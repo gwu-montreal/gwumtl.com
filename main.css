@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Archivo:700');
+
 body {
   background-color: #000;
 }
 
 .flex-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -11,4 +14,12 @@ body {
 .img-center {
   max-width: 80vw;
   max-height: 80vh;
+}
+
+.link {
+  font-family: 'Archivo', sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
 }
