@@ -1,0 +1,14 @@
+body {
+  background-color: #000;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-center {
+  max-width: 80vw;
+  max-height: 80vh;
+}
