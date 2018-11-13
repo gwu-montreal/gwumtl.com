@@ -1,24 +1,89 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Game Workers Unite Montréal</title>
-  <meta name="description" content="The Montréal chapter of the Game Workers Unite organization.">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="main.css">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Game Workers Unite Montréal</title>
+    <meta name="description" content="The Montréal chapter of the Game Workers Unite organization.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=PT+Mono|PT+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+    <link rel="stylesheet" href="milligram.min.css">
+    <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
-  <div class="flex-container flex-vert width-full height-full">
-    <div class="flex-container flex-horiz flex-wrap width-full">
-      <img src="gwu-logo-en.svg" class="img-center" />
-      <img src="gwu-logo-fr.svg" class="img-center" />
+    <a href="#content-en" class="no-vs">Jump to English content</a>
+    <a href="#content-fr" class="no-vs" lang="fr">Jump to English content</a>
+    <div id="lang-top" aria-hidden="true">
+        <span>Select your language / </span><span lang="fr">Sélectionnez votre langue</span>
     </div>
-    <div class="text-center">
-      <a href="https://discord.gg/aTYw2U3" class="link">Join the GWU Montréal Discord</a>
+    <div id="wrapper">
+        <input type="radio" id="lang-en" name="language" value="english" class="lang-check no-vs" checked aria-hidden="true">
+        <label for="lang-en" class="lang-label lang-label-en button button-outline" title="Anglais" aria-hidden="true"><span>English</span></label>
+        <input type="radio" id="lang-fr" name="language" value="french" class="lang-check no-vs" aria-hidden="true">
+        <label for="lang-fr" class="lang-label lang-label-fr button button-outline" title="French"><span lang="fr" aria-hidden="true">Fran&#231;ais</span></label>
+
+        <main class="container">
+            <div class="row row-middle">
+                <div class="column">
+                    <div id="logos">
+                        <img src="gwu-logo-en.svg" class="logo english" alt="GWU logo: Labor creates games"/>
+                        <img src="gwu-logo-fr.svg" class="logo french" alt="Logo GWU: Notre travail crée les jeux"/>
+                    </div>
+                    <div id="content-en" class="content english">
+                        <h1>Welcome!</h1>
+                        <p>We are the Montréal chapter of Game Workers Unite, a horizontal organization of people dedicated to advocating for workers' rights in the games industry.</p>
+                        <p>We're not a union, but we're working towards building one. Montréal is notable for the number of game companies it hosts – workers here are a powerful force. Together, we can achieve better working conditions, recognition, and mutual support.</p>
+                        <h2>Get involved</h2>
+                        <p>The easiest way to join us is to get in touch via one of the following channels:</p>
+                        <div class="links row row-middle">
+                            <ul class="fa-ul">
+                                <li>
+                                    <a href="https://discord.gg/aTYw2U3" class="link"><span class="fa-li" ><i class="fab fa-discord"></i></span>Our Discord server</a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/gwu_montreal" class="link"><span class="fa-li" ><i class="fab fa-twitter"></i></span>Our Twitter account</a>
+                                </li>
+                                <li>
+                                    <a href="mailto:gwumontreal@gmail.com" class="link"><span class="fa-li" ><i class="fas fa-envelope"></i></span>Our email</a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/gameworkers" class="link"><span class="fa-li" ><i class="fab fa-twitter-square"></i></span>GWU Intl's Twitter account</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <p>We can't wait to see you!</p>
+                    </div>
+                    <div id="content-fr" class="content french">
+                        <h1>Bienvenue!</h1>
+                        <p>Nous somme le chapitre Montréalais de Game Workers Unite, une organisation horizontale de personnes consacrée à la défense des droits des travailleu·ses·rs dans l'industrie du jeu vidéo.</p>
+                        <p>Nous ne sommes pas un syndicat, mais nous travaillons dans le but d'en établir un. Montréal est une ville notable pour le nombre de compagnies du domaine des jeux vidéo qu'elle accueille – ici, nous avons un grand pouvoir. Ensemble, nous pouvons obtenir de meilleures conditions de travail, une plus grande reconnaissance et un soutien mutuel.</p>
+                        <h2>Participez</h2>
+                        <p>La façon la plus facile de nous rejoindre est de nous contacter par l'un des moyens suivants:</p>
+                        <div class="links row row-middle">
+                            <ul class="fa-ul">
+                                <li>
+                                    <a href="https://discord.gg/aTYw2U3" class="link"><span class="fa-li" ><i class="fab fa-discord"></i></span>Notre serveur Discord</a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/gwu_montreal" class="link"><span class="fa-li" ><i class="fab fa-twitter"></i></span>Notre compte Twitter</a>
+                                </li>
+                                <li>
+                                    <a href="mailto:gwumontreal@gmail.com" class="link"><span class="fa-li" ><i class="fas fa-envelope"></i></span>Notre adresse courriel</a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/gameworkers" class="link"><span class="fa-li" ><i class="fab fa-twitter-square"></i></span>Le compte Twitter de GWU Intl.</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <p>Nous sommes impatient·e·s de vous compter parmi nous!</p>
+                    </div>
+                </div>
+            </div>
+        </main>
     </div>
-  </div>
 </body>
 </html>
