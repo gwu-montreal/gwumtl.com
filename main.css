@@ -1,52 +1,100 @@
-@import url('https://fonts.googleapis.com/css?family=Archivo:700');
-
 body {
-  background-color: #000;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+    margin: 0; padding: 0;
+    background-color: #000;
+    color: #eef;
 }
 
-.width-full {
-  width: 100%;
+#lang-en:checked ~ .container .french,
+#lang-fr:checked ~ .container .english,
+.no-vs {
+    position: absolute !important;
+    height: 1px; width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
 }
 
-.height-full {
-  height: 100%;
+#wrapper { position: relative; }
+
+/*
+** LANGUAGE
+*/
+
+#lang-top {
+    padding-bottom: 3.5em;
+    background-color: #333;
+    opacity: 0.6;
+    text-align: center;
 }
 
-.flex-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.lang-label {
+    position: absolute;
+    top: -4em;
+    left: 50%;
+    margin-bottom: 0 !important;
+    border-color: #aab !important;
+    color: #aab !important;
+    transition: border-color 0.2s ease, color 0.2s ease;
 }
 
-.flex-vert {
-  flex-direction: column;
+.lang-check:focus + .lang-label { box-shadow: inset 0 0 0 2px #aab; }
+
+.lang-label:hover {
+    border-color: #dde !important;
+    color: #dde !important;
 }
 
-.flex-horiz {
-  flex-direction: row;
+.lang-label-en { transform: translateX(-100%) translateX(-0.5em); }
+.lang-label-fr { transform: translateX(0.5em); }
+
+.lang-check:checked + .lang-label {
+    background-color: #444;
+    color: #eef !important;
 }
 
-.flex-wrap {
-  flex-wrap: wrap;
+/*
+** LAYOUT
+*/
+
+.container {
+    max-width: 60rem;
+    padding-top: 10vh;
 }
 
-.img-center {
-  max-width: 80vw;
-  max-height: 80vh;
+.row-middle {
+    justify-content: center;
+    flex-direction:row;
 }
 
-.text-center {
-  text-align: center;
+.row-middle > .column {
+    width: auto;
+    flex-grow: 0;
 }
 
-.link {
-  font-family: 'Archivo', sans-serif;
-  font-size: 2rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #fff;
+#logos { text-align: center; }
+
+@media (orientation: portrait) {
+    .logo { width: 50vw; max-width: 100%; }
 }
+
+@media (orientation: landscape) {
+    .logo { height: 50vh; }
+}
+
+.content {
+    margin: 5em 0;
+}
+
+.links > .fa-ul { margin-left: 1.5em; }
+
+/*
+** TYPOGRAPHY
+*/
+
+h1, h2, h3 {
+    margin-top: 1.4em;
+    font-family: 'PT Mono', monospace;
+    text-align: center;
+}
+
+a { color:#fff; }
