@@ -71,6 +71,10 @@ body {
     flex-grow: 0;
 }
 
+div.a {
+	text-align: center;
+}
+
 #logos { text-align: center; }
 
 @media (orientation: portrait) {
