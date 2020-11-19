@@ -1,0 +1,22 @@
+[build]
+  publish = "out"
+  command = "yarn export"
+
+[[plugins]]
+  package = "netlify-plugin-cache-nextjs"
+
+[[redirects]]
+  from = "/join"
+  to = "https://docs.google.com/forms/d/e/1FAIpQLSc59I5tMp8fJQJMUDsWoYfdCvLN95nLVIkOg5mKJlaa98vsOw/viewform"
+  status = 301
+
+[[redirects]]
+  from = "/*"
+  to = "/fr/:splat"
+  status = 302
+  conditions = {Language = ["fr"]}
+
+[[redirects]]
+  from = "/*"
+  to = "/en/:splat"
+  status = 301
