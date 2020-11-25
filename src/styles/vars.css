@@ -6,6 +6,6 @@
 @custom-media --xlarge (min-width: 1450px);
 
 :root {
-  --font-headings: "Metropolis", sans-serif;
-  --font-body: "ProspectusS", serif;
+  --font-headings: "Poppins", sans-serif;
+  --font-body: "Plex", sans-serif;
 }
