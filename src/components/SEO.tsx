@@ -1,11 +1,9 @@
 import React from "react";
 import Head from "next/head";
-import { useSiteData } from "~/lib/site-data";
+import { languageList, useSiteData } from "~/lib/site-data";
 import siteInfo from "~/lib/site-info.server";
 
-import { languageList } from "~/lib/consts";
-
-import openGraphImage from "~/images/social-crop.png";
+// import openGraphImage from "~/images/social-crop.png";
 
 const { domain, twitter } = siteInfo;
 
@@ -40,7 +38,7 @@ const SEO = ({
         key="og:description"
         content={resolvedDescription}
       />
-      <meta property="og:image" content={`${domain}${openGraphImage}`} />
+      {/* <meta property="og:image" content={`${domain}${openGraphImage}`} /> */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content={twitter} />
     </Head>
