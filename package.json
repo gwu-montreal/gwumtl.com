@@ -1,0 +1,59 @@
+{
+  "name": "gwumtl.com",
+  "version": "2.0.0",
+  "private": true,
+  "homepage": "https://gwumtl.com",
+  "repository": "gwu-montreal/gwumtl.com",
+  "twitter": "@gwu_montreal",
+  "scripts": {
+    "start": "next dev",
+    "export": "next build && next export",
+    "test": "run-s -l test:*",
+    "test:eslint": "eslint '{src,test}/**/*.{js,ts,tsx}'",
+    "test:prettier": "prettier '{src,test}/**/*.{css,js,ts,tsx}' -l",
+    "test:ts": "tsc --noEmit",
+    "test:stylelint": "stylelint 'src/**/*.{css,tsx}'",
+    "prettier": "prettier --write '{src,test}/**/*.{css,js,ts,tsx}'"
+  },
+  "dependencies": {
+    "netlify-cms-app": "^2.13.3",
+    "react": "16.14.0",
+    "react-dom": "16.14.0",
+    "react-headroom": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.8",
+    "@types/react": "^16.9.56",
+    "@types/react-dom": "^16.9.9",
+    "@types/react-headroom": "^2.2.1",
+    "astroturf": "^0.10.5",
+    "eslint": "^7.13.0",
+    "eslint-config-lostfictions": "^0.4.0",
+    "imagemin-optipng": "^8.0.0",
+    "next": "^10.0.2",
+    "next-compose-plugins": "^2.2.1",
+    "next-fonts": "^1.2.0",
+    "next-optimized-images": "^2.6.2",
+    "npm-run-all": "^4.1.5",
+    "postcss-nested": "^4.2.3",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.1.2",
+    "stylelint": "^13.7.2",
+    "stylelint-config-lostfictions": "^0.11.0",
+    "typescript": "^4.0.5",
+    "val-loader": "^2.1.2"
+  },
+  "browserslist": {
+    "production": [
+      "> 1%",
+      "last 2 versions",
+      "Firefox ESR",
+      "not dead",
+      "not IE 11"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version"
+    ]
+  }
+}
