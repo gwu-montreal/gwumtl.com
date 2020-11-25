@@ -1,7 +1,24 @@
-declare module "*.md" {
-  const html: string;
-  export default html;
-  export const attributes: { [attrib: string]: any };
+declare module "next-mdx-remote/render-to-string" {
+  export interface RenderedMDX {
+    compiledSource: string;
+    renderedOutput: string;
+    scope: Record<string, unknown>;
+  }
+
+  export default function renderToString(
+    source: string,
+    options?: {
+      components?: Record<string, React.ReactChild>;
+      mdxOptions?: {
+        remarkPlugins: any[];
+        rehypePlugins: any[];
+        hastPlugins: any[];
+        compilers: any[];
+        filepath: string;
+      };
+      scope?: any;
+    }
+  ): Promise<RenderedMDX>;
 }
 
 declare module "*.jpeg" {

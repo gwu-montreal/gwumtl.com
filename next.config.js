@@ -19,16 +19,6 @@ module.exports = withPlugins(
         });
 
         cfg.module.rules.push({
-          test: /\.md$/,
-          use: [
-            {
-              loader: "remark-loader-2",
-              options: {},
-            },
-          ],
-        });
-
-        cfg.module.rules.push({
           test: /\.server\.js$/,
           use: [
             {
