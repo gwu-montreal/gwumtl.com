@@ -1,3 +1,6 @@
+---
+title: Introduction
+---
 # Bienvenue!
 
 Nous sommes le chapitre Montréalais de Game Workers Unite, une organisation démocratique consacrée à la défense des droits des travailleu·ses·rs dans l'industrie du jeu vidéo.

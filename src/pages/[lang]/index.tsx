@@ -11,6 +11,7 @@ import type { GetStaticProps, GetStaticPaths } from "next";
 interface PageProps {
   lang: string;
   content: string;
+  summary: string;
 }
 
 const { container, image, readzine } = css`
@@ -63,15 +64,22 @@ export const getStaticProps: GetStaticProps<
   PageProps,
   { lang: string }
 > = async ({ params }) => {
+  const { summarize } = await import("~/lib/util");
   const { loadMdx } = await import("~/lib/load-mdx");
   const { lang } = params!;
 
-  const { rendered } = await loadMdx(`content/pages/intro.${lang}.md`);
+  const path = `content/pages/intro.${lang}.md`;
+
+  const { rendered, plaintext, matter } = await loadMdx(path);
 
   return {
     props: {
       lang,
       content: rendered,
+      summary: summarize(
+        matter.summary || plaintext.split(/\s+/).join(" "),
+        160
+      ),
     },
   };
 };

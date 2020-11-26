@@ -16,42 +16,58 @@ type PageProps = {
 };
 
 const Page = ({ title, content, summary }: PageProps) => {
-  return <div>fart</div>;
+  return (
+    <div>
+      <h1>{title}</h1>
+      <h2>{summary}</h2>
+      <div dangerouslySetInnerHTML={{ __html: content }} />
+    </div>
+  );
 };
 
 export const getStaticProps: GetStaticProps<
   PageProps,
-  { lang: string; page: string }
+  { lang: string; slug: string }
 > = async ({ params }) => {
-  // const { getDirectoryForSlug } = await import("~/lib/server");
   const { summarize } = await import("~/lib/util");
+  const { loadMdx } = await import("~/lib/load-mdx");
+  const { lang, slug } = params!;
 
-  const { lang, page } = params!;
+  const path = `content/posts/${slug}.${lang}.md`;
 
-  // const {
-  //   default: content,
-  //   attributes: { title, type, summary },
-  //   plaintext,
-  // } = await import(`content/${getDirectoryForSlug(page)}/${page}/${lang}.md`);
+  const { rendered, plaintext, matter } = await loadMdx(path, ["title"]);
 
   return {
     props: {
       lang,
-      title: "farts",
-      currentPage: page,
-      content: "fart, indeed very fart",
-      summary: summarize("fart...", 160),
-      // summary: summarize(summary ?? plaintext.split(/\s+/).join(" "), 160),
+      currentPage: slug,
+      title: matter.title,
+      content: rendered,
+      summary: summarize(
+        matter.summary || plaintext.split(/\s+/).join(" "),
+        160
+      ),
     },
   };
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const { languageList } = await import("~/lib/site-data");
+  const {
+    promises: { readdir },
+  } = await import("fs");
+  const { join } = await import("path");
 
-  const paths = languageList.flatMap((lang) =>
-    ["fart", "doublefart"].map((page) => ({ params: { lang, page } }))
-  );
+  const files = await readdir(join(process.cwd(), "content", "posts"));
+
+  const re = /(?<slug>[a-z0-9-_]+)\.(?<lang>[a-z]{2})\.mdx?/i;
+
+  const paths = files
+    .filter((fn) => re.test(fn))
+    .map((fn) => {
+      const match = fn.match(re)!;
+      const { lang, slug } = match.groups!;
+      return { params: { lang, slug } };
+    });
 
   return {
     paths,

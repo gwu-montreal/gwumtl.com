@@ -59,6 +59,13 @@ const init = async (props: PageProps) => {
               i18n: true,
             },
             {
+              label: "Summary",
+              name: "summary",
+              widget: "string",
+              required: false,
+              i18n: true,
+            },
+            {
               label: "Body",
               name: "body",
               widget: "markdown",
@@ -87,6 +94,13 @@ const init = async (props: PageProps) => {
               widget: "datetime",
               required: false,
               i18n: "duplicate",
+            },
+            {
+              label: "Summary",
+              name: "summary",
+              widget: "string",
+              required: false,
+              i18n: true,
             },
             {
               label: "Body",

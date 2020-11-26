@@ -1,3 +1,6 @@
+---
+title: Introduction
+---
 # Welcome!
 
 We are the Montréal chapter of Game Workers Unite, a democratic organization of people dedicated to advocating for workers' rights in the games industry.
