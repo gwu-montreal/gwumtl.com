@@ -114,10 +114,13 @@ const init = async (props: PageProps) => {
         {
           label: "Strings",
           name: "strings",
+          description:
+            "Miscellaneous small localization strings used around the site.",
           i18n: true,
           folder: "content/strings",
           create: false,
           format: "json",
+          identifier_field: "siteName",
           fields: Object.keys(strings).map((k) => ({
             name: k,
             widget: "string",
