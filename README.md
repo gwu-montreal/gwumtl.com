@@ -1,9 +1,9 @@
 ## gwumtl.com
 
-[Access the admin panel](https://gwumtl.com/admin) to start editing
-content!
+> [Access the admin panel](https://gwumtl.com/admin) to start editing content!
+No need to use Git or clone this repo.
 
-### Contributing
+### Contributing to the Code
 
 Make sure you have [Node](https://nodejs.org/en/) installed before proceeding.
 (You'll also need [Yarn](https://classic.yarnpkg.com/) — just run `npm i -g

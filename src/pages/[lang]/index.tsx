@@ -66,7 +66,7 @@ export const getStaticProps: GetStaticProps<
   const { loadMdx } = await import("~/lib/load-mdx");
   const { lang } = params!;
 
-  const { rendered } = await loadMdx(`content/intro/${lang}.md`);
+  const { rendered } = await loadMdx(`content/pages/intro.${lang}.md`);
 
   return {
     props: {

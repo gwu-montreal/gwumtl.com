@@ -1,5 +1,6 @@
-# Code de Conduite
-
+---
+title: Code de Conduite
+---
 ## Objectif
 
 Un des buts principaux de [“Game Workers Unite” (GWU)](https://www.gameworkersunite.org/) est de donner du pouvoir aux personnes marginalisées, opprimées, et exploitées par l’industrie du jeu vidéo, en leur apportant les outils et ressources pour améliorer leurs conditions de travail, repousser les systèmes d’oppression, et construire une industrie plus équitable pour tout le monde. GWU se tient en solidarité avec les personnes opprimées tout autour du monde, et vise en particulier à promouvoir les intérêts des travailleurs et travailleuses dans la lutte contre le capitalisme global. Ce code de conduite souligne nos attentes vis-à-vis de toutes celles et ceux qui participent à notre communauté, ainsi que les conséquences pour tout comportement inacceptable.

@@ -1,8 +1,8 @@
 import { createContext, useContext } from "react";
 import { useRouter } from "next/router";
 
-import en from "content/en.json";
-import fr from "content/fr.json";
+import en from "content/strings/strings.en.json";
+import fr from "content/strings/strings.fr.json";
 
 export const DEFAULT_LANG = "en";
 

@@ -1,3 +1,5 @@
+declare module "netlify-cms-locales";
+
 declare module "next-mdx-remote/render-to-string" {
   export interface RenderedMDX {
     compiledSource: string;

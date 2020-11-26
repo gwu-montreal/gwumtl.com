@@ -1,5 +1,6 @@
-# Code Of Conduct
-
+---
+title: Code of Conduct
+---
 ## Purpose
 
 A primary goal of [Game Workers Unite](https://www.gameworkersunite.org/) (GWU) is to empower people who are marginalized, oppressed, and exploited by the game industry, providing them with the tools and resources to improve their working conditions, push back against systems of oppression, and build a more equitable industry for everyone. We aim to stand in concrete solidarity with oppressed people around the world, and specifically to advance the interests of workers in the struggle against global capitalism. This code of conduct outlines our expectations for all those who participate in our community, as well as the consequences for unacceptable behavior.
@@ -42,7 +43,7 @@ The following behaviors are considered harassment and are unacceptable within ou
 - Advocating for, or encouraging, any of the above behavior.
 - Sustained disruption of community events including rallies, meetups, talks and presentations.
 
-## Consequences For Unacceptable Behaviour
+## Consequences for Unacceptable Behaviour
 
 Unacceptable behavior from any community member, including sponsors and those with decision-making authority, will not be tolerated.
 
