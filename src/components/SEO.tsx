@@ -14,17 +14,18 @@ const SEO = ({
   title: string;
   description?: string;
 }) => {
-  const { t, currentPage } = useSiteData();
+  const { t, slug } = useSiteData();
   const resolvedDescription = description || t("site_description");
 
   return (
     <Head>
+      <title>GWU Montréal</title>
       {languageList.map((l) => (
         <link
           key={l}
           rel="alternate"
           hrefLang={l}
-          href={`${domain}/${l}${currentPage ? "/" + currentPage : ""}`}
+          href={`${domain}/${l}${slug ? "/" + slug : ""}`}
         />
       ))}
       <meta

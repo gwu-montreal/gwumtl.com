@@ -1,17 +1,10 @@
 import React from "react";
-// import dynamic from "next/dynamic";
 
 import type { GetStaticProps, GetStaticPaths } from "next";
 
-// const Map = dynamic(() => import("~/components/Map"));
-
-// even though we don't use all these static props in the component, our app
-// wrapper (_app.tsx) also receives them and consumes them.
 type PageProps = {
-  lang: string;
   title: string;
   content: string;
-  currentPage: string;
   summary: string;
 };
 
@@ -39,8 +32,6 @@ export const getStaticProps: GetStaticProps<
 
   return {
     props: {
-      lang,
-      currentPage: slug,
       title: matter.title,
       content: rendered,
       summary: summarize(

@@ -3,16 +3,14 @@ import Head from "next/head";
 import App from "next/app";
 
 import Header from "~/components/Header";
-import { SiteDataProvider, DEFAULT_LANG } from "~/lib/site-data";
 
 import "~/styles/index.css";
 
 class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
-    const { lang, currentPage } = pageProps;
 
-    const main = (
+    return (
       <>
         <Head>
           <link
@@ -38,16 +36,10 @@ class MyApp extends App {
           <meta name="theme-color" content="#ffffff" />
           {/* <script async src="/fathom.js" /> */}
         </Head>
-        <SiteDataProvider value={{ lang: lang || DEFAULT_LANG, currentPage }}>
-          <Header />
-          <div className="container">
-            <Component {...pageProps} />
-          </div>
-        </SiteDataProvider>
+        {/* <Header /> */}
+        <Component {...pageProps} />
       </>
     );
-
-    return lang ? main : <Component {...pageProps} />;
   }
 }
 
