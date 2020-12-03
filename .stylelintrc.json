@@ -3,6 +3,7 @@
     "stylelint-config-lostfictions"
   ],
   "rules": {
+    "custom-property-empty-line-before": null,
     "selector-nested-pattern": null,
     "font-family-no-missing-generic-family-keyword": null,
     "plugin/value-no-exposed-custom-properties": [

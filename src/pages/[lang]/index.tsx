@@ -6,28 +6,35 @@ import Link from "~/components/LocalizedLink";
 import SEO from "~/components/SEO";
 import { useSiteData } from "~/lib/site-data";
 
-import grid from "~/styles/grid.module.css";
-
 import type { GetStaticProps, GetStaticPaths } from "next";
 
 interface PageProps {
-  content: string;
-  summary: string;
+  sections: { content: string; key: string }[];
+  description: string;
 }
 
 // const { container, image, readzine } = css`
 
 // `;
 
-const Index = ({ content }: PageProps) => {
+const Index = ({ sections, description }: PageProps) => {
   // const { t } = useSiteData();
   // const title = t("site_title");
 
   return (
     <>
-      <SEO title="GWU Montréal" />
-      <div className={grid.container}>
-        <div dangerouslySetInnerHTML={{ __html: content }} />
+      <SEO title="GWU Montréal" description={description} />
+      <div className="container">
+        {sections.map(({ key, content }, i) => (
+          <React.Fragment key={i}>
+            <div className="row">
+              <div
+                className="col-sm-6"
+                dangerouslySetInnerHTML={{ __html: content }}
+              />
+            </div>
+          </React.Fragment>
+        ))}
       </div>
     </>
   );
@@ -41,17 +48,14 @@ export const getStaticProps: GetStaticProps<
   const { loadMdx } = await import("~/lib/load-mdx");
   const { lang } = params!;
 
-  const path = `content/pages/intro.${lang}.md`;
+  const path = `content/pages/index.${lang}.md`;
 
-  const { rendered, plaintext, matter } = await loadMdx(path);
+  const { renderedSections, matter } = await loadMdx(path, ["description"]);
 
   return {
     props: {
-      content: rendered,
-      summary: summarize(
-        matter.summary || plaintext.split(/\s+/).join(" "),
-        160
-      ),
+      sections: renderedSections.map(({ content, key }) => ({ content, key })),
+      description: summarize(matter.description, 160),
     },
   };
 };
