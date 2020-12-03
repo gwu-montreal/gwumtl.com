@@ -6,13 +6,23 @@ import strip from "strip-markdown";
 
 import { components } from "~/components/mdx";
 
+const yaml = require("js-yaml");
+
 const mdx = (content: string) => renderToString(content, { components });
 
 export async function loadMdx(filename: string, expectedFmFields?: string[]) {
   const raw = await fs.readFile(filename, "utf-8");
 
   // FIXME: bad typings, see https://github.com/jonschlinkert/gray-matter/pull/80
-  const mat = matter(raw, { sections: true } as any);
+  // custom section parse is also required...
+  const mat = matter(raw, {
+    section(section: { content: string; data: any }) {
+      if (typeof section.data === "string" && section.data.trim() !== "") {
+        section.data = yaml.safeLoad(section.data);
+      }
+      section.content = section.content.trim() + "\n";
+    },
+  } as any);
   const { content, data, sections = [] } = mat as ReturnType<typeof matter> & {
     sections?: { key: string; data: Record<string, any>; content: string }[];
   };

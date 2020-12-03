@@ -4,7 +4,7 @@ description: Game Workers Unite Montréal is a democratic organization dedicated
 ---
 
 ---sec
-image: /images/goomba-01.png
+image: /images/index-01.png
 imagePlacement: right
 ---
 
@@ -15,6 +15,10 @@ Game Workers Unite Montréal is a democratic organization dedicated to advocatin
 Montréal is well-known as a major hub for the game industry in North America. Montréal is notable for the number of game companies it hosts – workers here are a powerful force. Together, we can achieve better working conditions and recognition for workers, in Montréal and across the globe.
 
 ---sec
+image: /images/index-02.png
+imagePlacement: left
+---
+
 
 ## What do we do?
 
@@ -23,12 +27,18 @@ Stories of mass layoffs and abuse in the game industry are all too frequent. By 
 Members in GWU Montréal work together in committees to tackle different projects, whether it’s organizing a workplace or creating literature, designing and putting on workshops, or helping workers with individual complaints access the support that they need. We meet every month in a general assembly to share the latest developments.
 
 ---sec
+image: /images/index-03.png
+imagePlacement: right
+---
 
 ## Building a better industry together.
 
 The best way to change things for the better in our workplaces is through collective action. We believe that all workers have the power to contribute in building a more equitable industry. If you’re a game worker or a student planning to join the industry and are interested in working towards a better future, we invite you to join us. No previous organizing experience is required! Together, we can bring about meaningful change and fairer conditions for all workers in the industry.
 
 ---box
+image: /images/index-04.png
+imagePlacement: right
+---
 
 # Get Involved!
 
@@ -44,7 +54,8 @@ If you’re interested in joining us, click the button below to start the proces
 All members must abide by our [Code of Conduct](/codeofconduct).
 
 ---sec
-data: yeah
+image: /images/zines.png
+imagePlacement: right
 ---
 
 # Zines and Resources
@@ -54,6 +65,9 @@ For GDC 2019, we wrote a zine talking about the recent layoffs in the industry, 
 <Button href="https://zines.gwumtl.com">Read the Game Workers Unite Zine!</Button>
 
 ---sec
+image: /images/kyr.png
+imagePlacement: left
+---
 
 We recently co-organized a workshop with [Pixelles](https://pixelles.ca/) and [S'ATTAQ](http://sattaq.xyz/), during which we presented an introduction to Quebec labour law for employees, contractors, and freelancers in the game industry.
 
