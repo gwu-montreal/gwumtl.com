@@ -1,0 +1,25 @@
+.mdx {
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--color-header);
+  }
+
+  .link {
+    text-decoration: none;
+  }
+
+  .button {
+    background-color: var(--color-main);
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-headings);
+    font-weight: normal;
+    color: #fff;
+    padding: 1em 0.5em;
+    margin-bottom: 1em;
+  }
+}

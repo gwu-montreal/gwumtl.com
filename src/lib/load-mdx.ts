@@ -4,10 +4,9 @@ import renderToString from "next-mdx-remote/render-to-string";
 import remark from "remark";
 import strip from "strip-markdown";
 
-import Button from "~/components/Button";
+import { components } from "~/components/mdx";
 
-const mdx = (content: string) =>
-  renderToString(content, { components: { Button } as any });
+const mdx = (content: string) => renderToString(content, { components });
 
 export async function loadMdx(filename: string, expectedFmFields?: string[]) {
   const raw = await fs.readFile(filename, "utf-8");

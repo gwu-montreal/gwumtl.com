@@ -4,6 +4,9 @@ description: Game Workers Unite Montréal is a democratic organization dedicated
 ---
 
 ---sec
+image: /images/goomba-01.png
+imagePlacement: right
+---
 
 ## For the rights of workers in the game industry.
 
@@ -31,31 +34,30 @@ The best way to change things for the better in our workplaces is through collec
 
 If you’re interested in joining us, click the button below to start the process of joining GWU MTL. We'll be happy to answer your questions!
 
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSc59I5tMp8fJQJMUDsWoYfdCvLN95nLVIkOg5mKJlaa98vsOw/viewform">
-  <Button icon="map">Apply to become a member</Button>
-</a>
+<Button
+  href="https://docs.google.com/forms/d/e/1FAIpQLSc59I5tMp8fJQJMUDsWoYfdCvLN95nLVIkOg5mKJlaa98vsOw/viewform"
+  icon="map"
+>
+  Apply to become a member
+</Button>
 
 All members must abide by our [Code of Conduct](/codeofconduct).
 
 ---sec
+data: yeah
+---
 
 # Zines and Resources
 
 For GDC 2019, we wrote a zine talking about the recent layoffs in the industry, what needs to change, and giving tons of advice on how to organize and recognize union-busting methods deployed by our bosses. You can now download the revamped 2020 version here!
 
-<a href="https://zines.gwumtl.com">
-  <Button>Read the Game Workers Unite Zine!</Button>
-</a>
+<Button href="https://zines.gwumtl.com">Read the Game Workers Unite Zine!</Button>
 
 ---sec
 
 We recently co-organized a workshop with [Pixelles](https://pixelles.ca/) and [S'ATTAQ](http://sattaq.xyz/), during which we presented an introduction to Quebec labour law for employees, contractors, and freelancers in the game industry.
 
-<a href="/kyr/KYR_Pamphlet_EN.pdf">
-  <Button>Get the Know Your Rights Pamphlet</Button>
-</a>
+<Button href="/kyr/KYR_Pamphlet_EN.pdf">Get the Know Your Rights Pamphlet</Button>
 
-<a href="/kyr/KYR_Slides_EN.pdf">
-  <Button>Check the Know Your Rights Workshop Slides</Button>
-</a>
+<Button href="/kyr/KYR_Slides_EN.pdf">Check the Know Your Rights Workshop Slides</Button>
 

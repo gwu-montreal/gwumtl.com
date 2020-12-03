@@ -6,10 +6,12 @@ import Link from "~/components/LocalizedLink";
 import SEO from "~/components/SEO";
 import { useSiteData } from "~/lib/site-data";
 
+import Box from "~/components/Box";
+
 import type { GetStaticProps, GetStaticPaths } from "next";
 
 interface PageProps {
-  sections: { content: string; key: string }[];
+  sections: { content: string; key: string; data: Record<string, any> }[];
   description: string;
 }
 
@@ -24,17 +26,33 @@ const Index = ({ sections, description }: PageProps) => {
   return (
     <>
       <SEO title="GWU Montréal" description={description} />
-      <div className="container">
-        {sections.map(({ key, content }, i) => (
-          <React.Fragment key={i}>
-            <div className="row">
-              <div
-                className="col-sm-6"
-                dangerouslySetInnerHTML={{ __html: content }}
-              />
-            </div>
-          </React.Fragment>
-        ))}
+      <div className="container mdx">
+        {sections.map(({ key, content, data }, i) => {
+          switch (key) {
+            case "sec":
+              return (
+                <div key={i} className="row">
+                  <div
+                    className="col-sm-6 col-sm-offset-1"
+                    dangerouslySetInnerHTML={{ __html: content }}
+                  />
+                </div>
+              );
+            case "box":
+              return (
+                <Box key={i}>
+                  <div className="row">
+                    <div
+                      className="col-sm-5 col-sm-offset-1"
+                      dangerouslySetInnerHTML={{ __html: content }}
+                    />
+                  </div>
+                </Box>
+              );
+            default:
+              throw new Error(`Unknown section type: "${key}" (in index)`);
+          }
+        })}
       </div>
     </>
   );
@@ -54,7 +72,7 @@ export const getStaticProps: GetStaticProps<
 
   return {
     props: {
-      sections: renderedSections.map(({ content, key }) => ({ content, key })),
+      sections: renderedSections,
       description: summarize(matter.description, 160),
     },
   };
