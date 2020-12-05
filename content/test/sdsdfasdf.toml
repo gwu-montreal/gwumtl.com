@@ -1,0 +1,14 @@
+title = "sdsdfasdf"
+summary = "asdfasdfsddddd "
+
+[[page]]
+type = "section"
+body = "xsdfasf **asdf as** f\n\n\n\n![asdfsdf]( \"asfasfd\")"
+
+[[page]]
+type = "section2"
+body = "asdfasfasf"
+
+[[page]]
+type = "box"
+body = "sddddddsddd"
