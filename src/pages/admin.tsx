@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 
 import type { GetStaticProps } from "next";
-import type { CmsConfig, CmsCollection, CmsField } from "netlify-cms-core";
 
 interface PageProps {
   repository: string;
@@ -17,12 +16,6 @@ const init = async (props: PageProps) => {
   const { default: strings } = await import(
     "../../content/strings/strings.en.json"
   );
-
-  interface CmsI18nConfig {
-    structure: "multiple_folders" | "multiple_files" | "single_file";
-    locales: string[];
-    default_locale?: string;
-  }
 
   CMS.init({
     config: {
@@ -42,8 +35,8 @@ const init = async (props: PageProps) => {
         locales: languageList,
       },
       collections: [
-        // File collections not yet supported for i18n:
-        // see https://github.com/netlify/netlify-cms/pull/4634
+        // File collections across multiple files not supported for i18n, so use
+        // folder collections with create: false instead
         {
           label: "Pages",
           name: "pages",
@@ -129,15 +122,6 @@ const init = async (props: PageProps) => {
           })),
         },
       ],
-    } as CmsConfig & {
-      backend: {
-        squash_merges?: boolean;
-      };
-      i18n?: CmsI18nConfig;
-      collections: (CmsCollection & {
-        i18n?: boolean | CmsI18nConfig;
-        fields: (CmsField & { i18n?: boolean | "translate" | "duplicate" })[];
-      })[];
     },
   });
 };
