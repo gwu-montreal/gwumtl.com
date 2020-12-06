@@ -1,9 +1,6 @@
-@custom-media --small (min-width: 568px);
-@custom-media --medium (min-width: 720px);
-@custom-media --large (min-width: 808px);
-
-/* for displaying the TOC sidebar */
-@custom-media --xlarge (min-width: 1450px);
+@custom-media --sm only screen and (min-width: 804px);
+@custom-media --md only screen and (min-width: 1060px);
+@custom-media --lg only screen and (min-width: 1236px);
 
 :root {
   --font-headings: "Poppins", sans-serif;
