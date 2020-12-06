@@ -33,3 +33,9 @@ blockquote {
   margin: 0 0 1rem 1rem;
   font-size: 1.3em;
 }
+
+/* util classes */
+
+.mw {
+  max-width: 100%;
+}

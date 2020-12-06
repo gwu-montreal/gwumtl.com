@@ -15,9 +15,11 @@ interface PageProps {
   description: string;
 }
 
-// const { container, image, readzine } = css`
-
-// `;
+const { sec } = css`
+  .sec {
+    margin-bottom: 2rem;
+  }
+`;
 
 const Index = ({ sections, description }: PageProps) => {
   // const { t } = useSiteData();
@@ -31,11 +33,26 @@ const Index = ({ sections, description }: PageProps) => {
           switch (key) {
             case "sec":
               return (
-                <div key={i} className="row">
-                  <div
-                    className="col-sm-6 col-sm-offset-1"
-                    dangerouslySetInnerHTML={{ __html: content }}
-                  />
+                <div key={i} className={sec}>
+                  <div className="row center-sm-only">
+                    <div
+                      className={
+                        data.imagePlacement === "left"
+                          ? "col-md-4 col-md-offset-1"
+                          : "col-md-4 last-md"
+                      }
+                    >
+                      <img className="mw" src={data.image} />
+                    </div>
+                    <div
+                      className={
+                        data.imagePlacement === "left"
+                          ? "col-md-6"
+                          : "col-md-6 col-md-offset-1"
+                      }
+                      dangerouslySetInnerHTML={{ __html: content }}
+                    />
+                  </div>
                 </div>
               );
             case "box":
