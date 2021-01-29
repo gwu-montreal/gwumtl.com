@@ -25,6 +25,7 @@ const init = async (props: PageProps) => {
         branch: "new-version", // FIXME: temp!!
         // squash_merges: true,
       },
+      local_backend: process.env.NODE_ENV === "development",
       publish_mode: "editorial_workflow",
       media_folder: "public/images",
       public_folder: "/images",
@@ -38,10 +39,12 @@ const init = async (props: PageProps) => {
         // File collections across multiple files not supported for i18n, so use
         // folder collections with create: false instead
         {
-          label: "Pages",
-          name: "pages",
+          label: "Home",
+          name: "home",
+          folder: "content/pages/home",
           i18n: true,
-          folder: "content/pages",
+          extension: "yml",
+          format: "yml",
           create: false,
           fields: [
             {
@@ -52,16 +55,26 @@ const init = async (props: PageProps) => {
               i18n: true,
             },
             {
-              label: "Summary",
-              name: "summary",
+              label: "Description",
+              name: "description",
               widget: "string",
               required: false,
               i18n: true,
             },
             {
-              label: "Body",
-              name: "body",
-              widget: "markdown",
+              label: "Sections",
+              name: "sections",
+              widget: "list",
+              fields: [
+                { label: "Image", name: "image", widget: "image" },
+                {
+                  label: "Image Placement",
+                  name: "imagePlacement",
+                  widget: "select",
+                  options: ["left", "right"],
+                },
+                { label: "Body", name: "body", widget: "markdown" },
+              ],
               required: true,
               i18n: true,
             },
@@ -104,23 +117,21 @@ const init = async (props: PageProps) => {
             },
           ],
         },
-        {
-          label: "Strings",
-          name: "strings",
-          description:
-            "Miscellaneous small localization strings used around the site.",
-          i18n: true,
-          folder: "content/strings",
-          create: false,
-          format: "json",
-          identifier_field: "siteName",
-          fields: Object.keys(strings).map((k) => ({
-            name: k,
-            widget: "string",
-            required: true,
-            i18n: true,
-          })),
-        },
+        // {
+        //   label: "Strings",
+        //   name: "strings",
+        //   file: "content/strings.json",
+        //   description:
+        //     "Miscellaneous small localization strings used around the site.",
+        //   // format: "json",
+        //   // identifier_field: "siteName",
+        //   fields: Object.keys(strings).map((k) => ({
+        //     name: k,
+        //     widget: "string",
+        //     required: true,
+        //     i18n: true,
+        //   })),
+        // },
       ],
     },
   });
