@@ -1,8 +1,22 @@
 en:
   title: sadasd
   description: asdasdasss
+  sections:
+    - image: /images/index-01.png
+      imagePlacement: left
+      body: |-
+        asdfasdfasdc asd fasd fa
+
+         a
+
+
+
+
+
+        asdf asfd asd
 fr:
   title: sadasda
   description: s
   sections:
-    - {}
+    - image: /images/index-01.png
+      imagePlacement: right
