@@ -1,28 +1,5 @@
 declare module "netlify-cms-locales";
 
-declare module "next-mdx-remote/render-to-string" {
-  export interface RenderedMDX {
-    compiledSource: string;
-    renderedOutput: string;
-    scope: Record<string, unknown>;
-  }
-
-  export default function renderToString(
-    source: string,
-    options?: {
-      components?: Record<string, React.ReactChild>;
-      mdxOptions?: {
-        remarkPlugins: any[];
-        rehypePlugins: any[];
-        hastPlugins: any[];
-        compilers: any[];
-        filepath: string;
-      };
-      scope?: any;
-    }
-  ): Promise<RenderedMDX>;
-}
-
 declare module "*.jpeg" {
   const value: string;
   export default value;
