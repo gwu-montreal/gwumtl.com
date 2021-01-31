@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
-import Header from "~/components/Header";
+// import StickyHeader from "~/components/StickyHeader";
 
 import "~/styles/index.css";
 

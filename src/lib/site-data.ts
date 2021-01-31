@@ -7,7 +7,7 @@ export const DEFAULT_LANG = "en";
 
 export const langs = {
   en: "English",
-  fr: "French",
+  fr: "Français",
 } as const;
 
 export const languageList = Object.keys(langs);

@@ -5,6 +5,12 @@ import Headroom from "react-headroom";
 import Link from "~/components/LocalizedLink";
 import { useSiteData } from "~/lib/site-data";
 
+/*
+!!!!!!!!
+CURRENTLY UNUSED, copied over from zine site
+!!!!!!!!
+*/
+
 const { logoimage, afterlogo, head, right, wrap } = css`
   .logoimage {
     max-height: 3.5rem;
@@ -16,7 +22,7 @@ const { logoimage, afterlogo, head, right, wrap } = css`
   .afterlogo {
     display: none;
 
-    @media (--small) {
+    @media (--sm-only) {
       display: unset;
       white-space: nowrap;
     }
