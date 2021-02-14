@@ -25,7 +25,7 @@ const init = async (props: PageProps) => {
         branch: "new-version", // FIXME: temp!!
         // squash_merges: true,
       },
-      local_backend: process.env.NODE_ENV === "development",
+      local_backend: process.env.NODE_ENV === "development", // FIXME: verify works
       publish_mode: "editorial_workflow",
       media_folder: "public/images",
       public_folder: "/images",
@@ -66,14 +66,35 @@ const init = async (props: PageProps) => {
               name: "sections",
               widget: "list",
               fields: [
+                {
+                  label: "Type",
+                  name: "type",
+                  widget: "select",
+                  options: [
+                    { label: "Section", value: "section" },
+                    { label: "Box", value: "box" },
+                  ],
+                },
                 { label: "Image", name: "image", widget: "image" },
                 {
                   label: "Image Placement",
                   name: "imagePlacement",
                   widget: "select",
-                  options: ["left", "right"],
+                  options: [
+                    { label: "Left", value: "left" },
+                    { label: "Right", value: "right" },
+                  ],
                 },
-                { label: "Body", name: "body", widget: "markdown" },
+                {
+                  label: "Body",
+                  name: "body",
+                  widget: "markdown",
+                  // only allow "raw" to prevent stomping the mdx
+                  modes: ["raw"],
+                  // buttons don't currently work in raw mode, so just hide them
+                  // i guess. not ideal.
+                  buttons: [],
+                },
               ],
               required: true,
               i18n: true,

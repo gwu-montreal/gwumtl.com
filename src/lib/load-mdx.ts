@@ -1,5 +1,4 @@
 import { promises as fs } from "fs";
-import matter from "gray-matter";
 import renderToString from "next-mdx-remote/render-to-string";
 import remark from "remark";
 import strip from "strip-markdown";
@@ -10,26 +9,12 @@ const yaml = require("js-yaml");
 
 const mdx = (content: string) => renderToString(content, { components });
 
-export async function loadMdx(filename: string, expectedFmFields?: string[]) {
-  const raw = await fs.readFile(filename, "utf-8");
+export async function loadMdx(filename: string, expectedFields?: string[]) {
+  const contents = yaml.safeLoad(await fs.readFile(filename, "utf-8"));
 
-  // FIXME: bad typings, see https://github.com/jonschlinkert/gray-matter/pull/80
-  // custom section parse is also required...
-  const mat = matter(raw, {
-    section(section: { content: string; data: any }) {
-      if (typeof section.data === "string" && section.data.trim() !== "") {
-        section.data = yaml.safeLoad(section.data);
-      }
-      section.content = section.content.trim() + "\n";
-    },
-  } as any);
-  const { content, data, sections = [] } = mat as ReturnType<typeof matter> & {
-    sections?: { key: string; data: Record<string, any>; content: string }[];
-  };
-
-  if (expectedFmFields) {
-    for (const field of expectedFmFields) {
-      if (!(field in data)) {
+  if (expectedFields) {
+    for (const field of expectedFields) {
+      if (!(field in contents)) {
         throw new Error(
           `Expected a field "${field}" in frontmatter for file "${filename}"!`
         );
@@ -37,21 +22,21 @@ export async function loadMdx(filename: string, expectedFmFields?: string[]) {
     }
   }
 
-  const { contents: plaintext } = await remark().use(strip).process(content);
+  const { contents: plaintext } = await remark()
+    .use(strip)
+    .process(contents.sections.map((s) => s.body).join("\n\n"));
 
-  const { renderedOutput } = await mdx(content);
-
-  const renderedSections = await Promise.all(
-    sections.map(async ({ content: c, ...rest }) => ({
+  const renderedSections: any[] = await Promise.all(
+    contents.sections.map(async ({ body, ...rest }) => ({
       ...rest,
-      content: (await mdx(c)).renderedOutput,
+      content: (await mdx(body)).renderedOutput,
     }))
   );
 
   return {
-    rendered: renderedOutput,
+    // rendered: renderedOutput,
     plaintext: String(plaintext),
-    matter: data,
+    matter: contents,
     renderedSections,
   };
 }

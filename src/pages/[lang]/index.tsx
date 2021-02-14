@@ -4,14 +4,19 @@ import Head from "next/head";
 
 import Link from "~/components/LocalizedLink";
 import SEO from "~/components/SEO";
-import { useSiteData } from "~/lib/site-data";
-
+import Hero from "~/components/Hero";
 import Box from "~/components/Box";
+import { useSiteData } from "~/lib/site-data";
 
 import type { GetStaticProps, GetStaticPaths } from "next";
 
 interface PageProps {
-  sections: { content: string; key: string; data: Record<string, any> }[];
+  sections: {
+    type?: "box";
+    content: string;
+    image?: string;
+    imagePlacement?: "left" | "right";
+  }[];
   description: string;
 }
 
@@ -28,25 +33,26 @@ const Index = ({ sections, description }: PageProps) => {
   return (
     <>
       <SEO title="GWU Montréal" description={description} />
+      <Hero />
       <div className="container mdx">
-        {sections.map(({ key, content, data }, i) => {
-          switch (key) {
-            case "sec":
+        {sections.map(({ type, content, image, imagePlacement }, i) => {
+          switch (type) {
+            case undefined:
               return (
                 <div key={i} className={sec}>
                   <div className="row center-sm-only">
                     <div
                       className={
-                        data.imagePlacement === "left"
+                        imagePlacement === "left"
                           ? "col-md-4 col-md-offset-1"
                           : "col-md-4 last-md"
                       }
                     >
-                      <img className="mw" src={data.image} />
+                      <img className="mw" src={image} />
                     </div>
                     <div
                       className={
-                        data.imagePlacement === "left"
+                        imagePlacement === "left"
                           ? "col-md-6"
                           : "col-md-6 col-md-offset-1"
                       }
@@ -67,7 +73,7 @@ const Index = ({ sections, description }: PageProps) => {
                 </Box>
               );
             default:
-              throw new Error(`Unknown section type: "${key}" (in index)`);
+              throw new Error(`Unknown section type: "${type}" (in index)`);
           }
         })}
       </div>
@@ -83,7 +89,7 @@ export const getStaticProps: GetStaticProps<
   const { loadMdx } = await import("~/lib/load-mdx");
   const { lang } = params!;
 
-  const path = `content/pages/index.${lang}.md`;
+  const path = `content/pages/home/home.${lang}.yml`;
 
   const { renderedSections, matter } = await loadMdx(path, ["description"]);
 
