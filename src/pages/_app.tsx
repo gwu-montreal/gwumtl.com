@@ -12,7 +12,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   const { query } = useRouter();
 
   // if there's no lang, we're on the admin page; render it directly
-  return query.lang ? (
+  return query["lang"] ? (
     <>
       <Head>
         <link

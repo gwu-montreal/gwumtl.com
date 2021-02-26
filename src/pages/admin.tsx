@@ -12,10 +12,11 @@ const init = async (props: PageProps) => {
   const { fr } = await import("netlify-cms-locales");
   CMS.registerLocale("fr", fr);
 
-  const { languageList } = await import("~/lib/site-data");
-  const { default: strings } = await import(
-    "../../content/strings/strings.en.json"
-  );
+  const { languageList: locales } = await import("~/lib/site-data");
+
+  // const { default: strings } = await import(
+  //   "../../content/strings/strings.en.json"
+  // );
 
   CMS.init({
     config: {
@@ -33,7 +34,7 @@ const init = async (props: PageProps) => {
       logo_url: props.homepage + "/images/gwu-mag-logo.svg",
       i18n: {
         structure: "multiple_files",
-        locales: languageList,
+        locales,
       },
       collections: [
         // File collections across multiple files not supported for i18n, so use

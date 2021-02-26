@@ -1,14 +1,11 @@
 import React from "react";
 import { css } from "astroturf";
-import Head from "next/head";
 
-import Link from "~/components/LocalizedLink";
 import SEO from "~/components/SEO";
 import Hero from "~/components/Hero";
 import Box from "~/components/Box";
-import { useSiteData } from "~/lib/site-data";
 
-import type { GetStaticProps, GetStaticPaths } from "next";
+import type { GetStaticProps } from "next";
 
 interface PageProps {
   sections: {
@@ -27,9 +24,6 @@ const { sec } = css`
 `;
 
 const Index = ({ sections, description }: PageProps) => {
-  // const { t } = useSiteData();
-  // const title = t("site_title");
-
   return (
     <>
       <SEO title="GWU Montréal" description={description} />
@@ -86,28 +80,22 @@ export const getStaticProps: GetStaticProps<
   { lang: string }
 > = async ({ params }) => {
   const { summarize } = await import("~/lib/util");
-  const { loadMdx } = await import("~/lib/load-mdx");
+  const { loadMdx, processSections } = await import("~/lib/load-mdx");
   const { lang } = params!;
 
   const path = `content/pages/home/home.${lang}.yml`;
 
-  const { renderedSections, matter } = await loadMdx(path, ["description"]);
+  const contents = await loadMdx(path, ["description", "sections"]);
+  const { sections } = await processSections(contents as any);
 
   return {
     props: {
-      sections: renderedSections,
-      description: summarize(matter.description, 160),
+      sections,
+      description: summarize(contents["description"], 160),
     },
   };
 };
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const { languageList } = await import("~/lib/site-data");
-
-  return {
-    paths: languageList.map((lang) => ({ params: { lang } })),
-    fallback: false,
-  };
-};
+export { getStaticPaths } from "~/lib/default-localized-static-paths";
 
 export default Index;

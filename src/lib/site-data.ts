@@ -20,8 +20,8 @@ const localeData: { [lang: string]: { [id: string]: string } } = {
 export function useSiteData() {
   const router = useRouter();
 
-  const lang = router.query.lang as string;
-  const slug = router.query.slug as string | undefined;
+  const lang = router.query["lang"] as string;
+  const slug = router.query["slug"] as string | undefined;
 
   return {
     lang,
@@ -33,7 +33,7 @@ export function useSiteData() {
       return localeData[DEFAULT_LANG][id] || id;
     },
     setLang: (nextLang: string) => {
-      if (!router.query.lang) {
+      if (!router.query["lang"]) {
         console.warn("Trying to set language, but not on a localized route!");
         return;
       }
