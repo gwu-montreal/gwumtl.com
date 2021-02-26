@@ -13,8 +13,13 @@ const box = css`
   }
 `;
 
-const Box = ({ children }: { children: React.ReactChild }) => (
-  <div className={box}>{children}</div>
+const Box = ({
+  children,
+  ...props
+}: { children: React.ReactChild } & React.ComponentProps<"div">) => (
+  <div {...props} className={`${box} ${props.className || ""}`}>
+    {children}
+  </div>
 );
 
 export default Box;

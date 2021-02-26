@@ -21,6 +21,13 @@ const sec = css`
   margin-bottom: 2rem;
 `;
 
+const padXs = css`
+  @media (--xs-only) {
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+  }
+`;
+
 const Index = ({ sections, description }: PageProps) => {
   return (
     <>
@@ -55,14 +62,27 @@ const Index = ({ sections, description }: PageProps) => {
               );
             case "box":
               return (
-                <Box key={i}>
-                  <div className="row">
-                    <div
-                      className="col-sm-5 col-sm-offset-1"
-                      dangerouslySetInnerHTML={{ __html: content }}
-                    />
+                <div key={i} className="row">
+                  <div className="col-sm-10 col-sm-offset-1">
+                    <Box className={padXs}>
+                      <div className="row">
+                        <div
+                          className="col-sm-5 col-sm-offset-1"
+                          dangerouslySetInnerHTML={{ __html: content }}
+                        />
+                        <div
+                          className={`text-center mx-auto col-md-5 ${
+                            imagePlacement === "left"
+                              ? "col-md-offset-1"
+                              : "last-md"
+                          }`}
+                        >
+                          <img className="mw" src={image} />
+                        </div>
+                      </div>
+                    </Box>
                   </div>
-                </Box>
+                </div>
               );
             default:
               throw new Error(`Unknown section type: "${type}" (in index)`);
