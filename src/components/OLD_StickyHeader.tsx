@@ -11,51 +11,51 @@ CURRENTLY UNUSED, copied over from zine site
 !!!!!!!!
 */
 
-const { logoimage, afterlogo, head, right, wrap } = css`
-  .logoimage {
-    max-height: 3.5rem;
-    margin-top: 10px;
-    margin-right: 20px;
-    margin-bottom: 20px;
+const logoimage = css`
+  max-height: 3.5rem;
+  margin-top: 10px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+`;
+
+const afterlogo = css`
+  display: none;
+
+  @media (--sm-only) {
+    display: unset;
+    white-space: nowrap;
   }
+`;
 
-  .afterlogo {
-    display: none;
+const head = css`
+  min-height: 4rem;
+  display: flex;
+  align-items: center;
 
-    @media (--sm-only) {
-      display: unset;
-      white-space: nowrap;
-    }
+  a {
+    font-size: 1.5rem;
+    text-decoration: none;
   }
+`;
 
-  .head {
-    min-height: 4rem;
-    display: flex;
-    align-items: center;
+const right = css`
+  margin-left: auto;
+  margin-right: 10px;
+`;
 
-    a {
-      font-size: 1.5rem;
-      text-decoration: none;
-    }
-  }
-
-  .right {
-    margin-left: auto;
-    margin-right: 10px;
-  }
-
+const wrap = css`
   /* global selectors need at least one local selector to be pure */
-  .wrap:global(.headroom-wrapper) {
+  :global(.headroom-wrapper) {
     margin-top: 30px;
     margin-bottom: 50px;
   }
 
-  .wrap :global(.headroom) {
+  :global(.headroom) {
     transition: box-shadow 0.5s ease-out;
     background-color: #eee;
   }
 
-  .wrap :global(.headroom--pinned) {
+  :global(.headroom--pinned) {
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
   }
 `;

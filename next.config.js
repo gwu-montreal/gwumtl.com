@@ -10,21 +10,12 @@ module.exports = withPlugins(
         // enable astroturf
         cfg.module.rules.push({
           test: /\.tsx$/,
-          use: [
-            {
-              loader: "astroturf/loader",
-              options: { extension: ".module.css" },
-            },
-          ],
+          use: [{ loader: "astroturf/loader" }],
         });
 
         cfg.module.rules.push({
           test: /\.server\.js$/,
-          use: [
-            {
-              loader: "val-loader",
-            },
-          ],
+          use: [{ loader: "val-loader" }],
         });
 
         return cfg;

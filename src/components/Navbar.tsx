@@ -4,39 +4,37 @@ import { css } from "astroturf";
 import Link from "~/components/LocalizedLink";
 import { useSiteData } from "~/lib/site-data";
 
-const { navbar, icons, right } = css`
-  .navbar {
-    margin-bottom: 2em;
+const navbar = css`
+  margin-bottom: 2em;
 
-    font-size: 1.3em;
-    color: #fcfcfc;
-    font-family: var(--font-headings);
+  font-size: 1.3em;
+  color: #fcfcfc;
+  font-family: var(--font-headings);
 
-    display: flex;
+  display: flex;
 
-    > div {
-      margin-right: 2em;
-    }
-
-    a {
-      text-decoration: none;
-    }
-  }
-
-  .icons {
-    display: flex;
-
-    > div {
-      margin-right: 1.5em;
-    }
-
+  > div {
     margin-right: 2em;
   }
 
-  .right {
-    margin-left: auto;
-    display: flex;
+  a {
+    text-decoration: none;
   }
+`;
+
+const icons = css`
+  display: flex;
+
+  > div {
+    margin-right: 1.5em;
+  }
+
+  margin-right: 2em;
+`;
+
+const right = css`
+  margin-left: auto;
+  display: flex;
 `;
 
 const Navbar = () => {

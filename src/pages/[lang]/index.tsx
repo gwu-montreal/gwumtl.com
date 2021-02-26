@@ -17,10 +17,8 @@ interface PageProps {
   description: string;
 }
 
-const { sec } = css`
-  .sec {
-    margin-bottom: 2rem;
-  }
+const sec = css`
+  margin-bottom: 2rem;
 `;
 
 const Index = ({ sections, description }: PageProps) => {

@@ -30,7 +30,7 @@
     "@types/react": "^17.0.2",
     "@types/react-dom": "^17.0.1",
     "@types/react-headroom": "^2.2.1",
-    "astroturf": "^0.10.5",
+    "astroturf": "^1.0.0-beta.17",
     "eslint": "^7.20.0",
     "eslint-config-lostfictions": "^1.1.0",
     "imagemin-optipng": "^8.0.0",
