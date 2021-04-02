@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
@@ -38,6 +38,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         <meta name="theme-color" content="#ffffff" />
         {/* <script async src="/fathom.js" /> */}
       </Head>
+      {/* <TestWebP /> */}
       {/* <Header /> */}
       <Component {...pageProps} />
     </>
@@ -45,5 +46,26 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
     <Component {...pageProps} />
   );
 };
+
+// const TestWebP = () => {
+//   useEffect(() => {
+//     const img = new Image();
+//     img.onload = function () {
+//       const result = img.width > 0 && img.height > 0;
+//       if (result) {
+//         document.body.classList.add("webp");
+//       } else {
+//         document.body.classList.remove("webp");
+//       }
+//     };
+//     img.onerror = function () {
+//       document.body.classList.remove("webp");
+//     };
+//     img.src =
+//       "data:image/webp;base64,UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEADsD+JaQAA3AAAAAA";
+//   }, []);
+
+//   return null;
+// };
 
 export default MyApp;

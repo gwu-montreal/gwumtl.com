@@ -4,6 +4,12 @@ import { css } from "astroturf";
 import Link from "~/components/LocalizedLink";
 import { useSiteData } from "~/lib/site-data";
 
+import siteInfo from "~/lib/site-info.server";
+
+import email from "~/images/email.svg";
+import twitter from "~/images/twitter.svg";
+import facebook from "~/images/facebook.svg";
+
 const navbar = css`
   margin-bottom: 2em;
 
@@ -22,6 +28,10 @@ const navbar = css`
   }
 `;
 
+const pointer = css`
+  cursor: pointer;
+`;
+
 const icons = css`
   display: flex;
 
@@ -36,6 +46,14 @@ const right = css`
   margin-left: auto;
   display: flex;
 `;
+
+const protocol = "mailto:";
+const address = "gwumontreal";
+const domain = "gmail.com";
+
+const decodeEmail = (e: React.SyntheticEvent<HTMLAnchorElement>) => {
+  e.currentTarget.href = `${protocol}${address}@${domain}`;
+};
 
 const Navbar = () => {
   const { lang, langs, t, setLang } = useSiteData();
@@ -57,17 +75,29 @@ const Navbar = () => {
       <div className={right}>
         <div className={icons}>
           <div>
-            <a href="">📯</a>
+            <a
+              className="flex"
+              onMouseEnter={decodeEmail}
+              onTouchStart={decodeEmail}
+              onFocus={decodeEmail}
+            >
+              <img width={20} src={email} />
+            </a>
           </div>
           <div>
-            <a href="">💾</a>
+            <a href={siteInfo.twitter}>
+              <img width={20} src={twitter} />
+            </a>
           </div>
           <div>
-            <a href="">💡</a>
+            <a href="">
+              <img width={20} src={facebook} />
+            </a>
           </div>
         </div>
         <div>
           <a
+            className={pointer}
             onClick={() => {
               setLang(otherLang);
             }}

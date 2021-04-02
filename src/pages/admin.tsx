@@ -76,7 +76,7 @@ const init = async (props: PageProps) => {
                     { label: "Box", value: "box" },
                   ],
                 },
-                { label: "Image", name: "image", widget: "image" },
+                { label: "Image", name: "image", widget: "text" },
                 {
                   label: "Image Placement",
                   name: "imagePlacement",

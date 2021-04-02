@@ -1,7 +1,7 @@
 title: Index
 description: Game Workers Unite Montréal is a democratic organization dedicated to advocating for workers’ rights in the games industry. Join us!
 sections:
-  - image: /images/index-01.png
+  - image: Illu_Line
     imagePlacement: right
     body: |-
       ## The games industry needs to change.
@@ -10,7 +10,7 @@ sections:
 
       Nous ne sommes pas un syndicat, mais nous travaillons dans le but d'en établir un. Montréal est une ville notable pour le nombre de compagnies du domaine des jeux vidéo qu'elle accueille – ici, nous avons un grand pouvoir. Ensemble, nous pouvons obtenir de meilleures conditions de travail, une plus grande reconnaissance et un soutien mutuel.
 
-  - image: /images/index-02.png
+  - image: Illu_Complain
     imagePlacement: left
     body: |-
       ## What do we do?
@@ -19,7 +19,7 @@ sections:
 
       Our members also establish committees to tackle projects such as producing literature and organizing educational workshops. We meet monthly in a general assembly to share the latest developments.
 
-  - image: /images/index-03.png
+  - image: Illu_Meeting
     imagePlacement: right
     body: |-
       ## Building a better industry together.
@@ -30,7 +30,7 @@ sections:
 
       Together, we can build a better industry for **all of us**.
 
-  - image: /images/index-04.png
+  - image: Illu_JoinGWU
     imagePlacement: right
     type: box
     body: |-
@@ -47,7 +47,7 @@ sections:
 
       All members must abide by our [Code of Conduct](/codeofconduct).
 
-  - image: /images/zines.png
+  - image: Illu_GDCZine
     imagePlacement: right
     body: |-
       # Zines and Resources
@@ -55,15 +55,16 @@ sections:
       Our zine contains a primer on what unions are, why the game industry should unionize, and advice on how to organize and recognize union-busting strategies.
 
       <Button href="https://zines.gwumtl.com">Read the Game Workers Unite Zine!</Button>
-  - image: /images/kyr.png
+
+  - image: Illu_KYR
     imagePlacement: left
     body: |-
       Written for a workshop co-organized with [Pixelles](https://pixelles.ca/) and [S'ATTAQ](http://sattaq.xyz/), this pamphlet and these slides present an introduction to Quebec labour law for employees, contractors and freelancers in the game industry.
 
-      <Button href="/kyr/KYR_Pamphlet_EN.pdf">
+      <Button href="/kyr/KYR_Pamphlet_FR.pdf">
         Get the Know Your Rights Pamphlet
       </Button>
 
-      <Button href="/kyr/KYR_Slides_EN.pdf">
+      <Button href="/kyr/KYR_Slides_FR.pdf">
         Check the Know Your Rights Workshop Slides
       </Button>

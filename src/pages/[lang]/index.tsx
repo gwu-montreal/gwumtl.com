@@ -28,6 +28,28 @@ const padXs = css`
   }
 `;
 
+const Pic = ({
+  imgName,
+  className,
+}: {
+  imgName: string;
+  className?: string;
+}) => {
+  return (
+    <picture>
+      <source
+        type="image/webp"
+        srcSet={`/images/${imgName}.webp 1x, /images/${imgName}@2x.webp 2x`}
+      />
+      <source
+        srcSet={`/images/${imgName}.png 1x, /images/${imgName}@2x.png 2x`}
+        type="image/png"
+      />
+      <img className={className} src={`/images/${imgName}.png`} />
+    </picture>
+  );
+};
+
 const Index = ({ sections, description }: PageProps) => {
   return (
     <>
@@ -47,7 +69,7 @@ const Index = ({ sections, description }: PageProps) => {
                           : "col-md-4 last-md"
                       }
                     >
-                      <img className="mw" src={image} />
+                      {image && <Pic className="mw" imgName={image} />}
                     </div>
                     <div
                       className={
@@ -77,7 +99,7 @@ const Index = ({ sections, description }: PageProps) => {
                               : "last-md"
                           }`}
                         >
-                          <img className="mw" src={image} />
+                          {image && <Pic className="mw" imgName={image} />}
                         </div>
                       </div>
                     </Box>

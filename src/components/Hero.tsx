@@ -1,9 +1,36 @@
 import React from "react";
-import { css } from "astroturf";
+import { css, stylesheet } from "astroturf";
 
 import Navbar from "~/components/Navbar";
 
-import logo from "../images/gwu-logo-TEMP.svg";
+import logo from "~/images/gwu-logo-TEMP.svg";
+
+// const { background } = stylesheet`
+//   .background {
+//     margin-bottom: 4em;
+
+//     width: 100vw;
+//     background-size: cover;
+//     background-position: center;
+//     padding: 64px 0;
+
+//     background-image: url("../images/hero-bg.jpg");
+
+//     /* stylelint-disable-next-line csstools/media-use-custom-media */
+//     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+//       background-image: url("../images/hero-bg@2x.jpg");
+//     }
+//   }
+
+//   :global(.webp) .background {
+//     background-image: url("../images/hero-bg.webp");
+
+//     /* stylelint-disable-next-line csstools/media-use-custom-media */
+//     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+//       background-image: url("../images/hero-bg@2x.webp");
+//     }
+//   }
+// `;
 
 const background = css`
   margin-bottom: 4em;
@@ -12,10 +39,15 @@ const background = css`
   background-size: cover;
   background-position: center;
   padding: 64px 0;
-  background-image: url("../images/hero-temp.jpg");
+  background-image: url("../images/hero-bg.jpg");
+
+  /* stylelint-disable-next-line csstools/media-use-custom-media */
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background-image: url("../images/hero-bg@2x.jpg");
+  }
 
   /* positioning and pseudo just for the gradient */
-  position: relative;
+  /* position: relative;
   z-index: 0;
   &::before {
     z-index: -1;
@@ -34,7 +66,7 @@ const background = css`
     );
     mix-blend-mode: multiply;
     opacity: 0.9;
-  }
+  } */
 `;
 
 const titlecontainer = css`
