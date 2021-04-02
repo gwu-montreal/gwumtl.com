@@ -30,8 +30,16 @@ if (!twitter) {
   );
 }
 
-/** @type {{domain: string, twitter: string}} */
+/** @type {string} */
+const facebook = pkg.facebook;
+if (!facebook) {
+  throw new Error(
+    "Expected Facebook account to be specified in package.json 'facebook' field!"
+  );
+}
+
+/** @type {{domain: string, twitter: string, facebook: string}} */
 module.exports = () => ({
   cacheable: true,
-  code: "module.exports = " + JSON.stringify({ domain, twitter }),
+  code: "module.exports = " + JSON.stringify({ domain, twitter, facebook }),
 });

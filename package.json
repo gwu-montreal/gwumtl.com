@@ -5,6 +5,7 @@
   "homepage": "https://gwumtl.com",
   "repository": "gwu-montreal/gwumtl.com",
   "twitter": "@gwu_montreal",
+  "facebook": "https://www.facebook.com/gwumtl",
   "scripts": {
     "start": "run-p dev:*",
     "dev:next": "next dev -p 3000",

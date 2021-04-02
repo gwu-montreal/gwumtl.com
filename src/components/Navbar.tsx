@@ -90,7 +90,7 @@ const Navbar = () => {
             </a>
           </div>
           <div>
-            <a href="">
+            <a href={siteInfo.facebook}>
               <img width={20} src={facebook} />
             </a>
           </div>
