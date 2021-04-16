@@ -1,7 +1,7 @@
-import React from "react";
-import { css } from "astroturf";
+import React, { useState } from "react";
 
 import Link from "~/components/LocalizedLink";
+import Drawer from "~/components/Drawer";
 import { useSiteData } from "~/lib/site-data";
 
 import siteInfo from "~/lib/site-info.server";
@@ -9,43 +9,6 @@ import siteInfo from "~/lib/site-info.server";
 import email from "~/images/email.svg";
 import twitter from "~/images/twitter.svg";
 import facebook from "~/images/facebook.svg";
-
-const navbar = css`
-  margin-bottom: 2em;
-
-  font-size: 1.3em;
-  color: #fcfcfc;
-  font-family: var(--font-headings);
-
-  display: flex;
-
-  > div {
-    margin-right: 2em;
-  }
-
-  a {
-    text-decoration: none;
-  }
-`;
-
-const pointer = css`
-  cursor: pointer;
-`;
-
-const icons = css`
-  display: flex;
-
-  > div {
-    margin-right: 1.5em;
-  }
-
-  margin-right: 2em;
-`;
-
-const right = css`
-  margin-left: auto;
-  display: flex;
-`;
 
 const protocol = "mailto:";
 const address = "gwumontreal";
@@ -62,51 +25,68 @@ const Navbar = () => {
   const otherLangLabel = langs[otherLang];
 
   return (
-    <div className={navbar}>
-      <div>
+    <nav className="px-6 mb-6 text-xl text-gray-50 font-display flex items-center">
+      <div className="md:hidden">
+        <NavbarDrawer />
+      </div>
+      <div className="hidden md:block">
         <Link href="/#info">{t("header:whoweare")}</Link>
       </div>
-      <div>
+      <div className="hidden md:block ml-6">
         <Link href="/#news">{t("header:newsandinfo")}</Link>
       </div>
-      <div>
+      <div className="hidden md:block ml-6">
         <Link href="/#getinvolved">{t("header:getinvolved")}</Link>
       </div>
-      <div className={right}>
-        <div className={icons}>
+      <div className="ml-auto flex items-center">
+        <div className="flex flex-shrink-0 items-center space-x-4 lg:space-x-8">
           <div>
             <a
-              className="flex"
               onMouseEnter={decodeEmail}
               onTouchStart={decodeEmail}
               onFocus={decodeEmail}
             >
-              <img width={20} src={email} />
+              <img className="h-5 w-auto" src={email} />
             </a>
           </div>
           <div>
             <a href={siteInfo.twitter}>
-              <img width={20} src={twitter} />
+              <img className="h-5 w-auto" src={twitter} />
             </a>
           </div>
           <div>
             <a href={siteInfo.facebook}>
-              <img width={20} src={facebook} />
+              <img className="h-5 w-auto" src={facebook} />
             </a>
           </div>
         </div>
-        <div>
-          <a
-            className={pointer}
-            onClick={() => {
-              setLang(otherLang);
-            }}
-          >
-            {otherLangLabel}
-          </a>
+        <div
+          className="cursor-pointer ml-8 lg:ml-16"
+          onClick={() => {
+            setLang(otherLang);
+          }}
+        >
+          {otherLangLabel}
         </div>
       </div>
-    </div>
+    </nav>
+  );
+};
+
+const NavbarDrawer = () => {
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  return (
+    <>
+      <div
+        className="cursor-pointer"
+        onClick={() => setDrawerOpen(!drawerOpen)}
+      >
+        (open)
+      </div>
+      <Drawer open={drawerOpen} onRequestClose={() => setDrawerOpen(false)}>
+        cool beans
+      </Drawer>
+    </>
   );
 };
 

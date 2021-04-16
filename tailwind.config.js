@@ -1,6 +1,6 @@
 module.exports = {
   mode: "jit",
-  purge: ["./src/**/*.tsx"],
+  purge: ["./src/**/*.{ts,tsx,css}"],
   theme: {
     fontFamily: {
       display: ["Poppins", "sans-serif"],

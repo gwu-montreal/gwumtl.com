@@ -4,7 +4,7 @@ import { css } from "astroturf";
 
 import Navbar from "~/components/Navbar";
 
-import logo from "~/images/gwu-logo-TEMP.svg";
+import logo from "~/images/gwu-logo.svg";
 
 const background = css`
   background-image: url("../images/hero-bg.jpg");
@@ -39,24 +39,20 @@ const background = css`
 
 const Hero = () => {
   return (
-    <div className={cx(background, "mb-16 bg-cover bg-center py-16")}>
+    <div
+      className={cx(
+        background,
+        "mb-12 bg-cover bg-center py-6 flex flex-col justify-center"
+      )}
+    >
       <Navbar />
-      <div className="FIXMErow FIXMEcenter-sm-only">
-        <div className="FIXMEcol-md-6 FIXMEcol-lg-4">
-          <img
-            height={400}
-            width={400}
-            src={logo}
-            className="max-w-full"
-            // temp
-            style={{ mixBlendMode: "screen" }}
-          />
+      <div className="mx-auto px-6 md:flex md:items-center">
+        <div className="mx-auto md:mx-0 mb-6 md:mb-0 flex-shrink-0 w-max">
+          <img src={logo} />
         </div>
-        <div className="FIXMEcol-md-6 FIXMEcol-lg-8 self-center">
-          <h1 className="font-display text-6xl text-gray-50 text-center sm:text-left">
-            GAME WORKERS UNITE MONTRÉAL
-          </h1>
-        </div>
+        <h1 className="max-w-xl font-display text-6xl text-gray-50 text-center md:text-left md:ml-12">
+          GAME WORKERS UNITE MONTRÉAL
+        </h1>
       </div>
     </div>
   );

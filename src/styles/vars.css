@@ -2,6 +2,9 @@
   --font-headings: "Poppins", sans-serif;
   --font-body: "Plex", sans-serif;
 
+  --color-bg: #eee;
+  --color-text: #101316;
+
   --color-main: #ff5a5a;
   --color-header: #e7382d;
 }
