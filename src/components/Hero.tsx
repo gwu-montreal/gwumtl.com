@@ -1,44 +1,12 @@
 import React from "react";
-import { css, stylesheet } from "astroturf";
+import cx from "classnames";
+import { css } from "astroturf";
 
 import Navbar from "~/components/Navbar";
 
 import logo from "~/images/gwu-logo-TEMP.svg";
 
-// const { background } = stylesheet`
-//   .background {
-//     margin-bottom: 4em;
-
-//     width: 100vw;
-//     background-size: cover;
-//     background-position: center;
-//     padding: 64px 0;
-
-//     background-image: url("../images/hero-bg.jpg");
-
-//     /* stylelint-disable-next-line csstools/media-use-custom-media */
-//     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-//       background-image: url("../images/hero-bg@2x.jpg");
-//     }
-//   }
-
-//   :global(.webp) .background {
-//     background-image: url("../images/hero-bg.webp");
-
-//     /* stylelint-disable-next-line csstools/media-use-custom-media */
-//     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-//       background-image: url("../images/hero-bg@2x.webp");
-//     }
-//   }
-// `;
-
 const background = css`
-  margin-bottom: 4em;
-
-  width: 100vw;
-  background-size: cover;
-  background-position: center;
-  padding: 64px 0;
   background-image: url("../images/hero-bg.jpg");
 
   /* stylelint-disable-next-line csstools/media-use-custom-media */
@@ -69,39 +37,25 @@ const background = css`
   } */
 `;
 
-const titlecontainer = css`
-  align-self: center;
-`;
-
-const title = css`
-  font-size: 4em;
-  line-height: 1.2;
-  color: #fcfcfc;
-
-  @media (--sm-only) {
-    text-align: center;
-  }
-`;
-
 const Hero = () => {
   return (
-    <div className={background}>
-      <div className="container">
-        <Navbar />
-        <div className="row center-sm-only">
-          <div className="col-md-6 col-lg-4">
-            <img
-              height={400}
-              width={400}
-              src={logo}
-              className="mw"
-              // temp
-              style={{ mixBlendMode: "screen" }}
-            />
-          </div>
-          <div className={`col-md-6 col-lg-8 ${titlecontainer}`}>
-            <h1 className={title}>GAME WORKERS UNITE MONTRÉAL</h1>
-          </div>
+    <div className={cx(background, "mb-16 bg-cover bg-center py-16")}>
+      <Navbar />
+      <div className="FIXMErow FIXMEcenter-sm-only">
+        <div className="FIXMEcol-md-6 FIXMEcol-lg-4">
+          <img
+            height={400}
+            width={400}
+            src={logo}
+            className="max-w-full"
+            // temp
+            style={{ mixBlendMode: "screen" }}
+          />
+        </div>
+        <div className="FIXMEcol-md-6 FIXMEcol-lg-8 self-center">
+          <h1 className="font-display text-6xl text-gray-50 text-center sm:text-left">
+            GAME WORKERS UNITE MONTRÉAL
+          </h1>
         </div>
       </div>
     </div>

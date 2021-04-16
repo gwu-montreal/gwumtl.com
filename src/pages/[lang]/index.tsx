@@ -5,6 +5,8 @@ import SEO from "~/components/SEO";
 import Hero from "~/components/Hero";
 import Box from "~/components/Box";
 
+import { mdx } from "~/styles/mdx";
+
 import type { GetStaticProps } from "next";
 
 interface PageProps {
@@ -16,17 +18,6 @@ interface PageProps {
   }[];
   description: string;
 }
-
-const sec = css`
-  margin-bottom: 2rem;
-`;
-
-const padXs = css`
-  @media (--xs-only) {
-    padding-left: 2.5em;
-    padding-right: 2.5em;
-  }
-`;
 
 const Pic = ({
   imgName,
@@ -60,7 +51,7 @@ const Index = ({ sections, description }: PageProps) => {
           switch (type) {
             case undefined:
               return (
-                <div key={i} className={sec}>
+                <div key={i} className="mb-8">
                   <div className="row center-sm-only">
                     <div
                       className={
@@ -86,7 +77,7 @@ const Index = ({ sections, description }: PageProps) => {
               return (
                 <div key={i} className="row">
                   <div className="col-sm-10 col-sm-offset-1">
-                    <Box className={padXs}>
+                    <Box className="px-10 sm:px-0">
                       <div className="row">
                         <div
                           className="col-sm-5 col-sm-offset-1"

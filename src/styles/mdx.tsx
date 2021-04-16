@@ -1,11 +1,6 @@
-.mdx {
-  h1,
-  h2,
-  h3,
-  h4 {
-    color: var(--color-header);
-  }
+import { css } from "astroturf";
 
+export const mdx = css`
   .link {
     text-decoration: none;
   }
@@ -24,4 +19,4 @@
     margin: 0 auto 1em;
     width: max-content;
   }
-}
+`;

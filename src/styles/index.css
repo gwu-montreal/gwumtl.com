@@ -1,10 +1,8 @@
 @charset "utf-8";
 
-@import url("./reboot.css");
 @import url("./fontface.css");
 @import url("./vars.css");
-@import url("./mdx.css");
-@import url("./grid.css");
+@import url("./tw.css");
 
 body {
   margin: 0;
@@ -15,36 +13,4 @@ body {
   line-height: 1.5;
   color: #101316;
   text-align: left;
-}
-
-a {
-  color: unset;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  font-family: var(--font-headings);
-  font-weight: normal;
-}
-
-blockquote {
-  margin: 0 0 1rem 1rem;
-  font-size: 1.3em;
-}
-
-/* util classes */
-
-.mw {
-  max-width: 100%;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
 }
