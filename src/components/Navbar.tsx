@@ -9,6 +9,7 @@ import siteInfo from "~/lib/site-info.server";
 import email from "~/images/email.svg";
 import twitter from "~/images/twitter.svg";
 import facebook from "~/images/facebook.svg";
+import menu from "~/images/menu.svg";
 
 const protocol = "mailto:";
 const address = "gwumontreal";
@@ -25,17 +26,17 @@ const Navbar = () => {
   const otherLangLabel = langs[otherLang];
 
   return (
-    <nav className="px-6 mb-6 text-xl text-gray-50 font-display flex items-center">
+    <nav className="px-6 mb-6 text-xl text-gray-50 font-display flex items-center lg:w-[1000px] lg:mx-auto">
       <div className="md:hidden">
         <NavbarDrawer />
       </div>
       <div className="hidden md:block">
         <Link href="/#info">{t("header:whoweare")}</Link>
       </div>
-      <div className="hidden md:block ml-6">
+      <div className="hidden md:block ml-6 lg:ml-9">
         <Link href="/#news">{t("header:newsandinfo")}</Link>
       </div>
-      <div className="hidden md:block ml-6">
+      <div className="hidden md:block ml-6 lg:ml-9 bg-black bg-opacity-60 rounded-full px-5 py-2">
         <Link href="/#getinvolved">{t("header:getinvolved")}</Link>
       </div>
       <div className="ml-auto flex items-center">
@@ -81,7 +82,7 @@ const NavbarDrawer = () => {
         className="cursor-pointer"
         onClick={() => setDrawerOpen(!drawerOpen)}
       >
-        (open)
+        <img className="h-5 w-auto" src={menu} />
       </div>
       <Drawer open={drawerOpen} onRequestClose={() => setDrawerOpen(false)}>
         cool beans

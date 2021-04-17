@@ -40,17 +40,19 @@ const background = css`
 const Hero = () => {
   return (
     <div
-      className={cx(
-        background,
-        "mb-12 bg-cover bg-center py-6 flex flex-col justify-center"
-      )}
+      className={cx(background, "mb-12 bg-cover bg-center py-6 flex flex-col")}
     >
       <Navbar />
-      <div className="mx-auto px-6 md:flex md:items-center">
+      <div className="mx-auto px-6 md:flex md:items-center md:justify-center">
         <div className="mx-auto md:mx-0 mb-6 md:mb-0 flex-shrink-0 w-max">
           <img src={logo} />
         </div>
-        <h1 className="max-w-xl font-display text-6xl text-gray-50 text-center md:text-left md:ml-12">
+        <h1
+          className={cx(
+            "max-w-xl font-display text-6xl text-gray-50",
+            "text-center md:text-left md:ml-12 md:basis-0 lg:basis-auto"
+          )}
+        >
           GAME WORKERS UNITE MONTRÉAL
         </h1>
       </div>
