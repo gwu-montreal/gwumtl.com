@@ -7,6 +7,9 @@ module.exports = {
       body: ["Plex", "sans-serif"],
     },
     extend: {
+      spacing: {
+        container: "1000px",
+      },
       typography: {
         DEFAULT: {
           css: {

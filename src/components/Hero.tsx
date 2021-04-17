@@ -40,7 +40,10 @@ const background = css`
 const Hero = () => {
   return (
     <div
-      className={cx(background, "mb-12 bg-cover bg-center py-6 flex flex-col")}
+      className={cx(
+        background,
+        "mb-12 bg-cover bg-center pt-6 pb-8 flex flex-col"
+      )}
     >
       <Navbar />
       <div className="mx-auto px-6 md:flex md:items-center md:justify-center">

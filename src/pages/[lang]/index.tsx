@@ -1,5 +1,5 @@
 import React from "react";
-import { css } from "astroturf";
+import cx from "classnames";
 
 import SEO from "~/components/SEO";
 import Hero from "~/components/Hero";
@@ -46,28 +46,20 @@ const Index = ({ sections, description }: PageProps) => {
     <>
       <SEO title="GWU Montréal" description={description} />
       <Hero />
-      <div className="container mdx">
+      <div className="lg:w-container px-2 mx-auto">
         {sections.map(({ type, content, image, imagePlacement }, i) => {
           switch (type) {
             case undefined:
               return (
                 <div key={i} className="mb-8">
-                  <div className="row center-sm-only">
+                  <div className="md:flex">
                     <div
-                      className={
-                        imagePlacement === "left"
-                          ? "col-md-4 col-md-offset-1"
-                          : "col-md-4 last-md"
-                      }
+                      className={cx({ "order-1": imagePlacement !== "left" })}
                     >
-                      {image && <Pic className="mw" imgName={image} />}
+                      {image && <Pic className="" imgName={image} />}
                     </div>
                     <div
-                      className={
-                        imagePlacement === "left"
-                          ? "col-md-6"
-                          : "col-md-6 col-md-offset-1"
-                      }
+                      className={cx("prose", mdx)}
                       dangerouslySetInnerHTML={{ __html: content }}
                     />
                   </div>
@@ -75,22 +67,20 @@ const Index = ({ sections, description }: PageProps) => {
               );
             case "box":
               return (
-                <div key={i} className="row">
-                  <div className="col-sm-10 col-sm-offset-1">
-                    <Box className="px-10 sm:px-0">
-                      <div className="row">
+                <div key={i}>
+                  <div className="lg:-mx-2">
+                    <Box className="px-10 sm:px-2">
+                      <div className="md:flex">
                         <div
-                          className="col-sm-5 col-sm-offset-1"
+                          className={cx("prose", mdx)}
                           dangerouslySetInnerHTML={{ __html: content }}
                         />
                         <div
-                          className={`text-center mx-auto col-md-5 ${
-                            imagePlacement === "left"
-                              ? "col-md-offset-1"
-                              : "last-md"
-                          }`}
+                          className={cx({
+                            "order-1": imagePlacement !== "left",
+                          })}
                         >
-                          {image && <Pic className="mw" imgName={image} />}
+                          {image && <Pic imgName={image} />}
                         </div>
                       </div>
                     </Box>
