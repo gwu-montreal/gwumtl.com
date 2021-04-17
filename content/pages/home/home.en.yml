@@ -13,7 +13,7 @@ sections:
   - image: Illu_Complain
     imagePlacement: left
     body: |-
-      ## What do we do?
+      ## We're here to help.
 
       Our main focus is on supporting workers who want to unionize their workplace. We provide training and peer support to workers who are in difficult situations, share information about workers’ legal rights, and connect people with legal support, community organizations, and existing unions.
 
@@ -59,7 +59,9 @@ sections:
   - image: Illu_KYR
     imagePlacement: left
     body: |-
-      Written for a workshop co-organized with [Pixelles](https://pixelles.ca/) and [S'ATTAQ](http://sattaq.xyz/), this pamphlet and these slides present an introduction to Quebec labour law for employees, contractors and freelancers in the game industry.
+      ## Know Your Rights!
+
+      This pamphlet and set of workshop slides (created for a workshop co-organized with [Pixelles](https://pixelles.ca/) and [S'ATTAQ](http://sattaq.xyz/)) present an introduction to Quebec labour law for employees, contractors and freelancers in the game industry.
 
       <Button href="/kyr/KYR_Pamphlet_EN.pdf">
         Get the Know Your Rights Pamphlet
