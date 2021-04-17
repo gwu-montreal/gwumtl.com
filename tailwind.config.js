@@ -7,6 +7,9 @@ module.exports = {
       body: ["Plex", "sans-serif"],
     },
     extend: {
+      colors: {
+        primary: "var(--color-primary)",
+      },
       spacing: {
         container: "1000px",
       },

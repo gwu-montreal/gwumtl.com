@@ -3,9 +3,6 @@ import cx from "classnames";
 
 import SEO from "~/components/SEO";
 import Hero from "~/components/Hero";
-import Box from "~/components/Box";
-
-import { mdx } from "~/styles/mdx";
 
 import type { GetStaticProps } from "next";
 
@@ -48,56 +45,32 @@ const Index = ({ sections, description }: PageProps) => {
       <Hero />
       <div className="lg:w-container px-2 sm:px-6 mx-auto">
         {sections.map(({ type, content, image, imagePlacement }, i) => {
-          switch (type) {
-            case undefined:
-              return (
-                <div key={i} className="mb-12">
-                  <div className="md:flex">
-                    <div
-                      className={cx(
-                        "flex-shrink-0 mx-auto mb-8 md:mb-0 md:w-2/5 lg:w-1/3",
-                        imagePlacement === "left"
-                          ? "md:ml-0 md:mr-8"
-                          : "md:ml-8 md:mr-0 order-1"
-                      )}
-                    >
-                      {image && <Pic className="mx-auto" imgName={image} />}
-                    </div>
-                    <div
-                      className={cx("prose", mdx, "mx-auto md:mx-0")}
-                      dangerouslySetInnerHTML={{ __html: content }}
-                    />
+          return (
+            <div key={i} className="mb-12">
+              <div
+                className={cx({
+                  "shadow-lg bg-gray-50 lg:-mx-2 p-10 sm:p-12": type === "box",
+                })}
+              >
+                <div className="md:flex">
+                  <div
+                    className={cx(
+                      "flex-shrink-0 mx-auto mb-8 md:mb-0 md:w-2/5 lg:w-1/3",
+                      imagePlacement === "left"
+                        ? "md:ml-0 md:mr-8"
+                        : "md:ml-8 md:mr-0 order-1"
+                    )}
+                  >
+                    {image && <Pic className="mx-auto" imgName={image} />}
                   </div>
+                  <div
+                    className="prose mx-auto md:mx-0"
+                    dangerouslySetInnerHTML={{ __html: content }}
+                  />
                 </div>
-              );
-            case "box":
-              return (
-                <div key={i}>
-                  <div className="lg:-mx-2">
-                    <Box className="px-10 sm:px-12">
-                      <div className="md:flex">
-                        <div
-                          className={cx("prose", mdx)}
-                          dangerouslySetInnerHTML={{ __html: content }}
-                        />
-                        <div
-                          className={cx(
-                            "flex-shrink-0 mx-auto mb-8 md:mb-0 md:w-2/5 lg:w-1/3",
-                            imagePlacement === "left"
-                              ? "md:ml-0 md:mr-8"
-                              : "md:ml-8 md:mr-0 order-1"
-                          )}
-                        >
-                          {image && <Pic className="mx-auto" imgName={image} />}
-                        </div>
-                      </div>
-                    </Box>
-                  </div>
-                </div>
-              );
-            default:
-              throw new Error(`Unknown section type: "${type}" (in index)`);
-          }
+              </div>
+            </div>
+          );
         })}
       </div>
     </>
