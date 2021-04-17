@@ -4,7 +4,10 @@ import { css } from "astroturf";
 
 import Navbar from "~/components/Navbar";
 
-import logo from "~/images/gwu-logo.svg";
+import { useSiteData } from "~/lib/site-data";
+
+import logoEn from "~/images/gwu-logo-en.svg";
+import logoFr from "~/images/gwu-logo-fr.svg";
 
 const background = css`
   background-image: url("../images/hero-bg.jpg");
@@ -38,6 +41,8 @@ const background = css`
 `;
 
 const Hero = () => {
+  const { lang } = useSiteData();
+
   return (
     <div
       className={cx(
@@ -48,7 +53,7 @@ const Hero = () => {
       <Navbar />
       <div className="mx-auto px-6 md:flex md:items-center md:justify-center">
         <div className="mx-auto md:mx-0 mb-6 md:mb-0 flex-shrink-0 w-max">
-          <img src={logo} />
+          <img src={lang === "fr" ? logoFr : logoEn} />
         </div>
         <h1
           className={cx(
