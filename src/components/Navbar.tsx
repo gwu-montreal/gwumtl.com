@@ -11,6 +11,8 @@ import twitter from "~/images/twitter.svg";
 import facebook from "~/images/facebook.svg";
 import menu from "~/images/menu.svg";
 
+const twitterUrl = `https://twitter.com/${siteInfo.twitter.slice(1)}`;
+
 const protocol = "mailto:";
 const address = "gwumontreal";
 const domain = "gmail.com";
@@ -51,7 +53,7 @@ const Navbar = () => {
             </a>
           </div>
           <div>
-            <a href={siteInfo.twitter}>
+            <a href={twitterUrl}>
               <img className="h-5 w-auto" src={twitter} />
             </a>
           </div>
