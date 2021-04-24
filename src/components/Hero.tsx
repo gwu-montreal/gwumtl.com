@@ -47,11 +47,11 @@ const Hero = () => {
     <div
       className={cx(
         background,
-        "mb-12 bg-cover bg-center pt-6 pb-8 flex flex-col"
+        "mb-20 bg-cover bg-center pt-6 pb-8 flex flex-col"
       )}
     >
       <Navbar />
-      <div className="mx-auto px-6 md:flex md:items-center md:justify-center">
+      <div className="mx-auto px-8 lg:px-16 md:flex md:items-center md:justify-center">
         <div className="mx-auto md:mx-0 mb-6 md:mb-0 flex-shrink-0 w-max">
           <img src={lang === "fr" ? logoFr : logoEn} />
         </div>

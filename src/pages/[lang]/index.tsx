@@ -43,31 +43,28 @@ const Index = ({ sections, description }: PageProps) => {
     <>
       <SEO title="GWU Montréal" description={description} />
       <Hero />
-      <div className="lg:w-container px-2 sm:px-6 mx-auto">
+      <div className="xl:w-container px-8 lg:px-16 mx-auto">
         {sections.map(({ type, content, image, imagePlacement }, i) => {
           return (
-            <div key={i} className="mb-12">
-              <div
-                className={cx({
-                  "shadow-lg bg-gray-50 lg:-mx-2 p-10 sm:p-12": type === "box",
-                })}
-              >
-                <div className="md:flex">
-                  <div
-                    className={cx(
-                      "flex-shrink-0 mx-auto mb-8 md:mb-0 md:w-2/5 lg:w-1/3",
-                      imagePlacement === "left"
-                        ? "md:ml-0 md:mr-8"
-                        : "md:ml-8 md:mr-0 order-1"
-                    )}
-                  >
-                    {image && <Pic className="mx-auto" imgName={image} />}
-                  </div>
-                  <div
-                    className="prose mx-auto md:mx-0"
-                    dangerouslySetInnerHTML={{ __html: content }}
-                  />
+            <div key={i} className={cx(
+              "mb-20",
+              {"shadow-lg bg-gray-50 lg:-mx-2 p-10 sm:p-12": type === "box"}
+            )}>
+              <div className="lg:flex">
+                <div
+                  className={cx(
+                    "flex-shrink-0 mx-auto mb-8 sm:mb-4 sm:w-2/5 md:w-80 xl:float-none xl:mb-0 xl:w-96",
+                    imagePlacement === "left"
+                      ? "sm:float-left sm:ml-0 sm:mr-8"
+                      : "sm:float-right sm:ml-8 sm:mr-0 order-1"
+                  )}
+                >
+                  {image && <Pic className="mx-auto" imgName={image} />}
                 </div>
+                <div
+                  className="prose mx-auto md:mx-0"
+                  dangerouslySetInnerHTML={{ __html: content }}
+                />
               </div>
             </div>
           );

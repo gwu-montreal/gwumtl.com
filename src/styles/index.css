@@ -4,6 +4,22 @@
 @import url("./vars.css");
 @import url("./tw.css");
 
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 400px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 800px) {
+  html {
+    font-size: 18px;
+  }
+}
+
 body {
   margin: 0;
   font-size: 1rem;

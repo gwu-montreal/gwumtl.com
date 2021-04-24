@@ -28,7 +28,7 @@ const Navbar = () => {
   const otherLangLabel = langs[otherLang];
 
   return (
-    <nav className="px-6 mb-6 text-xl text-gray-50 font-display flex items-center lg:w-container lg:mx-auto">
+    <nav className="px-8 lg:px-16 mb-8 text-xl text-gray-50 font-display flex items-center xl:w-container xl:mx-auto">
       <div className="md:hidden">
         <NavbarDrawer />
       </div>

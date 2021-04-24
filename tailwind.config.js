@@ -2,6 +2,13 @@ module.exports = {
   mode: "jit",
   purge: ["./src/**/*.{ts,tsx,css}"],
   theme: {
+    screens: {
+      'sm': "500px",
+      'md': "800px",
+      'lg': "1000px",
+      'xl': "1200px",
+      '2xl': "1500px"
+    },
     fontFamily: {
       display: ["Poppins", "sans-serif"],
       body: ["Plex", "sans-serif"],
@@ -11,7 +18,7 @@ module.exports = {
         primary: "var(--color-primary)",
       },
       spacing: {
-        container: "1000px",
+        container: "1200px",
       },
       typography: {
         DEFAULT: {
@@ -22,6 +29,14 @@ module.exports = {
               fontFamily: "Poppins, sans-serif",
               fontWeight: "normal",
             },
+            h1: {
+              fontSize: "2.5rem",
+              marginBottom: "1.3rem"
+            },
+            h2: {
+              fontSize: "1.4rem",
+              marginBottom: "1rem"
+            }
           },
         },
       },
