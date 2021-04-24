@@ -23,6 +23,7 @@ module.exports = {
       typography: {
         DEFAULT: {
           css: {
+            maxWidth: "none",
             color: "#101316",
             "h1,h2,h3,h4": {
               color: "var(--color-header)",
