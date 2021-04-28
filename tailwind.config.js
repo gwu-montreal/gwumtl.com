@@ -15,6 +15,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        main: "var(--color-main)",
         primary: "var(--color-primary)",
       },
       spacing: {

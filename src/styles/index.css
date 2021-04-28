@@ -5,7 +5,13 @@
 @import url("./tw.css");
 
 html {
-  font-size: 14px;
+  font-size: 12px;
+}
+
+@media (min-width: 300px) {
+  html {
+    font-size: 14px;
+  }
 }
 
 @media (min-width: 400px) {
