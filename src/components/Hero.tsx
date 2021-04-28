@@ -45,6 +45,7 @@ const Hero = () => {
 
   return (
     <div
+      id="top"
       className={cx(
         background,
         "bg-cover bg-center py-8 flex flex-col"

@@ -3,6 +3,7 @@ import cx from "classnames";
 
 import SEO from "~/components/SEO";
 import Hero from "~/components/Hero";
+import Footer from "~/components/Footer";
 
 import type { GetStaticProps } from "next";
 
@@ -80,6 +81,7 @@ const Index = ({ sections, description }: PageProps) => {
           );
         })}
       </div>
+      <Footer />
     </>
   );
 };
