@@ -28,17 +28,17 @@ const Navbar = () => {
   const otherLangLabel = langs[otherLang];
 
   return (
-    <nav className="px-6 mb-6 text-xl text-gray-50 font-display flex items-center lg:w-container lg:mx-auto">
-      <div className="md:hidden">
+    <nav className="px-8 lg:px-16 mb-8 xl:text-lg text-gray-50 font-display flex items-center xl:w-container xl:mx-auto">
+      <div className="lg:hidden">
         <NavbarDrawer />
       </div>
-      <div className="hidden md:block">
+      <div className="hidden lg:block mr-8 xl:mr-12">
         <Link href="/#info">{t("header:whoweare")}</Link>
       </div>
-      <div className="hidden md:block ml-6 lg:ml-9">
+      <div className="hidden lg:block mr-8 xl:mr-12">
         <Link href="/#news">{t("header:newsandinfo")}</Link>
       </div>
-      <div className="hidden md:block ml-6 lg:ml-9 bg-black bg-opacity-60 rounded-full px-5 py-2">
+      <div className="hidden lg:block mr-8 xl:mr-12 bg-black bg-opacity-60 rounded-full px-5 py-2">
         <Link href="/#getinvolved">{t("header:getinvolved")}</Link>
       </div>
       <div className="ml-auto flex items-center">
@@ -64,7 +64,7 @@ const Navbar = () => {
           </div>
         </div>
         <div
-          className="cursor-pointer ml-8 lg:ml-16"
+          className="cursor-pointer ml-8 xl:ml-12"
           onClick={() => {
             setLang(otherLang);
           }}

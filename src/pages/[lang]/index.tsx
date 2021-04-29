@@ -3,6 +3,7 @@ import cx from "classnames";
 
 import SEO from "~/components/SEO";
 import Hero from "~/components/Hero";
+import Footer from "~/components/Footer";
 
 import type { GetStaticProps } from "next";
 
@@ -43,36 +44,44 @@ const Index = ({ sections, description }: PageProps) => {
     <>
       <SEO title="GWU Montréal" description={description} />
       <Hero />
-      <div className="lg:w-container px-2 sm:px-6 mx-auto">
+      <div className="mx-auto px-8 mt-16 lg:px-16 lg:mt-24 xl:w-container">
         {sections.map(({ type, content, image, imagePlacement }, i) => {
           return (
-            <div key={i} className="mb-12">
-              <div
-                className={cx({
-                  "shadow-lg bg-gray-50 lg:-mx-2 p-10 sm:p-12": type === "box",
-                })}
-              >
-                <div className="md:flex">
-                  <div
-                    className={cx(
-                      "flex-shrink-0 mx-auto mb-8 md:mb-0 md:w-2/5 lg:w-1/3",
+            <div key={i} className={cx(
+              "mb-16 lg:mb-24",
+              {"shadow-lg bg-gray-50 p-8 -mx-8 lg:px-16 lg:py-12 lg:-mx-16": type === "box"}
+            )}>
+              <div className={cx(type === "box" ? "flex flex-wrap sm:flex-nowrap" : "lg:flex")}>
+                <div
+                  className={cx(
+                    "flex-shrink-0 mx-auto",
+                    imagePlacement !== "left" && "order-1",
+                    type === "box" ? "mt-6 sm:mt-0 sm:pl-6 sm:w-5/12 md:w-2/5" : "mb-6 sm:mb-4 sm:w-2/5 md:w-80 lg:float-none lg:mb-0",
+                    type !== "box" && (
                       imagePlacement === "left"
-                        ? "md:ml-0 md:mr-8"
-                        : "md:ml-8 md:mr-0 order-1"
-                    )}
-                  >
-                    {image && <Pic className="mx-auto" imgName={image} />}
-                  </div>
-                  <div
-                    className="prose mx-auto md:mx-0"
-                    dangerouslySetInnerHTML={{ __html: content }}
-                  />
+                      ? "sm:float-left sm:ml-0 sm:mr-8"
+                      : "sm:float-right sm:ml-8 sm:mr-0"
+                    )
+                  )}
+                >
+                  {image && <Pic className={cx(
+                    "mx-auto",
+                    type === "box" ? "max-h-64" : "max-h-56"
+                  )} imgName={image} />}
                 </div>
+                <div
+                  className={cx(
+                    "prose mx-auto md:mx-0",
+                    {"text-xl": type === "box"}
+                  )}
+                  dangerouslySetInnerHTML={{ __html: content }}
+                />
               </div>
             </div>
           );
         })}
       </div>
+      <Footer />
     </>
   );
 };
