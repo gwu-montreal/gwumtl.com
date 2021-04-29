@@ -19,7 +19,7 @@ module.exports = {
         primary: "var(--color-primary)",
       },
       spacing: {
-        container: "1200px",
+        container: "1180px",
       },
       typography: {
         DEFAULT: {
