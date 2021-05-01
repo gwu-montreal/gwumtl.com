@@ -4,6 +4,8 @@ sections:
   - image: Illu_Distribution
     imagePlacement: right
     body: |-
+      <div id="info" />
+
       ## The games industry needs to change.
 
       Game Workers Unite Montréal is a democratic organization dedicated to advocating for unions and for workers’ rights in the games industry. GWU is not a union, but we’re working to help build them across the industry.
@@ -34,6 +36,8 @@ sections:
     imagePlacement: right
     type: box
     body: |-
+      <div id="join" />
+
       # Get Involved!
 
       Click the button below to start the process of joining GWU Montréal. We'll be happy to answer your questions!
@@ -50,6 +54,8 @@ sections:
   - image: Illu_GDCZine
     imagePlacement: right
     body: |-
+      <div id="zines" />
+
       # Zines and Resources
 
       Our zine contains a primer on what unions are, why the game industry should unionize, and advice on how to organize and recognize union-busting strategies.

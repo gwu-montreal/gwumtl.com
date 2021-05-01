@@ -18,7 +18,7 @@ module.exports = {
         main: "var(--color-main)",
         primary: "var(--color-primary)",
       },
-      spacing: {
+      maxWidth: {
         container: "1180px",
       },
       typography: {
