@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 // import Drawer from "~/components/Drawer";
 import { useSiteData } from "~/lib/site-data";
@@ -9,7 +9,7 @@ import siteInfo from "~/lib/site-info.server";
 import email from "~/images/email.svg";
 import twitter from "~/images/twitter.svg";
 import facebook from "~/images/facebook.svg";
-import menu from "~/images/menu.svg";
+// import menu from "~/images/menu.svg";
 
 const twitterUrl = `https://twitter.com/${siteInfo.twitter.slice(1)}`;
 
@@ -88,21 +88,21 @@ const Navbar = () => {
   );
 };
 
-const NavbarDrawer = () => {
-  const [drawerOpen, setDrawerOpen] = useState(false);
-  return (
-    <>
-      <div
-        className="cursor-pointer"
-        onClick={() => setDrawerOpen(!drawerOpen)}
-      >
-        <img className="h-5 w-auto" src={menu} />
-      </div>
-      <Drawer open={drawerOpen} onRequestClose={() => setDrawerOpen(false)}>
-        cool beans
-      </Drawer>
-    </>
-  );
-};
+// const NavbarDrawer = () => {
+//   const [drawerOpen, setDrawerOpen] = useState(false);
+//   return (
+//     <>
+//       <div
+//         className="cursor-pointer"
+//         onClick={() => setDrawerOpen(!drawerOpen)}
+//       >
+//         <img className="h-5 w-auto" src={menu} />
+//       </div>
+//       <Drawer open={drawerOpen} onRequestClose={() => setDrawerOpen(false)}>
+//         cool beans
+//       </Drawer>
+//     </>
+//   );
+// };
 
 export default Navbar;
