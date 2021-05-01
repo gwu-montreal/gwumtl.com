@@ -1,3 +1,5 @@
+import { useCallback } from "react";
+
 // naive truncate with bias to split on space
 export const summarize = (text: string, len: number) => {
   if (text.length < len) return text;
@@ -10,4 +12,12 @@ export const summarize = (text: string, len: number) => {
     }
   }
   return text.slice(0, i) + "…";
+};
+
+export const useScrollTo = (anchor: string) => {
+  return useCallback(
+    () =>
+      document.getElementById(anchor)?.scrollIntoView({ behavior: "smooth" }),
+    [anchor]
+  );
 };

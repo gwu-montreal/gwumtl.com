@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-import Link from "~/components/LocalizedLink";
 import Drawer from "~/components/Drawer";
 import { useSiteData } from "~/lib/site-data";
+import { useScrollTo } from "~/lib/util";
 
 import siteInfo from "~/lib/site-info.server";
 
@@ -24,6 +24,11 @@ const decodeEmail = (e: React.SyntheticEvent<HTMLAnchorElement>) => {
 const Navbar = () => {
   const { lang, langs, t, setLang } = useSiteData();
 
+  // these anchors are defined in the markdown as empty div tags!
+  const scrollToInfo = useScrollTo("info");
+  const scrollToZines = useScrollTo("zines");
+  const scrollToJoin = useScrollTo("join");
+
   const otherLang = lang === "en" ? "fr" : "en";
   const otherLangLabel = langs[otherLang];
 
@@ -33,13 +38,19 @@ const Navbar = () => {
         <NavbarDrawer />
       </div>
       <div className="hidden lg:block mr-8 xl:mr-12">
-        <Link href="/#info">{t("header:whoweare")}</Link>
+        <div className="cursor-pointer" onClick={scrollToInfo}>
+          {t("header:whoweare")}
+        </div>
       </div>
       <div className="hidden lg:block mr-8 xl:mr-12">
-        <Link href="/#news">{t("header:newsandinfo")}</Link>
+        <div className="cursor-pointer" onClick={scrollToZines}>
+          {t("header:newsandinfo")}
+        </div>
       </div>
       <div className="hidden lg:block mr-8 xl:mr-12 bg-black bg-opacity-60 rounded-full px-5 py-2">
-        <Link href="/#getinvolved">{t("header:getinvolved")}</Link>
+        <div className="cursor-pointer" onClick={scrollToJoin}>
+          {t("header:getinvolved")}
+        </div>
       </div>
       <div className="ml-auto flex items-center">
         <div className="flex flex-shrink-0 items-center space-x-4 lg:space-x-8">
