@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import Drawer from "~/components/Drawer";
+// import Drawer from "~/components/Drawer";
 import { useSiteData } from "~/lib/site-data";
 import { useScrollTo } from "~/lib/util";
 
@@ -34,9 +34,9 @@ const Navbar = () => {
 
   return (
     <nav className="px-8 lg:px-16 mb-8 xl:text-lg text-gray-50 font-display flex items-center">
-      <div className="lg:hidden mr-8">
+      {/* <div className="lg:hidden mr-8">
         <NavbarDrawer />
-      </div>
+      </div> */}
       <div className="hidden lg:block mr-8 xl:mr-12">
         <div className="cursor-pointer" onClick={scrollToInfo}>
           {t("header:whoweare")}
