@@ -18,7 +18,7 @@ const background = css`
   }
 
   /* positioning and pseudo just for the gradient */
-  /* position: relative;
+  position: relative;
   z-index: 0;
   &::before {
     z-index: -1;
@@ -28,16 +28,9 @@ const background = css`
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.8) 1.32%,
-      rgba(50, 5, 5, 0.8) 27.91%,
-      rgba(52, 7, 7, 0.8) 76.59%,
-      rgba(32, 4, 4, 0.8) 98.31%
-    );
-    mix-blend-mode: multiply;
-    opacity: 0.9;
-  } */
+    background: linear-gradient(0deg, #f98aa0bf 0%, #771412a1 38%, #7b100e40 46%, #a23c3500 72%);
+    mix-blend-mode: color;
+  }
 `;
 
 const Hero = () => {
@@ -48,22 +41,25 @@ const Hero = () => {
       id="top"
       className={cx(
         background,
-        "bg-cover bg-center py-8 flex flex-col"
+        "bg-cover bg-center py-8"
       )}
     >
-      <Navbar />
-      <div className="mx-auto max-w-full p-8 lg:px-16 md:flex md:items-center md:justify-center">
-        <div className="flex-shrink-0 w-max max-w-full mx-auto mb-6 md:mx-0 md:mb-0">
-          <img src={lang === "fr" ? logoFr : logoEn} />
+      <div className="max-w-container mx-auto flex flex-col">
+        <Navbar />
+        <div className="max-w-full mx-auto p-8 lg:px-16 md:flex md:items-center md:justify-center">
+          <div className="flex-shrink-0 w-max max-w-full mx-auto mb-6 md:mx-0 md:mb-0">
+            <img src={lang === "fr" ? logoFr : logoEn} />
+          </div>
+          <h1
+            className={cx(
+              css`max-width:33rem`,
+              "font-display text-5xl sm:text-6xl text-gray-50",
+              "text-center break-words md:text-left md:ml-12 md:basis-0 lg:basis-auto"
+            )}
+          >
+            GAME WORKERS UNITE MONTRÉAL
+          </h1>
         </div>
-        <h1
-          className={cx(
-            "max-w-xl font-display text-5xl sm:text-6xl text-gray-50",
-            "text-center md:text-left md:ml-12 md:basis-0 lg:basis-auto"
-          )}
-        >
-          GAME WORKERS UNITE MONTRÉAL
-        </h1>
       </div>
     </div>
   );

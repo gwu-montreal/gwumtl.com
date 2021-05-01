@@ -28,8 +28,8 @@ const Navbar = () => {
   const otherLangLabel = langs[otherLang];
 
   return (
-    <nav className="px-8 lg:px-16 mb-8 xl:text-lg text-gray-50 font-display flex items-center xl:w-container xl:mx-auto">
-      <div className="lg:hidden">
+    <nav className="px-8 lg:px-16 mb-8 xl:text-lg text-gray-50 font-display flex items-center">
+      <div className="lg:hidden mr-8">
         <NavbarDrawer />
       </div>
       <div className="hidden lg:block mr-8 xl:mr-12">
@@ -69,7 +69,8 @@ const Navbar = () => {
             setLang(otherLang);
           }}
         >
-          {otherLangLabel}
+          <span className="capitalize sm:hidden">{otherLang}</span>
+          <span className="hidden sm:inline">{otherLangLabel}</span>
         </div>
       </div>
     </nav>
