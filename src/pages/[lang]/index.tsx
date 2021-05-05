@@ -2,6 +2,7 @@ import React from "react";
 import cx from "classnames";
 
 import SEO from "~/components/SEO";
+import Pic from "~/components/Pic";
 import Hero from "~/components/Hero";
 import Footer from "~/components/Footer";
 
@@ -16,28 +17,6 @@ interface PageProps {
   }[];
   description: string;
 }
-
-const Pic = ({
-  imgName,
-  className,
-}: {
-  imgName: string;
-  className?: string;
-}) => {
-  return (
-    <picture>
-      <source
-        type="image/webp"
-        srcSet={`/images/${imgName}.webp 1x, /images/${imgName}@2x.webp 2x`}
-      />
-      <source
-        srcSet={`/images/${imgName}.png 1x, /images/${imgName}@2x.png 2x`}
-        type="image/png"
-      />
-      <img className={className} src={`/images/${imgName}.png`} />
-    </picture>
-  );
-};
 
 const Index = ({ sections, description }: PageProps) => {
   return (
@@ -67,9 +46,9 @@ const Index = ({ sections, description }: PageProps) => {
                     "sm:flex-shrink-0 mx-auto order-3",
                     { "sm:order-1": imagePlacement === "left" },
                     type === "box"
-                    ? "mt-6 md:mt-0 md:pl-6 md:w-2/5"
-                    : [
-                      "mt-6 sm:mt-0 sm:mb-4 sm:w-2/5 md:w-80 lg:float-none lg:mb-0",
+                      ? "mt-6 md:mt-0 md:pl-6 md:w-2/5"
+                      : [
+                          "mt-6 sm:mt-0 sm:mb-4 sm:w-2/5 md:w-80 lg:float-none lg:mb-0",
                           {
                             "sm:float-left sm:ml-0 sm:mr-8":
                               imagePlacement === "left",
@@ -78,14 +57,14 @@ const Index = ({ sections, description }: PageProps) => {
                             "sm:float-right sm:ml-8 sm:mr-0":
                               imagePlacement === "right",
                           },
-                    ]
+                        ]
                   )}
                 >
                   {image && (
                     <Pic
                       className={cx(
-                    "mx-auto",
-                    type === "box" ? "max-h-64" : "max-h-56"
+                        "mx-auto",
+                        type === "box" ? "max-h-64" : "max-h-56"
                       )}
                       imgName={image}
                     />
