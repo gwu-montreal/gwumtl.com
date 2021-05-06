@@ -1,5 +1,6 @@
 ---
 title: Code of Conduct
+description: GWU Montréal's Code of Conduct.
 ---
 ## Purpose
 

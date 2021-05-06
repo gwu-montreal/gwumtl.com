@@ -23,7 +23,7 @@ export const getStaticProps: GetStaticProps<
   { lang: string; slug: string }
 > = async ({ params }) => {
   const { summarize } = await import("~/lib/util");
-  const { loadMdx } = await import("~/lib/load-mdx");
+  const { loadYaml: loadMdx } = await import("~/lib/load-mdx");
   const { lang, slug } = params!;
 
   const path = `content/posts/${slug}.${lang}.md`;

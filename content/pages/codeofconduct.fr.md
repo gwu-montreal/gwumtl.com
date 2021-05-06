@@ -1,5 +1,6 @@
 ---
 title: Code de Conduite
+description: La code de conduite de GWU Montréal.
 ---
 ## Objectif
 

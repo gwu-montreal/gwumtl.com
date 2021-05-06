@@ -21,7 +21,7 @@ interface PageProps {
 const Index = ({ sections, description }: PageProps) => {
   return (
     <>
-      <SEO title="GWU Montréal" description={description} />
+      <SEO title="GWU Montréal" omitSiteNameInTitle description={description} />
       <Hero />
       <div className="max-w-container mx-auto px-8 mt-16 lg:px-16 lg:mt-24">
         {sections.map(({ type, content, image, imagePlacement }, i) => {
@@ -92,12 +92,12 @@ export const getStaticProps: GetStaticProps<
   { lang: string }
 > = async ({ params }) => {
   const { summarize } = await import("~/lib/util");
-  const { loadMdx, processSections } = await import("~/lib/load-mdx");
+  const { loadYaml, processSections } = await import("~/lib/load-mdx");
   const { lang } = params!;
 
   const path = `content/pages/home/home.${lang}.yml`;
 
-  const contents = await loadMdx(path, ["description", "sections"]);
+  const contents = await loadYaml(path, ["description", "sections"]);
   const { sections } = await processSections(contents as any);
 
   return {

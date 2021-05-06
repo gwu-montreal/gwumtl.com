@@ -9,9 +9,11 @@ const { domain, twitter } = siteInfo;
 
 const SEO = ({
   title,
+  omitSiteNameInTitle,
   description,
 }: {
   title: string;
+  omitSiteNameInTitle?: boolean;
   description?: string;
 }) => {
   const { t, slug } = useSiteData();
@@ -19,7 +21,10 @@ const SEO = ({
 
   return (
     <Head>
-      <title>GWU Montréal</title>
+      <title>
+        {omitSiteNameInTitle ? "" : `${t("siteName")} — `}
+        {title}
+      </title>
       {languageList.map((l) => (
         <link
           key={l}
