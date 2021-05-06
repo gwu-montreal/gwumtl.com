@@ -19,7 +19,7 @@ const CodeOfConduct = ({ title, content, description }: PageProps) => {
       <Hero />
       <div className="max-w-container mx-auto px-8 my-16 lg:px-16 lg:mt-24">
         <div
-          className="prose max-w-full mx-auto md:mx-0"
+          className="prose max-w-prose mx-auto"
           dangerouslySetInnerHTML={{ __html: content }}
         />
       </div>
