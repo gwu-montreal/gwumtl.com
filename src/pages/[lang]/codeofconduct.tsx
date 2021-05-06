@@ -4,6 +4,8 @@ import SEO from "~/components/SEO";
 import Hero from "~/components/Hero";
 import Footer from "~/components/Footer";
 
+import { useSiteData } from "~/lib/site-data";
+
 import type { GetStaticProps } from "next";
 
 interface PageProps {
@@ -13,10 +15,12 @@ interface PageProps {
 }
 
 const CodeOfConduct = ({ title, content, description }: PageProps) => {
+  const { t } = useSiteData();
+
   return (
     <>
       <SEO title={title} description={description} />
-      <Hero />
+      <Hero items={[{ label: `< ${t("header:backtohome")}`, link: "/" }]} />
       <div className="max-w-container mx-auto px-8 my-16 lg:px-16 lg:mt-24">
         <div
           className="prose max-w-prose mx-auto"

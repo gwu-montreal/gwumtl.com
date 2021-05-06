@@ -6,6 +6,8 @@ import Pic from "~/components/Pic";
 import Hero from "~/components/Hero";
 import Footer from "~/components/Footer";
 
+import { useSiteData } from "~/lib/site-data";
+
 import type { GetStaticProps } from "next";
 
 interface PageProps {
@@ -19,10 +21,18 @@ interface PageProps {
 }
 
 const Index = ({ sections, description }: PageProps) => {
+  const { t } = useSiteData();
+
   return (
     <>
       <SEO title="GWU Montréal" omitSiteNameInTitle description={description} />
-      <Hero />
+      <Hero
+        items={[
+          { label: t("header:whoweare"), scrollTo: "info" },
+          { label: t("header:newsandinfo"), scrollTo: "zines" },
+          { label: t("header:getinvolved"), scrollTo: "join" },
+        ]}
+      />
       <div className="max-w-container mx-auto px-8 mt-16 lg:px-16 lg:mt-24">
         {sections.map(({ type, content, image, imagePlacement }, i) => {
           return (

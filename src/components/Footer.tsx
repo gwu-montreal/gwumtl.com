@@ -4,11 +4,9 @@ import { useSiteData } from "~/lib/site-data";
 
 import logoEn from "~/images/gwu-logo-en.svg";
 import logoFr from "~/images/gwu-logo-fr.svg";
-import { useScrollTo } from "~/lib/util";
 
 const Footer = () => {
   const { lang, t } = useSiteData();
-  const scrollToTop = useScrollTo("top");
 
   return (
     <div className="bg-gray-900 p-16 lg:px-24 flex flex-col items-center">
@@ -16,7 +14,14 @@ const Footer = () => {
         <img className="max-h-24" src={lang === "fr" ? logoFr : logoEn} />
       </div>
       <div className="text-gray-50">
-        <div className="cursor-pointer" onClick={scrollToTop}>
+        <div
+          className="cursor-pointer"
+          onClick={() =>
+            document
+              .getElementById("top")
+              ?.scrollIntoView({ behavior: "smooth" })
+          }
+        >
           {t("footer:backtotop")}
         </div>
       </div>

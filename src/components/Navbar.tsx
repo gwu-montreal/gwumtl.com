@@ -1,8 +1,9 @@
 import React from "react";
+import cx from "classnames";
 
 // import Drawer from "~/components/Drawer";
+import Link from "~/components/LocalizedLink";
 import { useSiteData } from "~/lib/site-data";
-import { useScrollTo } from "~/lib/util";
 
 import siteInfo from "~/lib/site-info.server";
 
@@ -21,13 +22,20 @@ const decodeEmail = (e: React.SyntheticEvent<HTMLAnchorElement>) => {
   e.currentTarget.href = `${protocol}${address}@${domain}`;
 };
 
-const Navbar = () => {
-  const { lang, langs, t, setLang } = useSiteData();
+export type NavbarItem = {
+  label: string;
+  emphasized?: boolean;
+} & (
+  | {
+      link: string;
+    }
+  | {
+      scrollTo: string;
+    }
+);
 
-  // these anchors are defined in the markdown as empty div tags!
-  const scrollToInfo = useScrollTo("info");
-  const scrollToZines = useScrollTo("zines");
-  const scrollToJoin = useScrollTo("join");
+const Navbar = ({ items }: { items: NavbarItem[] }) => {
+  const { lang, langs, setLang } = useSiteData();
 
   const otherLang = lang === "en" ? "fr" : "en";
   const otherLangLabel = langs[otherLang];
@@ -37,21 +45,30 @@ const Navbar = () => {
       {/* <div className="lg:hidden mr-8">
         <NavbarDrawer />
       </div> */}
-      <div className="hidden lg:block mr-8 xl:mr-12">
-        <div className="cursor-pointer" onClick={scrollToInfo}>
-          {t("header:whoweare")}
+      {items.map((item) => (
+        <div
+          key={item.label}
+          className={cx(
+            "hidden lg:block mr-8 xl:mr-12",
+            item.emphasized && "bg-black bg-opacity-60 rounded-full px-5 py-2"
+          )}
+        >
+          {"scrollTo" in item ? (
+            <div
+              className="cursor-pointer"
+              onClick={() =>
+                document
+                  .getElementById(item.scrollTo)
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              {item.label}
+            </div>
+          ) : (
+            <Link href={item.link}>{item.label}</Link>
+          )}
         </div>
-      </div>
-      <div className="hidden lg:block mr-8 xl:mr-12">
-        <div className="cursor-pointer" onClick={scrollToZines}>
-          {t("header:newsandinfo")}
-        </div>
-      </div>
-      <div className="hidden lg:block mr-8 xl:mr-12 bg-black bg-opacity-60 rounded-full px-5 py-2">
-        <div className="cursor-pointer" onClick={scrollToJoin}>
-          {t("header:getinvolved")}
-        </div>
-      </div>
+      ))}
       <div className="ml-auto flex items-center">
         <div className="flex flex-shrink-0 items-center space-x-4 lg:space-x-8">
           <div>
