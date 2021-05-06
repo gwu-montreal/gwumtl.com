@@ -15,9 +15,12 @@ The following behaviors are expected and requested of all community members:
 - In general, try to assume good faith and exercise consideration and respect in your speech and actions. Note that when talking about specific oppressions, people on the opposite side of a power dynamic might have different interests, and this should also be taken into account when determining good faith. For example, an employer should not automatically be assumed to be acting in good faith when discussing unions with workers, since their interests are opposed to those of the workers on this issue.
 - In general, attempt collaboration before conflict. However keep in mind that conflict is sometimes necessary, particularly when groups have opposing interests. Refer to the safety and mediation committee if necessary.
 - Refrain from tone policing, silencing, or otherwise sanctioning marginalized people who defend themselves against or call out oppressive behaviour.
-- Try to treat criticism and call outs as gifts, rather than personal attacks. They may hurt, but they’re also a necessary part of learning to work together. If you’re feeling defensive or are unsure how to react, try this helpful guide created by Dietrich Squinkifer: [http://games.squinky.me/calledout/](http://games.squinky.me/calledout/)
-- Respect people’s gender pronouns and ask if you don’t know which pronouns a person uses.
-    - if you are unfamiliar with the various pronouns in use in the english language, check out “Pronoun Island” at [http://pronoun.is](http://pronoun.is)
+- Try to treat criticism and call outs as gifts, rather than personal attacks. They may hurt, but they’re also a necessary part of learning to work together.
+
+  If you’re feeling defensive or are unsure how to react, try this helpful guide created by Dietrich Squinkifer: [http://games.squinky.me/calledout/](http://games.squinky.me/calledout/)
+- Respect people’s pronouns and ask if you don’t know which pronouns a person uses.
+
+  If you are unfamiliar with the various pronouns in use in the english language, check out “Pronoun Island” at [http://pronoun.is](http://pronoun.is)
 - Refrain from demeaning, discriminatory, or harassing behavior and speech.
 - Be mindful of your surroundings and of your fellow participants. Alert committee members if you notice a dangerous situation, someone in distress, or violations of this Code of Conduct, even if they seem inconsequential.
 - Remember that community event venues may be shared with members of the public; please be respectful to all patrons of these locations.
@@ -36,7 +39,8 @@ The following behaviors are considered harassment and are unacceptable within ou
     - Personal insults related to gender, sexual orientation, race, class, religion, body shape, or disability.
 - Posting or displaying sexually explicit or violent material.
 - Posting or threatening to post other people’s personally identifying information (“doxing”) or expose their participation in GWU.
-    - This includes posting material that is not anonymized properly without consent.
+
+  This includes posting material that is not anonymized properly without consent.
 - Inappropriate or non-consensual photography, filming or recording of online conversations or at events, especially pertaining to the previous point (anonymity).
 - Inappropriate physical contact. You should have someone’s consent before touching them.
 - Unwelcome sexual attention. This includes: sexualized comments or jokes, inappropriate touching, groping, and unwelcome sexual advances.
@@ -92,13 +96,13 @@ When groups are pushed to the “margins” of a particular society and thus do 
 
 _“Classism is differential treatment based on social class or perceived social class. Classism is held in place by a system of beliefs and cultural attitudes that ranks people according to economic status, family lineage, job status, level of education, and other divisions. Middle-class and owning- or ruling-class people (dominant group members) are seen as smarter and more articulate than working-class and poor people (subordinated groups). In this way, dominant group members (middle-class and wealthy people) define for everyone else what is “normal” or “acceptable” in the class hierarchy.”_
 
-source: [http://www.classism.org/about-class/what-is-classism/](http://www.classism.org/about-class/what-is-classism/)
+_([source](http://www.classism.org/about-class/what-is-classism/))_
 
 ### Ableism
 
 _“Ableism is discrimination against people with disabilities, including the expression of hate for people with disabilities, denial of accessibility, rejection of disabled applicants for housing and jobs, institutionalised discrimination in the form of benefits systems designed to keep people with disabilities in poverty, etc.”_
 
-source: [http://disabledfeminists.com/2010/11/19/what-is-ableism-five-things-about-ableism-you-should-know/](http://disabledfeminists.com/2010/11/19/what-is-ableism-five-things-about-ableism-you-should-know/)
+_([source](http://disabledfeminists.com/2010/11/19/what-is-ableism-five-things-about-ableism-you-should-know/))_
 
 ### Genderqueer / Gender non-conforming / Non-binary / Genderfluid / Agender
 
@@ -109,7 +113,9 @@ source: [http://disabledfeminists.com/2010/11/19/what-is-ableism-five-things-abo
 - moving between two or more genders (gender fluid)
 - third gendered or other-gendered (includes those who prefer “genderqueer” or “non-binary” to describe their gender without labeling it otherwise)
 - having an overlap or blur of gender and orientation and/or sex (girlfags and guydykes)
-- those who “queer” gender, in presentation or otherwise, who may or may not see themselves as non-binary or having a gender that is queer; this category may also include those who are consciously political or radical in their understanding of being genderqueer” (source: http://genderqueerid.com/what-is-gq)
+- those who “queer” gender, in presentation or otherwise, who may or may not see themselves as non-binary or having a gender that is queer; this category may also include those who are consciously political or radical in their understanding of being genderqueer”
+
+_([source](http://genderqueerid.com/what-is-gq))_
 
 Our society has historically been structured around a rigid gender binary that divides human beings into the categories of male and female, men and women. Many people, however, do not identify as either one or the other. Gender is a social construct, meaning it is defined by culture, and is distinct from biological sex (think of all the stereotypes and learned behaviours associated with women, many of which have nothing to do with biology). Other societies have more than two genders, and as our society develops and changes, it is possible we may eventually move beyond a binary system, which can be quite limiting and even harmful for those who don’t conform to the unrealistic standards and norms that it generates (for e.g., when boys are bullied and teased for being too “girly”).
 
