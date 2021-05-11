@@ -6,16 +6,16 @@ sections:
     body: |-
       <h2 id="info">L'industrie du jeu vidéo doit changer.</h2>
 
-      Game Workers Unite Montréal est unne organisation démocratique vouée à promouvoir les droits des travailleu·se·rs et la syndicalisation de l'industrie du jeu vidéo. GWU n'est pas un syndicat, mais nous travaillons à en établir dans l'industrie.
+      Game Workers Unite Montréal est une organisation démocratique vouée à promouvoir les droits des travailleu·se·rs et la syndicalisation de l'industrie du jeu vidéo. GWU n'est pas un syndicat, mais nous travaillons à en établir dans l'industrie.
 
-      Montréal est bien connue pour êtr un hub international de l'industrie du jeu vidéo, et pourtant, les histoires d'abus et de licenciement massifs sont fréquentes ici. Ça suffit! Les travailleu·se·rs sont une forte puissante — avec collaboration et support mutuel nous pouvons obtenir de meilleurs conditions de travail et de la considération pour tout le monde.
+      Montréal est bien connue pour être un hub international de l'industrie du jeu vidéo, et pourtant, les histoires d'abus et de licenciement massifs sont fréquentes ici. Ça suffit! Les travailleu·se·rs sont une force puissante — avec collaboration et support mutuel nous pouvons obtenir de meilleurs conditions de travail et de la considération pour tout le monde.
 
   - image: Illu_Complain
     imagePlacement: left
     body: |-
-      ## Nou sommes là pour aider.
+      ## Nous sommes là pour aider.
 
-      Notre but principal est de supporter les employé·e·s dans la syndicalisation de leur milieu de travail. Nous apportons des entraînements, un réseau de support, des informations sur les droits légaux des travailleu·se·rs, et mettons les gens en contact avec du support légal, des syndicats existants ou des organisations communautaires.
+      Notre but principal est de supporter les employé·e·s dans la syndicalisation de leur milieu de travail. Nous apportons des entraînements, un réseau de support, des informations sur les droits légaux des travailleu·se·rs. Nous mettons également les gens en contact avec du support légal, des syndicats existants ou des organisations communautaires.
 
       Nos membres établissent des comités pour aborder des projets tels que la création de workshops éducatifs, ou la production de pamphlets. Nous nous rassemblons tous les mois pour une assemblée générale.
 
@@ -59,14 +59,14 @@ sections:
   - image: Illu_KYR
     imagePlacement: left
     body: |-
-      ## Know Your Rights!
+      ## Quels sont mes droits?
 
-	    Ce pamphlet et ces slides (créées pour un workshop co-organisé avec [Pixelles](https://pixelles.ca/) et [S'ATTAQ](http://sattaq.xyz/)) présentent une introduction aux lois du travail au Québec pour les employé·e·s et pigistes dans l'industrie du jeu vidéo.
+      Ce zine et ces diapos (créées pour un workshop co-organisé avec [Pixelles](https://pixelles.ca/) et [S'ATTAQ](http://sattaq.xyz/)) présentent une introduction aux lois du travail au Québec pour les employé·e·s et pigistes dans l'industrie du jeu vidéo.
 
-      <Button href="/kyr/KYR_Pamphlet_EN.pdf">
-        Téléchargez le Pamphlet Know Your Rights
+      <Button href="/kyr/KYR_Pamphlet_FR.pdf">
+        Téléchargez le zine Quels sont mes droits?
       </Button>
 
-      <Button href="/kyr/KYR_Slides_EN.pdf">
-        Accédez au slide du Workshop Know Your Rights
+      <Button href="/kyr/KYR_Slides_FR.pdf">
+        Accédez au diapos de l'atelier Quels sont mes droits?
       </Button>
