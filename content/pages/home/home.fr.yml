@@ -34,7 +34,7 @@ sections:
     imagePlacement: right
     type: box
     body: |-
-      <h1 id="join">Get Involved!</h1>
+      <h1 id="join">Impliquez-vous!</h1>
 
       Cliques sur le lien ci-dessous pour rejoindre GWU Montréal. Nous serons fiers de répondre à vos questions!
 
@@ -50,7 +50,7 @@ sections:
   - image: Illu_GDCZine
     imagePlacement: right
     body: |-
-      <h1 id="zines">Zines and Resources</h1>
+      <h1 id="zines">Zines et ressources</h1>
 
       Notre zine dresse un portrait de ce que sont les syndicats, pourquoi l'industrie en a besoin, et des astuces pour commencer à s'organiser et reconnaître les stratégies que les compagnies utilisent pour briser les syndicats.
 
