@@ -17,10 +17,10 @@ The following behaviors are expected and requested of all community members:
 - Refrain from tone policing, silencing, or otherwise sanctioning marginalized people who defend themselves against or call out oppressive behaviour.
 - Try to treat criticism and call outs as gifts, rather than personal attacks. They may hurt, but they’re also a necessary part of learning to work together.
 
-  If you’re feeling defensive or are unsure how to react, try this helpful guide created by Dietrich Squinkifer: [http://games.squinky.me/calledout/](http://games.squinky.me/calledout/)
+  If you’re feeling defensive or are unsure how to react, try this [helpful guide created by Dietrich Squinkifer](http://games.squinky.me/calledout/).
 - Respect people’s pronouns and ask if you don’t know which pronouns a person uses.
 
-  If you are unfamiliar with the various pronouns in use in the english language, check out “Pronoun Island” at [http://pronoun.is](http://pronoun.is). For a french-language resource, see [https://libraryguides.mcgill.ca/ecritureinclusive/pronoms](https://libraryguides.mcgill.ca/ecritureinclusive/pronoms).
+  If you are unfamiliar with the various pronouns in use in the english language, check out the website “[Pronoun Island](http://pronoun.is)”. For a french-language resource, see [this guide](https://libraryguides.mcgill.ca/ecritureinclusive/pronoms).
 - Refrain from demeaning, discriminatory, or harassing behavior and speech.
 - Be mindful of your surroundings and of your fellow participants. Alert committee members if you notice a dangerous situation, someone in distress, or violations of this Code of Conduct, even if they seem inconsequential.
 - Remember that community event venues may be shared with members of the public; please be respectful to all patrons of these locations.
