@@ -1,7 +1,8 @@
 {
-  "siteName": "GWU Montréal TEST",
+  "siteName": "GWU Montréal",
+  "header:whoweare": "Qui nous sommes",
+  "header:newsandinfo": "Zines et infos",
   "header:getinvolved": "Impliquez-vous!",
-  "header:backtohome": "fixme",
-  "footer:backtotop": "retour en haut",
-  "otherString": "needs english"
+  "header:backtohome": "Acceuil",
+  "footer:backtotop": "Retour en haut"
 }
