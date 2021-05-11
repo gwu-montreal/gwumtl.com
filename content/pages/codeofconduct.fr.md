@@ -17,8 +17,9 @@ Les comportements suivants sont attendus de tous les membres de la communauté:
 - De manière générale, tentez toujours de collaborer avant d’entrer en conflit. Gardez cependant à l’esprit que le conflit est parfois nécessaire, surtout quand des groupes ont des intérêts opposés. Référez-vous au comité de médiation si nécessaire.
 - Abstenez-vous de modérer le ton, faire taire, ou sanctionner les personnes marginalisées qui se défendent contre les attitudes oppressantes ou les pointent du doigt.
 - Tâchez de considérer les critiques et rappels à l’ordre comme des faveurs plutôt que des attaques personnelles. Vous risquez de vous sentir blessé·e, mais c’est une étape nécessaire lorsque l’on apprend à travailler ensemble. Si vous vous sentez sur la défensive ou ne savez pas comment réagir, essayez de consulter ce guide par Dietrich Squinkifer: [http://games.squinky.me/calledout/](http://games.squinky.me/calledout/)
-- Soyez respectueux des pronoms de genre, et posez la question si vous ignorez quel pronom une personne utilise
-    - Si vous n'êtes pas familier avec les différents pronoms utilisés en anglais, visitez [http://pronoun.is](http://pronoun.is)
+- Soyez respectueux des pronoms de genre, et posez la question si vous ignorez quel pronom une personne utilise.
+
+  Si vous n'êtes pas familier avec les différents pronoms utilisés en anglais, visitez [http://pronoun.is](http://pronoun.is). Pour une ressource en français, consultez [https://libraryguides.mcgill.ca/ecritureinclusive/pronoms](https://libraryguides.mcgill.ca/ecritureinclusive/pronoms)
 - Abstenez-vous de tout comportement discriminatoire, rabaissant, ou diffamatoire, et ne harcelez personne.
 - Soyez soucieux de votre entourage et des autres participant·e·s. Alertez les membres du comité si vous repérez une situation dangereuse, une personne en détresse, ou une infraction de ce Code de Conduite, même si elles vous semblent sans conséquence.
 - Les événements communautaires prennent parfois place dans des lieux ouverts au public; soyez respectueux·se de tou·te·s les client·e·s/passant·e·s.
