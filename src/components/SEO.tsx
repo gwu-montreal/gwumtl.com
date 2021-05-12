@@ -3,7 +3,7 @@ import Head from "next/head";
 import { languageList, useSiteData } from "~/lib/site-data";
 import siteInfo from "~/lib/site-info.server";
 
-// import openGraphImage from "~/images/social-crop.png";
+import openGraphImage from "~/images/opengraph.png";
 
 const { domain, twitter } = siteInfo;
 
@@ -11,10 +11,12 @@ const SEO = ({
   title,
   omitSiteNameInTitle,
   description,
+  openGraphImageOverride,
 }: {
   title: string;
   omitSiteNameInTitle?: boolean;
   description?: string;
+  openGraphImageOverride?: string;
 }) => {
   const { t, slug } = useSiteData();
   const resolvedDescription = description || t("site_description");
@@ -44,7 +46,10 @@ const SEO = ({
         key="og:description"
         content={resolvedDescription}
       />
-      {/* <meta property="og:image" content={`${domain}${openGraphImage}`} /> */}
+      <meta
+        property="og:image"
+        content={`${domain}${openGraphImageOverride ?? openGraphImage}`}
+      />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content={twitter} />
     </Head>
