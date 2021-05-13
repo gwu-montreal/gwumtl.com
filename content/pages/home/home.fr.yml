@@ -63,10 +63,12 @@ sections:
 
       Ce zine et ces diapos (créées pour un atelier co-organisé avec [Pixelles](https://pixelles.ca/) et [S'ATTAQ](http://sattaq.xyz/)) présentent une introduction aux lois du travail au Québec pour les employé·e·s et pigistes dans l'industrie du jeu vidéo.
 
-      <Button href="/kyr/KYR_Pamphlet_FR.pdf">
-        Téléchargez le zine Quels sont mes droits?
-      </Button>
+      <div className="flow-root">
+        <Button href="/kyr/KYR_Pamphlet_FR.pdf">
+          Téléchargez le zine Quels sont mes droits?
+        </Button>
 
-      <Button href="/kyr/KYR_Slides_FR.pdf">
-        Accédez au diapos de l'atelier Quels sont mes droits?
-      </Button>
+        <Button href="/kyr/KYR_Slides_FR.pdf">
+          Accédez au diapos de l'atelier Quels sont mes droits?
+        </Button>
+      </div>
