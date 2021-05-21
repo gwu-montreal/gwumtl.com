@@ -29,12 +29,10 @@ const background = css`
     left: 0;
     right: 0;
     background: linear-gradient(
-      0deg,
-      #f98aa0bf 0%,
-      #771412a1 38%,
-      #7b100e40 46%,
-      #a23c3500 72%
-    );
+      0deg,hsl(320deg 65% 50% / 75%),
+      hsl(338deg 65% 50% / 50%) 36%,
+      hsl(353deg 65% 50% / 20%) 54%,
+      hsl(5deg 65% 50% / 0%) 72%);
     mix-blend-mode: color;
   }
 `;
