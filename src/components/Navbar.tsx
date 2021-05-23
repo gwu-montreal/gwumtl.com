@@ -35,7 +35,7 @@ export type NavbarItem = {
 );
 
 const Navbar = ({ items }: { items: NavbarItem[] }) => {
-  const { lang, langs, setLang } = useSiteData();
+  const { t, lang, langs, setLang } = useSiteData();
 
   const otherLang = lang === "en" ? "fr" : "en";
   const otherLangLabel = langs[otherLang];
@@ -77,17 +77,17 @@ const Navbar = ({ items }: { items: NavbarItem[] }) => {
               onTouchStart={decodeEmail}
               onFocus={decodeEmail}
             >
-              <img className="h-5 w-auto" src={email} />
+              <img className="h-5 w-auto" alt={t("header:email")} src={email} />
             </a>
           </div>
           <div>
             <a href={twitterUrl}>
-              <img className="h-5 w-auto" src={twitter} />
+              <img className="h-5 w-auto" alt="Twitter" src={twitter} />
             </a>
           </div>
           <div>
             <a href={siteInfo.facebook}>
-              <img className="h-5 w-auto" src={facebook} />
+              <img className="h-5 w-auto" alt="Facebook" src={facebook} />
             </a>
           </div>
         </div>
