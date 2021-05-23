@@ -10,14 +10,6 @@ import logoEn from "~/images/gwu-logo-en.svg";
 import logoFr from "~/images/gwu-logo-fr.svg";
 
 const background = css`
-  background-image: url("../images/hero-bg.jpg");
-
-  /* stylelint-disable-next-line csstools/media-use-custom-media */
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    background-image: url("../images/hero-bg@2x.jpg");
-  }
-
-  /* positioning and pseudo just for the gradient */
   position: relative;
   z-index: 0;
   &::before {
@@ -28,14 +20,25 @@ const background = css`
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(
-      0deg,
-      #f98aa0bf 0%,
-      #771412a1 38%,
-      #7b100e40 46%,
-      #a23c3500 72%
-    );
-    mix-blend-mode: color;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-blend-mode: color, normal;
+    background-image: linear-gradient(
+        0deg,
+        hsl(330deg 65% 50% / 85%),
+        rgba(255, 0, 0, 0.65) 100%
+      ),
+      url("../images/hero-bg.jpg");
+    /* stylelint-disable-next-line csstools/media-use-custom-media */
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: linear-gradient(
+          0deg,
+          hsl(330deg 65% 50% / 85%),
+          rgba(255, 0, 0, 0.65) 100%
+        ),
+        url("../images/hero-bg@2x.jpg");
+    }
   }
 `;
 
