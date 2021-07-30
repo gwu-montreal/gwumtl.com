@@ -13,6 +13,7 @@ sections:
 
 
       Montréal est bien connue en tant que hub international de l'industrie du jeu vidéo, et pourtant, les histoires d'abus et de licenciement massifs sont fréquentes ici. Ça suffit! Les travailleu·se·rs sont une force puissante — en collaboration nous pouvons obtenir de meilleures conditions de travail pour tout le monde.
+    type: section
   - image: Illu_Complain
     imagePlacement: left
     body: >-
@@ -23,6 +24,7 @@ sections:
 
 
       Nos membres forment aussi des comités pour collaborer sur des projets tels que des workshops éducatifs et l'écriture de pamphlets. Nous nous rassemblons tous les mois lors d'une assemblée générale pour partager les derniers développements.
+    type: section
   - image: Illu_Meeting
     imagePlacement: right
     body: >-
@@ -36,6 +38,7 @@ sections:
 
 
       **Ensemble**, nous pouvons bâtir une meilleur industrie.
+    type: section
   - image: Illu_JoinGWU
     imagePlacement: right
     type: box
