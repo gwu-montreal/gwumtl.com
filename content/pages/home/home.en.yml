@@ -1,42 +1,68 @@
 title: Index
-description: Game Workers Unite Montréal is a democratic organization dedicated to advocating for workers’ rights in the games industry. Join us!
+description: Game Workers Unite Montréal is a democratic organization dedicated
+  to advocating for workers’ rights in the games industry. Join us!
 sections:
   - image: Illu_Distribution
     imagePlacement: right
-    body: |-
-      <h2 id="info">The games industry needs to change.</h2>
+    body: "<h2 id=\"info\">The games industry needs to change.</h2>
 
-      Game Workers Unite Montréal is a democratic organization dedicated to advocating for unions and for workers’ rights in the games industry. GWU is not a union, but we’re working to help build them across the industry.
 
-      Montréal is well-known as an international hub for the games industry, yet stories of mass layoffs and abuse are still rampant here. Enough is enough! Workers here are a powerful force — and through collaboration and mutual support we can achieve better working conditions and recognition for everyone.
+      Game Workers Unite Montréal is a democratic workers’ organization
+      dedicated to advocating for workers’ rights and supporting union
+      organizing in the games industry. GWU is not a union itself, but we’re
+      working to help build them across the industry.
 
+
+      \r
+
+      Montréal is well-known as an international hub for the games
+      industry, yet stories of mass layoffs and abuse are still rampant here.
+      Enough is enough! Workers here are a powerful force — and through
+      collaboration and mutual support we can achieve better working conditions
+      and recognition for everyone.\r\n"
+    type: section
   - image: Illu_Complain
     imagePlacement: left
-    body: |-
-      ## We're here to help.
+    body: "## We're here to help.
 
-      Our main focus is on supporting workers who want to unionize their workplace. We provide training and peer support to workers who are in difficult situations, share information about workers’ legal rights, and connect people with legal support, community organizations, and existing unions.
 
-      Our members also establish committees to tackle projects such as producing literature and organizing educational workshops. We meet monthly in a general assembly to share the latest developments.
+      Our main focus is on supporting workers who want to unionize their
+      workplace. We provide training and peer support to workers who are in
+      difficult situations, share information about workers’ legal rights, and
+      connect people with legal support, community organizations, and existing
+      unions and labour organizations.\r
 
+
+      Our members also form committees to collaborate on projects such as
+      producing literature and organizing educational workshops. We meet monthly
+      in a general assembly to share the latest developments.\r\n"
+    type: section
   - image: Illu_Meeting
     imagePlacement: right
-    body: |-
-      ## Building a better industry together.
+    body: "## Building a better industry together.
 
-      The best way to change conditions for workers is through collective action.
 
-      If you work in the games industry — whether or not you’re currently employed — or you’re a student or are otherwise planning to join the industry, we invite you to join us. You don’t need any previous organizing experience, and we’re happy to provide organizer training.
+      The best way to improve conditions for workers is through collective
+      action.\r
 
-      Together, we can build a better industry for **all of us**.
 
+      If you work in the games industry — whether or not you’re currently
+      employed — or if you’re a student or are otherwise planning to join the
+      industry, we invite you to join us. You don’t need any previous organizing
+      experience, and we’re happy to provide organizer training.\r
+
+
+      Together, we can build a better industry for **all of us**."
+    type: section
   - image: Illu_JoinGWU
     imagePlacement: right
     type: box
-    body: |-
+    body: >-
       <h1 id="join">Get Involved!</h1>
 
+
       Click the button below to start the process of joining GWU Montréal. We'll be happy to answer your questions!
+
 
       <Button
         href="https://docs.google.com/forms/d/e/1FAIpQLSc59I5tMp8fJQJMUDsWoYfdCvLN95nLVIkOg5mKJlaa98vsOw/viewform"
@@ -45,24 +71,27 @@ sections:
         Apply to become a member
       </Button>
 
-      All members must abide by our [Code of Conduct](/en/codeofconduct).
 
+      All members must abide by our [Code of Conduct](/en/codeofconduct).
   - image: Illu_GDCZine
     imagePlacement: right
-    body: |-
+    body: >-
       <h1 id="zines">Zines and Resources</h1>
+
 
       Our zine contains a primer on what unions are, why the game industry should unionize, and advice on how to organize and recognize union-busting strategies.
 
-      <Button href="https://zines.gwumtl.com">Read the Game Workers Unite Zine!</Button>
 
+      <Button href="https://zines.gwumtl.com">Read the Game Workers Unite Zine!</Button>
+    type: section
   - image: Illu_KYR
     imagePlacement: left
-    # the below <div> around the buttons is to fix an awkward wrapping issue at medium screens when the image is floated left
-    body: |-
+    body: >-
       ## Know Your Rights!
 
+
       This pamphlet and set of workshop slides (created for a workshop co-organized with [Pixelles](https://pixelles.ca/) and [S'ATTAQ](http://sattaq.xyz/)) present an introduction to Quebec labour law for employees, contractors and freelancers in the game industry.
+
 
       <div className="flow-root">
         <Button href="/kyr/KYR_Pamphlet_EN.pdf">
@@ -73,3 +102,4 @@ sections:
           Check the Know Your Rights Workshop Slides
         </Button>
       </div>
+    type: section
