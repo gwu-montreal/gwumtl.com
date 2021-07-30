@@ -1,42 +1,50 @@
 title: Index
-description: Game Workers Unite Montréal est une organisation démocratique dédiée à revendiquer les droits des travailleu·se·rs de l'industrie du jeu vidéo. Rejoignez-nous!
+description: Game Workers Unite Montréal est une organisation démocratique
+  dédiée à revendiquer les droits des travailleu·se·rs de l'industrie du jeu
+  vidéo. Rejoignez-nous!
 sections:
   - image: Illu_Distribution
     imagePlacement: right
-    body: |-
+    body: >-
       <h2 id="info">L'industrie du jeu vidéo doit changer.</h2>
+
 
       Game Workers Unite Montréal est une organisation démocratique vouée à promouvoir les droits des travailleu·se·rs et la syndicalisation de l'industrie du jeu vidéo. GWU n'est pas un syndicat, mais nous travaillons à en établir dans l'industrie.
 
-      Montréal est bien connue pour être un hub international de l'industrie du jeu vidéo, et pourtant, les histoires d'abus et de licenciement massifs sont fréquentes ici. Ça suffit! Les travailleu·se·rs sont une force puissante — avec collaboration et support mutuel nous pouvons obtenir de meilleurs conditions de travail et de la considération pour tout le monde.
 
+      Montréal est bien connue pour être un hub international de l'industrie du jeu vidéo, et pourtant, les histoires d'abus et de licenciement massifs sont fréquentes ici. Ça suffit! Les travailleu·se·rs sont une force puissante — avec collaboration et support mutuel nous pouvons obtenir de meilleurs conditions de travail et de la considération pour tout le monde.
   - image: Illu_Complain
     imagePlacement: left
-    body: |-
+    body: >-
       ## Nous sommes là pour aider.
+
 
       Notre but principal est de supporter les employé·e·s dans la syndicalisation de leur milieu de travail. Nous apportons des entraînements, un réseau de support, des informations sur les droits légaux des travailleu·se·rs. Nous mettons également les gens en contact avec du support légal, des syndicats existants ou des organisations communautaires.
 
-      Nos membres établissent des comités pour aborder des projets tels que la création de workshops éducatifs, ou la production de pamphlets. Nous nous rassemblons tous les mois pour une assemblée générale.
 
+      Nos membres établissent des comités pour aborder des projets tels que la création de workshops éducatifs, ou la production de pamphlets. Nous nous rassemblons tous les mois pour une assemblée générale.
   - image: Illu_Meeting
     imagePlacement: right
-    body: |-
+    body: >-
       ## Construire une industrie meilleure tous ensemble.
+
 
       La meilleure façon d'améliorer les conditions de travail dans notre industrie est de mener des actions collectives.
 
+
       Si vous travaillez dans l'industrie du jeu vidéo — que vous soyez employé·e ou non — ou que vous êtes étudiant·e·s ou comptez entrer dans l'industrie, nous vous invitons à nous rejoindre. Aucune expérience d'organisation préalable n'est requise, et nous sommes ravis de fournir accès à des entraînements.
 
-      **Ensemble**, nous pouvons bâtir une meilleur industrie.
 
+      **Ensemble**, nous pouvons bâtir une meilleur industrie.
   - image: Illu_JoinGWU
     imagePlacement: right
     type: box
-    body: |-
+    body: >-
       <h1 id="join">Impliquez-vous!</h1>
 
+
       Cliques sur le lien ci-dessous pour rejoindre GWU Montréal. Nous serons fiers de répondre à vos questions!
+
 
       <Button
         href="https://docs.google.com/forms/d/e/1FAIpQLSc59I5tMp8fJQJMUDsWoYfdCvLN95nLVIkOg5mKJlaa98vsOw/viewform"
@@ -45,23 +53,26 @@ sections:
         Rejoindre GWU Montréal
       </Button>
 
-      Tous les membres doivent se conformer à notre [Code de Conduite](/fr/codeofconduct).
 
+      Tous les membres doivent se conformer à notre [Code de Conduite](/fr/codeofconduct).
   - image: Illu_GDCZine
     imagePlacement: right
-    body: |-
+    body: >-
       <h1 id="zines">Zines et ressources</h1>
+
 
       Notre zine dresse un portrait de ce que sont les syndicats, pourquoi l'industrie en a besoin, et des astuces pour commencer à s'organiser et reconnaître les stratégies que les compagnies utilisent pour briser les syndicats.
 
-      <Button href="https://zines.gwumtl.com/fr">Lisez le Zine Game Workers Unite!</Button>
 
+      <Button href="https://zines.gwumtl.com/fr">Lisez le Zine Game Workers Unite!</Button>
   - image: Illu_KYR
     imagePlacement: left
-    body: |-
+    body: >-
       ## Quels sont mes droits?
 
+
       Ce zine et ces diapos (créées pour un atelier co-organisé avec [Pixelles](https://pixelles.ca/) et [S'ATTAQ](http://sattaq.xyz/)) présentent une introduction aux lois du travail au Québec pour les employé·e·s et pigistes dans l'industrie du jeu vidéo.
+
 
       <div className="flow-root">
         <Button href="/kyr/KYR_Pamphlet_FR.pdf">
