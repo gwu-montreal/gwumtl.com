@@ -23,7 +23,7 @@ const init = async (props: PageProps) => {
       backend: {
         name: "github",
         repo: props.repository,
-        branch: "new-version", // FIXME: temp!!
+        branch: "master",
         // squash_merges: true,
       },
       local_backend: process.env.NODE_ENV === "development", // FIXME: verify works

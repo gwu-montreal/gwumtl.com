@@ -1,8 +1,9 @@
 {
   "siteName": "GWU Montréal",
   "header:whoweare": "Who We Are",
-  "header:newsandinfo": "News and Info",
+  "header:newsandinfo": "Zines and Info",
   "header:getinvolved": "Get Involved!",
-  "footer:backtotop": "back to top",
-  "testString": "Unlocalized"
+  "header:backtohome": "Back to Home",
+  "header:email": "Email",
+  "footer:backtotop": "Back to Top"
 }
