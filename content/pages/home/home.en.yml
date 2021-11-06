@@ -103,11 +103,3 @@ sections:
         </Button>
       </div>
     type: section
-  - type: section
-    body: >-
-      <h1 id="zines">Partnerships</h1>
-
-
-      GWU Montreal is a <a href="https://www.qpirgconcordia.org/">QPIRG</a> working group.
-    image: Illu_Meeting
-    imagePlacement: right
