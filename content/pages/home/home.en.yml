@@ -103,3 +103,11 @@ sections:
         </Button>
       </div>
     type: section
+  - type: section
+    image: Illu_Distribution
+    imagePlacement: right
+    body: >
+      ## Partnerships
+
+
+      Game Workers Unite Montreal is a <a href="https://www.qpirgconcordia.org/">QPIRG (Quebec Public Interest Research Group)</a> working group. QPIRG grants us a yearly budget and lets us use one of their spaces for our monthly meetings when they happen in person.
