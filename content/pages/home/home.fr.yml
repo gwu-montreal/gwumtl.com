@@ -3,7 +3,8 @@ description: Game Workers Unite Montréal est une organisation démocratique
   dédiée à revendiquer les droits des travailleu·se·rs de l'industrie du jeu
   vidéo. Rejoignez-nous!
 sections:
-  - image: Illu_Distribution
+  - type: section
+    image: Illu_Distribution
     imagePlacement: right
     body: >-
       <h2 id="info">L'industrie du jeu vidéo doit changer.</h2>
@@ -13,8 +14,8 @@ sections:
 
 
       Montréal est bien connue en tant que hub international de l'industrie du jeu vidéo, et pourtant, les histoires d'abus et de licenciement massifs sont fréquentes ici. Ça suffit! Les travailleu·se·rs sont une force puissante — en collaboration nous pouvons obtenir de meilleures conditions de travail pour tout le monde.
-    type: section
-  - image: Illu_Complain
+  - type: section
+    image: Illu_Complain
     imagePlacement: left
     body: >-
       ## Nous sommes là pour aider.
@@ -24,8 +25,8 @@ sections:
 
 
       Nos membres forment aussi des comités pour collaborer sur des projets tels que des workshops éducatifs et l'écriture de pamphlets. Nous nous rassemblons tous les mois lors d'une assemblée générale pour partager les derniers développements.
-    type: section
-  - image: Illu_Meeting
+  - type: section
+    image: Illu_Meeting
     imagePlacement: right
     body: >-
       ## Construire une meilleure industrie tous ensemble.
@@ -38,10 +39,9 @@ sections:
 
 
       **Ensemble**, nous pouvons bâtir une meilleur industrie.
-    type: section
-  - image: Illu_JoinGWU
+  - type: box
+    image: Illu_JoinGWU
     imagePlacement: right
-    type: box
     body: >-
       <h1 id="join">Impliquez-vous!</h1>
 
@@ -58,7 +58,8 @@ sections:
 
 
       Tous les membres doivent se conformer à notre [Code de Conduite](/fr/codeofconduct).
-  - image: Illu_GDCZine
+  - type: section
+    image: Illu_GDCZine
     imagePlacement: right
     body: >-
       <h1 id="zines">Zines et ressources</h1>
@@ -70,15 +71,16 @@ sections:
       <Button href="https://zines.gwumtl.com/fr">Lisez le Zine Game Workers Unite!</Button>
 
 
-      #﻿# Nos articles de blog
+      ## Nos articles de blog
 
 
       Lisez nos articles sur Medium:
 
       - [Intro aux coopératives de travail](https://medium.com/@gwumlit/intro-aux-coop%C3%A9ratives-de-travailleu-se-rs-bd3ffd7e2e9e)
 
-      -﻿ [Le modèle AEIOU pour les conversations 1-on-1](https://medium.com/@gwumlit/introduction-au-mod%C3%A8le-aeiou-pour-les-conversations-1-on-1-b8b17fe593b9)
-  - image: Illu_KYR
+      - [Le modèle AEIOU pour les conversations 1-on-1](https://medium.com/@gwumlit/introduction-au-mod%C3%A8le-aeiou-pour-les-conversations-1-on-1-b8b17fe593b9)
+  - type: section
+    image: Illu_KYR
     imagePlacement: left
     body: >-
       ## Quels sont mes droits?
@@ -96,3 +98,11 @@ sections:
           Accédez au diapos de l'atelier Quels sont mes droits?
         </Button>
       </div>
+  - type: section
+    image: Illu_Distribution
+    imagePlacement: right
+    body: >
+      ## Partenariats
+
+
+      Game Workers Unite Montreal est un groupe de travail du <a href="https://www.qpirgconcordia.org/fr/">GRIP (Groupe de Recherche d'Intérêt Public du Québec)</a>. Le GRIP nous octroie un budget annuel et nous laisse utiliser un de leurs espaces pour nos rencontres mensuelles, quand elles ont lieu en personne.

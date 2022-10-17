@@ -2,7 +2,8 @@ title: Index
 description: Game Workers Unite Montréal is a democratic organization dedicated
   to advocating for workers’ rights in the games industry. Join us!
 sections:
-  - image: Illu_Distribution
+  - type: section
+    image: Illu_Distribution
     imagePlacement: right
     body: "<h2 id=\"info\">The games industry needs to change.</h2>
 
@@ -20,8 +21,8 @@ sections:
       Enough is enough! Workers here are a powerful force — and through
       collaboration and mutual support we can achieve better working conditions
       and recognition for everyone.\r\n"
-    type: section
-  - image: Illu_Complain
+  - type: section
+    image: Illu_Complain
     imagePlacement: left
     body: "## We're here to help.
 
@@ -36,8 +37,8 @@ sections:
       Our members also form committees to collaborate on projects such as
       producing literature and organizing educational workshops. We meet monthly
       in a general assembly to share the latest developments.\r\n"
-    type: section
-  - image: Illu_Meeting
+  - type: section
+    image: Illu_Meeting
     imagePlacement: right
     body: "## Building a better industry together.
 
@@ -53,10 +54,9 @@ sections:
 
 
       Together, we can build a better industry for **all of us**."
-    type: section
-  - image: Illu_JoinGWU
+  - type: box
+    image: Illu_JoinGWU
     imagePlacement: right
-    type: box
     body: >-
       <h1 id="join">Get Involved!</h1>
 
@@ -73,7 +73,8 @@ sections:
 
 
       All members must abide by our [Code of Conduct](/en/codeofconduct).
-  - image: Illu_GDCZine
+  - type: section
+    image: Illu_GDCZine
     imagePlacement: right
     body: >-
       <h1 id="zines">Zines and Resources</h1>
@@ -85,16 +86,16 @@ sections:
       <Button href="https://zines.gwumtl.com">Read the Game Workers Unite Zine!</Button>
 
 
-      #﻿# Our blog posts
+      ## Our blog posts
 
 
       Read our posts on Medium:
 
-      - [﻿Intro to Worker Cooperatives](https://medium.com/@gwumlit/intro-to-worker-cooperatives-fbbeb0fd2c5a)
+      - [Intro to Worker Cooperatives](https://medium.com/@gwumlit/intro-to-worker-cooperatives-fbbeb0fd2c5a)
 
-      -﻿ [Intro to 1-on-1s and the AEIOU structure for conversations](https://medium.com/@gwumlit/intro-to-1-on-1s-and-the-aeiou-structure-for-conversations-b8b5331ffd96)
-    type: section
-  - image: Illu_KYR
+      - [Intro to 1-on-1s and the AEIOU structure for conversations](https://medium.com/@gwumlit/intro-to-1-on-1s-and-the-aeiou-structure-for-conversations-b8b5331ffd96)
+  - type: section
+    image: Illu_KYR
     imagePlacement: left
     body: >-
       ## Know Your Rights!
@@ -112,7 +113,6 @@ sections:
           Check the Know Your Rights Workshop Slides
         </Button>
       </div>
-    type: section
   - type: section
     image: Illu_Distribution
     imagePlacement: right
