@@ -46,7 +46,7 @@ sections:
       <h1 id="join">Impliquez-vous!</h1>
 
 
-      Cliques sur le lien ci-dessous pour rejoindre GWU Montréal. Nous serons fiers de répondre à vos questions!
+      Tous les membres de GWU Montréal doivent se conformer à notre [Code de Conduite](/fr/codeofconduct).
 
 
       <Button
@@ -56,53 +56,41 @@ sections:
         Rejoindre GWU Montréal
       </Button>
 
+      <Button
+        href="mailto:gwumontreal@gmail.com">
+        <span class="text-base">Nous contacter pour des infos</span>
+      </Button>
 
-      Tous les membres doivent se conformer à notre [Code de Conduite](/fr/codeofconduct).
   - type: section
-    image: Illu_GDCZine
-    imagePlacement: right
     body: >-
-      <h1 id="zines">Zines et ressources</h1>
+      <h1 id="zines">Ressources et zines</h1>
 
 
-      Notre zine dresse un portrait de ce que sont les syndicats, pourquoi l'industrie en a besoin, et des astuces pour commencer à s'organiser et reconnaître les stratégies que les compagnies utilisent pour briser les syndicats.
+      ## Zines & présentations
+
+      - [Notre zine de la GDC](https://zines.gwumtl.com/fr): un portrait de ce que sont les syndicats, pourquoi l'industrie en a besoin, et des astuces pour commencer à s'organiser et reconnaître les stratégies que les compagnies utilisent pour briser les syndicats.
+
+      - [Diapos de l'atelier Quels sont mes droits?](/kyr/KYR_Slides_FR.pdf):  une introduction aux lois du travail au Québec pour les employé·e·s et pigistes dans l'industrie du jeu vidéo. <br/>Co-organisé avec with [Pixelles](https://pixelles.ca/) et [S'ATTAQ](http://sattaq.xyz/).
+
+      - [Pamphlet Quels sont mes droits](/kyr/KYR_Pamphlet_FR.pdf) distribué au public de l'atelier.
 
 
-      <Button href="https://zines.gwumtl.com/fr">Lisez le Zine Game Workers Unite!</Button>
-
-
-      ## Nos articles de blog
-
-
-      Lisez nos articles sur Medium:
+      ## Articles de blog
 
       - [Intro aux coopératives de travail](https://medium.com/@gwumlit/intro-aux-coop%C3%A9ratives-de-travailleu-se-rs-bd3ffd7e2e9e)
 
       - [Le modèle AEIOU pour les conversations 1-on-1](https://medium.com/@gwumlit/introduction-au-mod%C3%A8le-aeiou-pour-les-conversations-1-on-1-b8b17fe593b9)
-  - type: section
-    image: Illu_KYR
-    imagePlacement: left
-    body: >-
-      ## Quels sont mes droits?
 
 
-      Ce zine et ces diapos (créées pour un atelier co-organisé avec [Pixelles](https://pixelles.ca/) et [S'ATTAQ](http://sattaq.xyz/)) présentent une introduction aux lois du travail au Québec pour les employé·e·s et pigistes dans l'industrie du jeu vidéo.
+      ## Présentations
 
+      - [Winter4Ever: Carolyn Jong parle de la syndicalisation de l'industrie du jeu vidéo](https://youtu.be/pxzg-7gXGfI) (en Anglais)
 
-      <div className="flow-root">
-        <Button href="/kyr/KYR_Pamphlet_FR.pdf">
-          Téléchargez le zine Quels sont mes droits?
-        </Button>
-
-        <Button href="/kyr/KYR_Slides_FR.pdf">
-          Accédez au diapos de l'atelier Quels sont mes droits?
-        </Button>
-      </div>
   - type: section
     image: Illu_Distribution
     imagePlacement: right
     body: >
-      ## Partenariats
+      # Partenariats
 
 
       Game Workers Unite Montreal est un groupe de travail du <a href="https://www.qpirgconcordia.org/fr/">GRIP (Groupe de Recherche d'Intérêt Public du Québec)</a>. Le GRIP nous octroie un budget annuel et nous laisse utiliser un de leurs espaces pour nos rencontres mensuelles, quand elles ont lieu en personne.
