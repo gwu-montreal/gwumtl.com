@@ -18,11 +18,7 @@ const LocalizedLink = ({
     console.warn(`only absolute uris are currently supported.`);
   }
 
-  return (
-    <Link href={`/${lang}${href}`}>
-      <a>{children}</a>
-    </Link>
-  );
+  return <Link href={`/${lang}${href}`}>{children}</Link>;
 };
 
 export default LocalizedLink;
