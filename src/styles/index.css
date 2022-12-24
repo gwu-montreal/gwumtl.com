@@ -8,7 +8,6 @@ html {
   font-size: 12px;
 }
 
-/* stylelint-disable csstools/media-use-custom-media */
 @media (min-width: 300px) {
   html {
     font-size: 14px;
@@ -26,7 +25,6 @@ html {
     font-size: 18px;
   }
 }
-/* stylelint-enable csstools/media-use-custom-media */
 
 body {
   margin: 0;

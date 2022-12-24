@@ -4,7 +4,7 @@ import type { GetStaticProps } from "next";
 
 interface PageProps {
   repository: string;
-  homepage: string;
+  domain: string;
 }
 
 const init = async (props: PageProps) => {
@@ -30,8 +30,8 @@ const init = async (props: PageProps) => {
       publish_mode: "editorial_workflow",
       media_folder: "public/images",
       public_folder: "/images",
-      site_url: props.homepage,
-      logo_url: props.homepage + "/images/gwu-mag-logo.svg",
+      site_url: props.domain,
+      logo_url: props.domain + "/images/gwu-mag-logo.svg",
       i18n: {
         structure: "multiple_files",
         locales,
@@ -175,14 +175,12 @@ export const getStaticProps: GetStaticProps<PageProps> = async () => {
   // const { readFileSync } = await import("fs");
   // const { join } = await import("path");
 
-  const {
-    default: { repository, homepage },
-  } = await import("../../package.json");
+  const { repository, domain } = await import("~/site-info.json");
 
   return {
     props: {
       repository,
-      homepage,
+      domain,
     },
   };
 };
