@@ -1,7 +1,8 @@
 import React from "react";
 import Head from "next/head";
+
 import { languageList, useSiteData } from "~/lib/site-data";
-import siteInfo from "~/lib/site-info.server";
+import siteInfo from "~/site-info.json";
 
 import openGraphImage from "~/images/opengraph.png";
 

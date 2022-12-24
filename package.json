@@ -2,10 +2,6 @@
   "name": "gwumtl.com",
   "version": "2.0.0",
   "private": true,
-  "homepage": "https://gwumtl.com",
-  "repository": "gwu-montreal/gwumtl.com",
-  "twitter": "@gwu_montreal",
-  "facebook": "https://www.facebook.com/gwumtl",
   "scripts": {
     "start": "run-p dev:*",
     "dev:next": "next dev -p 3000",
@@ -58,8 +54,7 @@
     "stylelint": "^13.12.0",
     "stylelint-config-lostfictions": "^0.11.0",
     "tailwindcss": "^3.2.4",
-    "typescript": "^4.9.4",
-    "val-loader": "^2.1.2"
+    "typescript": "^4.9.4"
   },
   "browserslist": {
     "production": [

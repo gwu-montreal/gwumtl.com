@@ -5,7 +5,7 @@ import cx from "classnames";
 import Link from "~/components/LocalizedLink";
 import { useSiteData } from "~/lib/site-data";
 
-import siteInfo from "~/lib/site-info.server";
+import siteInfo from "~/site-info.json";
 
 import email from "~/images/email.svg";
 import twitter from "~/images/twitter.svg";

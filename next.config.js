@@ -13,11 +13,6 @@ module.exports = withPlugins(
           use: [{ loader: "astroturf/loader" }],
         });
 
-        cfg.module.rules.push({
-          test: /\.server\.js$/,
-          use: [{ loader: "val-loader" }],
-        });
-
         return cfg;
       },
     }),
