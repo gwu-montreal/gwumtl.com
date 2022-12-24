@@ -1,7 +1,7 @@
-import React from "react";
 import Head from "next/head";
+
 import { languageList, useSiteData } from "~/lib/site-data";
-import siteInfo from "~/lib/site-info.server";
+import siteInfo from "~/site-info.json";
 
 import openGraphImage from "~/images/opengraph.png";
 
@@ -19,20 +19,19 @@ const SEO = ({
   openGraphImageOverride?: string;
 }) => {
   const { t, slug } = useSiteData();
-  const resolvedDescription = description || t("site_description");
+  const resolvedDescription = description ?? t("site_description");
 
   return (
     <Head>
       <title>
-        {omitSiteNameInTitle ? "" : `${t("siteName")} — `}
-        {title}
+        {omitSiteNameInTitle ? title : `${t("siteName")} — ${title}`}
       </title>
       {languageList.map((l) => (
         <link
           key={l}
           rel="alternate"
           hrefLang={l}
-          href={`${domain}/${l}${slug ? "/" + slug : ""}`}
+          href={`${domain}/${l}${slug ? `/${slug}` : ""}`}
         />
       ))}
       <meta
@@ -48,7 +47,7 @@ const SEO = ({
       />
       <meta
         property="og:image"
-        content={`${domain}${openGraphImageOverride ?? openGraphImage}`}
+        content={`${domain}${openGraphImageOverride ?? openGraphImage.src}`}
       />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content={twitter} />

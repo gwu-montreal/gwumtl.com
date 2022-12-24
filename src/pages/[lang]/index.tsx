@@ -1,4 +1,3 @@
-import React from "react";
 import cx from "classnames";
 
 import SEO from "~/components/SEO";
@@ -53,7 +52,7 @@ const Index = ({ sections, description }: PageProps) => {
               >
                 <div
                   className={cx(
-                    "sm:flex-shrink-0 mx-auto order-3",
+                    "sm:shrink-0 mx-auto order-3",
                     { "sm:order-1": imagePlacement === "left" },
                     type === "box"
                       ? "mt-6 md:mt-0 md:pl-6 md:w-2/5"
@@ -70,7 +69,7 @@ const Index = ({ sections, description }: PageProps) => {
                         ]
                   )}
                 >
-                  {image && (
+                  {image ? (
                     <Pic
                       className={cx(
                         "mx-auto",
@@ -78,7 +77,7 @@ const Index = ({ sections, description }: PageProps) => {
                       )}
                       imgName={image}
                     />
-                  )}
+                  ) : null}
                 </div>
                 <div
                   className={cx(

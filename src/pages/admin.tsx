@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 import type { GetStaticProps } from "next";
 
 interface PageProps {
   repository: string;
-  homepage: string;
+  domain: string;
 }
 
 const init = async (props: PageProps) => {
@@ -26,12 +26,13 @@ const init = async (props: PageProps) => {
         branch: "master",
         // squash_merges: true,
       },
+      // eslint-disable-next-line node/no-process-env
       local_backend: process.env.NODE_ENV === "development", // FIXME: verify works
       publish_mode: "editorial_workflow",
       media_folder: "public/images",
       public_folder: "/images",
-      site_url: props.homepage,
-      logo_url: props.homepage + "/images/gwu-mag-logo.svg",
+      site_url: props.domain,
+      logo_url: `${props.domain}/android-chrome-512x512.png`,
       i18n: {
         structure: "multiple_files",
         locales,
@@ -175,14 +176,12 @@ export const getStaticProps: GetStaticProps<PageProps> = async () => {
   // const { readFileSync } = await import("fs");
   // const { join } = await import("path");
 
-  const {
-    default: { repository, homepage },
-  } = await import("../../package.json");
+  const { repository, domain } = await import("~/site-info.json");
 
   return {
     props: {
       repository,
-      homepage,
+      domain,
     },
   };
 };

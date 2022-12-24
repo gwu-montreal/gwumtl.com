@@ -1,5 +1,3 @@
-import React from "react";
-
 import SEO from "~/components/SEO";
 import Hero from "~/components/Hero";
 import Footer from "~/components/Footer";

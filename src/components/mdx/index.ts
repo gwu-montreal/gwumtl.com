@@ -1,7 +1,7 @@
 import Button from "~/components/mdx/Button";
 
-import type { ReactChild } from "react";
+import type { ReactNode } from "react";
 
-export const components = ({
+export const components = {
   Button,
-} as unknown) as Record<string, ReactChild>;
+} as unknown as Record<string, ReactNode>;
