@@ -5,4 +5,5 @@ const optimizedImages = require("next-optimized-images");
 
 module.exports = withPlugins([fonts, optimizedImages], {
   reactStrictMode: true,
+  images: { unoptimized: true },
 });
