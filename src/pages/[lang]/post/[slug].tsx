@@ -19,13 +19,13 @@ const Page = ({ title, content, description }: PageProps) => {
     <>
       <SEO title={title} description={description} />
       <Hero items={[{ label: `< ${t("header:backtohome")}`, link: "/" }]} />
-      <div className="max-w-container mx-auto px-8 mt-8 mb-16 lg:px-16">
-        <h1 className="max-w-[700px] mx-auto text-5xl uppercase font-display mb-8">
+      <div className="mx-auto mt-8 mb-16 max-w-container px-8 lg:px-16">
+        <h1 className="mx-auto mb-8 max-w-[700px] font-display text-5xl uppercase">
           {title}
         </h1>
 
         <div
-          className="prose max-w-[700px] mx-auto"
+          className="prose mx-auto max-w-[700px]"
           dangerouslySetInnerHTML={{ __html: content }}
         />
       </div>

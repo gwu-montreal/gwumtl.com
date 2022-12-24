@@ -28,7 +28,7 @@ export default function Custom404({ description }: PageProps) {
         {`if(navigator.language.split('-')[0] === 'fr') location.href = 'fr'; else location.href = 'en'`}
       </Script>
       <SEO title="GWU Montréal" omitSiteNameInTitle description={description} />
-      <div className="flex justify-center items-center w-full h-screen gap-4">
+      <div className="flex h-screen w-full flex-col items-center justify-center gap-4">
         <a href="/en">Click here if you are not redirected</a>
         <a href="/fr">Cliquer ici si vous n&apos;êtes pas redirigé·e</a>
       </div>

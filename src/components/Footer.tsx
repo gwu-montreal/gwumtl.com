@@ -7,8 +7,8 @@ const Footer = () => {
   const { lang, t } = useSiteData();
 
   return (
-    <div className="bg-gray-900 p-16 lg:px-24 flex flex-col items-center">
-      <div className="max-w-full mx-auto mb-4">
+    <div className="flex flex-col items-center bg-gray-900 p-16 lg:px-24">
+      <div className="mx-auto mb-4 max-w-full">
         <img
           className="max-h-24"
           src={lang === "fr" ? logoFr.src : logoEn.src}

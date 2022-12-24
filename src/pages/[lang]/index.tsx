@@ -32,13 +32,13 @@ const Index = ({ sections, description }: PageProps) => {
           { label: t("header:getinvolved"), scrollTo: "join" },
         ]}
       />
-      <div className="max-w-container mx-auto px-8 mt-16 lg:px-16 lg:mt-24">
+      <div className="mx-auto mt-16 max-w-container px-8 lg:mt-24 lg:px-16">
         {sections.map(({ type, content, image, imagePlacement }, i) => {
           return (
             <div
               key={i}
               className={cx("mb-16 lg:mb-24", {
-                "shadow-lg bg-gray-50 p-8 -mx-8 lg:px-16 lg:py-12 lg:-mx-16":
+                "-mx-8 bg-gray-50 p-8 shadow-lg lg:-mx-16 lg:px-16 lg:py-12":
                   type === "box",
               })}
             >
@@ -52,10 +52,10 @@ const Index = ({ sections, description }: PageProps) => {
               >
                 <div
                   className={cx(
-                    "sm:shrink-0 mx-auto order-3",
+                    "order-3 mx-auto sm:shrink-0",
                     { "sm:order-1": imagePlacement === "left" },
                     type === "box"
-                      ? "mt-6 md:mt-0 md:pl-6 md:w-2/5"
+                      ? "mt-6 md:mt-0 md:w-2/5 md:pl-6"
                       : [
                           "mt-6 sm:mt-0 sm:mb-4 sm:w-2/5 md:w-80 lg:float-none lg:mb-0",
                           {
@@ -81,7 +81,7 @@ const Index = ({ sections, description }: PageProps) => {
                 </div>
                 <div
                   className={cx(
-                    "prose break-words max-w-full mx-auto md:mx-0 order-2",
+                    "prose order-2 mx-auto max-w-full break-words md:mx-0",
                     { "text-xl": type === "box" }
                   )}
                   dangerouslySetInnerHTML={{ __html: content }}

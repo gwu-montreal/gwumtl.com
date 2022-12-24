@@ -12,10 +12,10 @@ const Button = ({
     className={cx(
       // ! needed to override tailwind-typography directives when rendering via mdx
       // TODO: can probably use an alternate strategy for applying tailwind-typography
-      "!no-underline !font-display !font-normal !text-white",
-      "flex flex-wrap justify-center items-center text-center max-w-max",
-      "bg-main hover:bg-primary focus:bg-primary shadow focus:shadow-inner",
-      "mx-auto my-4 px-6 py-4 rounded-lg"
+      "!font-display !font-normal !text-white !no-underline",
+      "flex max-w-max flex-wrap items-center justify-center text-center",
+      "bg-main shadow hover:bg-primary focus:bg-primary focus:shadow-inner",
+      "mx-auto my-4 rounded-lg px-6 py-4"
     )}
     href={href}
   >

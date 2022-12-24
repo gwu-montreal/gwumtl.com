@@ -17,16 +17,16 @@ const Hero = ({ items }: { items: NavbarItem[] }) => {
       id="top"
       className={cx(styles["background"], "bg-cover bg-center py-8")}
     >
-      <div className="max-w-container mx-auto flex flex-col">
+      <div className="mx-auto flex max-w-container flex-col">
         <Navbar items={items} />
-        <div className="max-w-full mx-auto p-8 lg:px-16 md:flex md:items-center md:justify-center">
-          <div className="shrink-0 w-max max-w-full mx-auto mb-6 md:mx-0 md:mb-0">
+        <div className="mx-auto max-w-full p-8 md:flex md:items-center md:justify-center lg:px-16">
+          <div className="mx-auto mb-6 w-max max-w-full shrink-0 md:mx-0 md:mb-0">
             <img alt="Logo" src={lang === "fr" ? logoFr.src : logoEn.src} />
           </div>
           <h1
             className={cx(
-              "max-w-[33rem] font-display text-5xl sm:text-6xl text-gray-50",
-              "text-center break-words md:text-left md:ml-12 md:basis-0 lg:basis-auto"
+              "max-w-[33rem] font-display text-5xl text-gray-50 sm:text-6xl",
+              "break-words text-center md:ml-12 md:basis-0 md:text-left lg:basis-auto"
             )}
           >
             GAME WORKERS UNITE MONTRÉAL

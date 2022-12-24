@@ -39,13 +39,13 @@ const Navbar = ({ items }: { items: NavbarItem[] }) => {
   const otherLangLabel = langs[otherLang];
 
   return (
-    <nav className="px-8 lg:px-16 mb-8 xl:text-lg text-gray-50 font-display flex items-center">
+    <nav className="mb-8 flex items-center px-8 font-display text-gray-50 lg:px-16 xl:text-lg">
       {items.map((item) => (
         <div
           key={item.label}
           className={cx(
-            "hidden lg:block mr-8 xl:mr-12",
-            item.emphasized && "bg-black/60 rounded-full px-5 py-2"
+            "mr-8 hidden lg:block xl:mr-12",
+            item.emphasized && "rounded-full bg-black/60 px-5 py-2"
           )}
         >
           {"scrollTo" in item ? (
@@ -91,7 +91,7 @@ const Navbar = ({ items }: { items: NavbarItem[] }) => {
           </div>
         </div>
         <div
-          className="cursor-pointer ml-8 xl:ml-12"
+          className="ml-8 cursor-pointer xl:ml-12"
           onClick={() => {
             setLang(otherLang);
           }}
