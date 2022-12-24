@@ -2,11 +2,9 @@ import React from "react";
 import cx from "classnames";
 
 const Button = ({
-  icon,
   href,
   children,
 }: {
-  icon?: string;
   href: string;
   children: React.ReactNode;
 }) => (

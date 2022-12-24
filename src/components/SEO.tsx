@@ -1,4 +1,3 @@
-import React from "react";
 import Head from "next/head";
 
 import { languageList, useSiteData } from "~/lib/site-data";
@@ -20,7 +19,7 @@ const SEO = ({
   openGraphImageOverride?: string;
 }) => {
   const { t, slug } = useSiteData();
-  const resolvedDescription = description || t("site_description");
+  const resolvedDescription = description ?? t("site_description");
 
   return (
     <Head>
@@ -32,7 +31,7 @@ const SEO = ({
           key={l}
           rel="alternate"
           hrefLang={l}
-          href={`${domain}/${l}${slug ? "/" + slug : ""}`}
+          href={`${domain}/${l}${slug ? `/${slug}` : ""}`}
         />
       ))}
       <meta

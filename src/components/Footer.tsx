@@ -1,5 +1,3 @@
-import React from "react";
-
 import { useSiteData } from "~/lib/site-data";
 
 import logoEn from "~/images/gwu-logo-en.svg";

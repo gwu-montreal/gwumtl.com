@@ -1,4 +1,3 @@
-import React from "react";
 import cx from "classnames";
 
 import SEO from "~/components/SEO";
@@ -70,7 +69,7 @@ const Index = ({ sections, description }: PageProps) => {
                         ]
                   )}
                 >
-                  {image && (
+                  {image ? (
                     <Pic
                       className={cx(
                         "mx-auto",
@@ -78,7 +77,7 @@ const Index = ({ sections, description }: PageProps) => {
                       )}
                       imgName={image}
                     />
-                  )}
+                  ) : null}
                 </div>
                 <div
                   className={cx(

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 import type { GetStaticProps } from "next";
 
@@ -26,12 +26,13 @@ const init = async (props: PageProps) => {
         branch: "master",
         // squash_merges: true,
       },
+      // eslint-disable-next-line node/no-process-env
       local_backend: process.env.NODE_ENV === "development", // FIXME: verify works
       publish_mode: "editorial_workflow",
       media_folder: "public/images",
       public_folder: "/images",
       site_url: props.domain,
-      logo_url: props.domain + "/images/gwu-mag-logo.svg",
+      logo_url: `${props.domain}/android-chrome-512x512.png`,
       i18n: {
         structure: "multiple_files",
         locales,
