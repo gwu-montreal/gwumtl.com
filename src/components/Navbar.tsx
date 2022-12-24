@@ -77,17 +77,21 @@ const Navbar = ({ items }: { items: NavbarItem[] }) => {
               onTouchStart={decodeEmail}
               onFocus={decodeEmail}
             >
-              <img className="h-5 w-auto" alt={t("header:email")} src={email} />
+              <img
+                className="h-5 w-auto"
+                alt={t("header:email")}
+                src={email.src}
+              />
             </a>
           </div>
           <div>
             <a href={twitterUrl}>
-              <img className="h-5 w-auto" alt="Twitter" src={twitter} />
+              <img className="h-5 w-auto" alt="Twitter" src={twitter.src} />
             </a>
           </div>
           <div>
             <a href={siteInfo.facebook}>
-              <img className="h-5 w-auto" alt="Facebook" src={facebook} />
+              <img className="h-5 w-auto" alt="Facebook" src={facebook.src} />
             </a>
           </div>
         </div>
@@ -113,7 +117,7 @@ const Navbar = ({ items }: { items: NavbarItem[] }) => {
 //         className="cursor-pointer"
 //         onClick={() => setDrawerOpen(!drawerOpen)}
 //       >
-//         <img className="h-5 w-auto" src={menu} />
+//         <img className="h-5 w-auto" src={menu.src} />
 //       </div>
 //       <Drawer open={drawerOpen} onRequestClose={() => setDrawerOpen(false)}>
 //         cool beans

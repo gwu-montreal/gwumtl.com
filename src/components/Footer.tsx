@@ -11,7 +11,10 @@ const Footer = () => {
   return (
     <div className="bg-gray-900 p-16 lg:px-24 flex flex-col items-center">
       <div className="max-w-full mx-auto mb-4">
-        <img className="max-h-24" src={lang === "fr" ? logoFr : logoEn} />
+        <img
+          className="max-h-24"
+          src={lang === "fr" ? logoFr.src : logoEn.src}
+        />
       </div>
       <div className="text-gray-50">
         <div

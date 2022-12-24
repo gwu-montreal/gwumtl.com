@@ -49,7 +49,7 @@ const SEO = ({
       />
       <meta
         property="og:image"
-        content={`${domain}${openGraphImageOverride ?? openGraphImage}`}
+        content={`${domain}${openGraphImageOverride ?? openGraphImage.src}`}
       />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content={twitter} />

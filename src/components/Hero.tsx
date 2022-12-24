@@ -22,7 +22,7 @@ const Hero = ({ items }: { items: NavbarItem[] }) => {
         <Navbar items={items} />
         <div className="max-w-full mx-auto p-8 lg:px-16 md:flex md:items-center md:justify-center">
           <div className="shrink-0 w-max max-w-full mx-auto mb-6 md:mx-0 md:mb-0">
-            <img alt="Logo" src={lang === "fr" ? logoFr : logoEn} />
+            <img alt="Logo" src={lang === "fr" ? logoFr.src : logoEn.src} />
           </div>
           <h1
             className={cx(
