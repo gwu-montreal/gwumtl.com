@@ -82,8 +82,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths,
-    // FIXME: TEMP
-    // paths: [],
     fallback: false,
   };
 };
