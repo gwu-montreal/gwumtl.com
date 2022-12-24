@@ -1,6 +1,6 @@
 import { promises as fs } from "fs";
 import renderToString from "next-mdx-remote/render-to-string";
-import remark from "remark";
+import { remark } from "remark";
 import strip from "strip-markdown";
 import yaml from "js-yaml";
 import matter from "gray-matter";
@@ -38,7 +38,7 @@ export async function loadMdx(filename: string, expectedFields?: string[]) {
     }
   }
 
-  const { contents: plaintext } = await remark().use(strip).process(content);
+  const { value: plaintext } = await remark().use(strip).process(content);
 
   return {
     data,
@@ -50,7 +50,7 @@ export async function loadMdx(filename: string, expectedFields?: string[]) {
 export async function processSections(contents: {
   sections: { body: string; [fields: string]: unknown }[];
 }) {
-  const { contents: plaintext } = await remark()
+  const { value: plaintext } = await remark()
     .use(strip)
     .process(contents["sections"].map((s) => s.body).join("\n\n"));
 
