@@ -1,15 +1,11 @@
 import Head from "next/head";
-import { useRouter } from "next/router";
 
 import "~/styles/index.css";
 
 import type { AppProps } from "next/app";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
-  const { query } = useRouter();
-
-  // if there's no lang, we're on the admin page; render it directly
-  return query["lang"] ? (
+  return (
     <>
       <Head>
         <link
@@ -36,8 +32,6 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       </Head>
       <Component {...pageProps} />
     </>
-  ) : (
-    <Component {...pageProps} />
   );
 };
 
