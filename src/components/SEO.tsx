@@ -25,8 +25,7 @@ const SEO = ({
   return (
     <Head>
       <title>
-        {omitSiteNameInTitle ? "" : `${t("siteName")} — `}
-        {title}
+        {omitSiteNameInTitle ? title : `${t("siteName")} — ${title}`}
       </title>
       {languageList.map((l) => (
         <link
