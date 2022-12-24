@@ -12,7 +12,6 @@
     "test:eslint": "eslint '{src,test}/**/*.{js,ts,tsx}'",
     "test:prettier": "prettier '{src,test}/**/*.{css,js,ts,tsx}' -l",
     "test:ts": "tsc --noEmit",
-    "test:stylelint": "stylelint 'src/**/*.{css,tsx}'",
     "prettier": "prettier --write '{src,test}/**/*.{css,js,ts,tsx}'"
   },
   "dependencies": {
@@ -51,8 +50,6 @@
     "prettier": "^2.8.1",
     "remark": "^14.0.2",
     "strip-markdown": "^5.0.0",
-    "stylelint": "^13.12.0",
-    "stylelint-config-lostfictions": "^0.11.0",
     "tailwindcss": "^3.2.4",
     "typescript": "^4.9.4"
   },
