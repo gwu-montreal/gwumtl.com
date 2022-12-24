@@ -3,23 +3,6 @@ const withPlugins = require("next-compose-plugins");
 const fonts = require("next-fonts");
 const optimizedImages = require("next-optimized-images");
 
-module.exports = withPlugins(
-  [
-    () => ({
-      webpack(cfg) {
-        // enable astroturf
-        cfg.module.rules.push({
-          test: /\.tsx$/,
-          use: [{ loader: "astroturf/loader" }],
-        });
-
-        return cfg;
-      },
-    }),
-    fonts,
-    optimizedImages,
-  ],
-  {
-    reactStrictMode: true,
-  }
-);
+module.exports = withPlugins([fonts, optimizedImages], {
+  reactStrictMode: true,
+});
