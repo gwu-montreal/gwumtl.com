@@ -1,9 +1,7 @@
-/* eslint no-undef: error */
-const withPlugins = require("next-compose-plugins");
-const fonts = require("next-fonts");
-const optimizedImages = require("next-optimized-images");
+// @ts-check
 
-module.exports = withPlugins([fonts, optimizedImages], {
+/** @type {import('next').NextConfig} */
+module.exports = {
   reactStrictMode: true,
   images: { unoptimized: true },
-});
+};
