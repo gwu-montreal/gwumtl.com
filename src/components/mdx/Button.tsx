@@ -8,7 +8,7 @@ const Button = ({
 }: {
   icon?: string;
   href: string;
-  children: React.ReactChild;
+  children: React.ReactNode;
 }) => (
   <a
     className={cx(
