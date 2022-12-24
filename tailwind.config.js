@@ -1,6 +1,5 @@
 module.exports = {
-  mode: "jit",
-  purge: ["./src/**/*.{ts,tsx,css}", "./content/**/*.{yml,md}"],
+  content: ["./src/**/*.{ts,tsx,css}", "./content/**/*.{yml,yaml,md}"],
   theme: {
     screens: {
       sm: "500px",

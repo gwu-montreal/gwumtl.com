@@ -53,7 +53,7 @@ const Index = ({ sections, description }: PageProps) => {
               >
                 <div
                   className={cx(
-                    "sm:flex-shrink-0 mx-auto order-3",
+                    "sm:shrink-0 mx-auto order-3",
                     { "sm:order-1": imagePlacement === "left" },
                     type === "box"
                       ? "mt-6 md:mt-0 md:pl-6 md:w-2/5"

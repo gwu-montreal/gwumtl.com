@@ -50,7 +50,7 @@ const Navbar = ({ items }: { items: NavbarItem[] }) => {
           key={item.label}
           className={cx(
             "hidden lg:block mr-8 xl:mr-12",
-            item.emphasized && "bg-black bg-opacity-60 rounded-full px-5 py-2"
+            item.emphasized && "bg-black/60 rounded-full px-5 py-2"
           )}
         >
           {"scrollTo" in item ? (
@@ -70,7 +70,7 @@ const Navbar = ({ items }: { items: NavbarItem[] }) => {
         </div>
       ))}
       <div className="ml-auto flex items-center">
-        <div className="flex flex-shrink-0 items-center space-x-4 lg:space-x-8">
+        <div className="flex shrink-0 items-center space-x-4 lg:space-x-8">
           <div>
             <a
               onMouseEnter={decodeEmail}
