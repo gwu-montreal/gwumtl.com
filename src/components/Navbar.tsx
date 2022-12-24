@@ -1,7 +1,6 @@
 import React from "react";
 import cx from "classnames";
 
-// import Drawer from "~/components/Drawer";
 import Link from "~/components/LocalizedLink";
 import { useSiteData } from "~/lib/site-data";
 
@@ -10,7 +9,6 @@ import siteInfo from "~/site-info.json";
 import email from "~/images/email.svg";
 import twitter from "~/images/twitter.svg";
 import facebook from "~/images/facebook.svg";
-// import menu from "~/images/menu.svg";
 
 const twitterUrl = `https://twitter.com/${siteInfo.twitter.slice(1)}`;
 
@@ -42,9 +40,6 @@ const Navbar = ({ items }: { items: NavbarItem[] }) => {
 
   return (
     <nav className="px-8 lg:px-16 mb-8 xl:text-lg text-gray-50 font-display flex items-center">
-      {/* <div className="lg:hidden mr-8">
-        <NavbarDrawer />
-      </div> */}
       {items.map((item) => (
         <div
           key={item.label}
@@ -108,22 +103,5 @@ const Navbar = ({ items }: { items: NavbarItem[] }) => {
     </nav>
   );
 };
-
-// const NavbarDrawer = () => {
-//   const [drawerOpen, setDrawerOpen] = useState(false);
-//   return (
-//     <>
-//       <div
-//         className="cursor-pointer"
-//         onClick={() => setDrawerOpen(!drawerOpen)}
-//       >
-//         <img className="h-5 w-auto" src={menu.src} />
-//       </div>
-//       <Drawer open={drawerOpen} onRequestClose={() => setDrawerOpen(false)}>
-//         cool beans
-//       </Drawer>
-//     </>
-//   );
-// };
 
 export default Navbar;
