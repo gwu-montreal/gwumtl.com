@@ -20,12 +20,14 @@
     "allowJs": true,
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
+    "incremental": true,
+    "tsBuildInfoFile": "./node_modules/.cache/typescript/tsconfig.tsbuildinfo",
     "baseUrl": ".",
     "paths": {
       "~/*": [
         "src/*"
       ]
-    }
+    },
   },
   "include": [
     "src",
