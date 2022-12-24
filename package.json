@@ -12,7 +12,8 @@
     "test:eslint": "eslint --color --max-warnings=0 '{src,test}/**/*.{js,ts,tsx}'",
     "test:prettier": "prettier -l '{src,test}/**/*.{css,js,ts,tsx}'",
     "test:ts": "tsc --pretty --noEmit",
-    "prettier": "prettier --write '{src,test}/**/*.{css,js,ts,tsx}'"
+    "prettier": "prettier --write '{src,test}/**/*.{css,js,ts,tsx}'",
+    "prepare": "git config core.hooksPath .githooks"
   },
   "dependencies": {
     "classnames": "^2.3.2",

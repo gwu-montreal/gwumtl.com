@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+if [ ! -f ".nohooks" ]; then
+  echo "Running pre-push checks..."
+  yarn test
+fi
