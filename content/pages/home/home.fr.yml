@@ -60,7 +60,6 @@ sections:
         href="mailto:gwumontreal@gmail.com">
         <span class="text-base">Nous contacter pour des infos</span>
       </Button>
-
   - type: section
     body: >-
       <h1 id="zines">Ressources et zines</h1>
@@ -86,9 +85,12 @@ sections:
 
       - [Winter4Ever: Carolyn Jong parle de la syndicalisation de l'industrie du jeu vidéo](https://youtu.be/pxzg-7gXGfI) (en Anglais)
 
-  - type: section
-    image: Illu_Distribution
+      - [Atelier préventif contre les actions antisyndicales](https://medium.com/@gwumlit/atelier-pr%C3%A9ventif-contre-les-actions-antisyndicales-f39a3fe50c37)
+    image: Illu_GDCZine
     imagePlacement: right
+  - type: section
+    image: Illu_Protest
+    imagePlacement: left
     body: >
       # Partenariats
 

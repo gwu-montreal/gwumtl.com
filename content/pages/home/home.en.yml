@@ -77,7 +77,6 @@ sections:
         href="mailto:gwumontreal@gmail.com">
         <span class="text-base">Or contact us for more information</span>
       </Button>
-
   - type: section
     body: >-
       <h1 id="zines">Resources and Zines</h1>
@@ -103,9 +102,12 @@ sections:
 
       - [Winter4Ever: Carolyn Jong on games industry unionization](https://youtu.be/pxzg-7gXGfI)
 
-  - type: section
-    image: Illu_Distribution
+      - [Identifying Union Busting Tactics](https://medium.com/@gwumlit/identifying-union-busting-tactics-110d45cc05ba)
+    image: Illu_GDCZine
     imagePlacement: right
+  - type: section
+    image: Illu_Protest
+    imagePlacement: left
     body: >
       # Partnerships
 
