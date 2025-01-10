@@ -6,7 +6,23 @@ The website for Game Workers Unite Montréal.
 
 ## Contributing to the Code
 
-This website is built with [Astro](https://astro.build/). You can make simple changes online using the [StackBlitz web editor](https://pr.new/github/gwu-montreal/gwumtl.com) right in your browser if you login to GitHub. For more sweeping changes, read on for local setup instructions.
+This website is built with [Astro](https://astro.build/). You can make simple changes online using the [StackBlitz web editor](https://pr.new/github/gwu-montreal/gwumtl.com) right in your browser if you login to GitHub. Here are some important files:
+
+- **[`src/content/en/home.mdx`](src/content/en/home.mdx) and [`src/content/fr/home.mdx`](src/content/fr/home.mdx)**
+
+  The home page content for each language.
+
+- **[`src/components/Navbar.astro`](src/components/Navbar.astro)**
+
+  The site navbar, with social media links.
+
+- **[`src/util/ui.ts`](src/util/ui.ts)**
+
+  The list of short translation strings (which you'll see translated in the codebase using the [`t()` helper](src/util/i18n.ts#L26).)
+
+Read on for the advanced local setup instructions. They assume you know how to use Git and run commands on the command line!
+
+---
 
 First, ensure sure you've installed Node, ideally at least the version of that's listed in [the `.node-version` file](.node-version). You can also use [`fnm`](https://github.com/Schniz/fnm) and let it pick the correct Node version to use automatically.
 
