@@ -1,13 +1,14 @@
 ---
+// note that this component is made for use specifically in mdx files, to ease
+// working with images without the use of imports. it assumes (already
+// optimized) images are in the /public/images/ folder.
+
 export interface Props {
   imgName: string;
   class?: string;
 }
 
 const { imgName, class: className } = Astro.props;
-
-// TODO: ported directly from next, can astro Image/Picture handle this without
-//  a custom component?
 ---
 
 <picture>

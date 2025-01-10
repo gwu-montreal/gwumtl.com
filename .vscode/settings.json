@@ -11,12 +11,6 @@
   "[astro]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "tailwindCSS.experimental.classRegex": [
-    "cx\\(['\"`]([^`\"']*)['\"`]\\)",
-    // astro's `class:list` directive
-    // FIXME: not robust but maybe sufficient for now
-    "class:list={[^}]*?['\"`]([^`\"']*)['\"`][^}]*?}"
-  ],
   "markdown.validate.enabled": false,
   "[mdx]": {
     // prettier will make unsafe formatting changes to mdx!
