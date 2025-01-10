@@ -1,13 +1,28 @@
 {
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "[typescript]": {
+  "prettier.documentSelectors": ["**/*.astro"],
+  "editor.formatOnSave": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "astro",
+    "typescript",
+    "typescriptreact"
+  ],
+  "[astro]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "files.associations": {
-    "*.css": "postcss"
-  },
-  "postcss.validate": false
+  "tailwindCSS.experimental.classRegex": [
+    "cx\\(['\"`]([^`\"']*)['\"`]\\)",
+    // astro's `class:list` directive
+    // FIXME: not robust but maybe sufficient for now
+    "class:list={[^}]*?['\"`]([^`\"']*)['\"`][^}]*?}"
+  ],
+  "markdown.validate.enabled": false,
+  "[mdx]": {
+    // prettier will make unsafe formatting changes to mdx!
+    "editor.defaultFormatter": "unifiedjs.vscode-mdx",
+    "editor.wordWrap": "bounded",
+    "editor.wordWrapColumn": 80,
+    "editor.wrappingStrategy": "advanced"
+  }
 }

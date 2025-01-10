@@ -1,0 +1,26 @@
+---
+import logoEn from "~/images/gwu-logo-en.svg";
+import logoFr from "~/images/gwu-logo-fr.svg";
+
+import { getSiteData } from "~/util/i18n";
+
+const { lang, t } = getSiteData(Astro.url);
+---
+
+<div class="flex flex-col items-center bg-gray-900 p-16 lg:px-24">
+  <div class="mx-auto mb-4 max-w-full">
+    <img class="max-h-24" src={lang === "fr" ? logoFr.src : logoEn.src} />
+  </div>
+  <div class="text-gray-50">
+    <div class="cursor-pointer" id="backtotop">
+      {t("footer:backtotop")}
+    </div>
+  </div>
+</div>
+<script>
+  document
+    .getElementById("backtotop")!
+    .addEventListener("click", () =>
+      document.getElementById("top")?.scrollIntoView({ behavior: "smooth" }),
+    );
+</script>

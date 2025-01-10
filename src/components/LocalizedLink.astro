@@ -1,0 +1,19 @@
+---
+import { getSiteData } from "~/util/i18n";
+
+export interface Props {
+  href: string;
+  children: any;
+}
+
+const { href } = Astro.props;
+
+const { lang } = getSiteData(Astro.url);
+
+if (!href.startsWith("/")) {
+  console.warn(`<LocalizedLink> using relative href: "${href}"`);
+  console.warn(`only absolute uris are currently supported.`);
+}
+---
+
+<a href={`/${lang}${href}`}><slot /></a>

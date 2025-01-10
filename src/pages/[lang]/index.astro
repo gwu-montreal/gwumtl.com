@@ -1,0 +1,37 @@
+---
+import { getEntry, render } from "astro:content";
+
+import Default from "~/layouts/Default.astro";
+import Hero from "~/components/Hero.astro";
+import Navbar from "~/components/Navbar.astro";
+import Footer from "~/components/Footer.astro";
+import Pic from "~/components/Pic.astro";
+import Section from "~/components/mdx/Section.astro";
+import Button from "~/components/mdx/Button.astro";
+import { getSiteData } from "~/util/i18n";
+
+export { getStaticPaths } from "~/util/get-static-paths";
+
+const { t, lang } = getSiteData(Astro.url);
+const entry = await getEntry("content", `${lang}/home`);
+const { Content } = await render(entry!);
+const {
+  data: { description },
+} = entry!;
+---
+
+<Default description={description}>
+  <Hero>
+    <Navbar
+      items={[
+        { label: t("header:whoweare"), scrollTo: "info" },
+        { label: t("header:newsandinfo"), scrollTo: "zines" },
+        { label: t("header:getinvolved"), scrollTo: "join" },
+      ]}
+    />
+  </Hero>
+  <div class="mx-auto mt-16 max-w-container px-8 lg:mt-24 lg:px-16">
+    <Content components={{ Button, Pic, Section }} />
+  </div>
+  <Footer />
+</Default>

@@ -1,0 +1,23 @@
+---
+export interface Props {
+  imgName: string;
+  class?: string;
+}
+
+const { imgName, class: className } = Astro.props;
+
+// TODO: ported directly from next, can astro Image/Picture handle this without
+//  a custom component?
+---
+
+<picture>
+  <source
+    type="image/webp"
+    srcset={`/images/${imgName}.webp 1x, /images/${imgName}@2x.webp 2x`}
+  />
+  <source
+    srcset={`/images/${imgName}.png 1x, /images/${imgName}@2x.png 2x`}
+    type="image/png"
+  />
+  <img class={className} src={`/images/${imgName}.png`} />
+</picture>

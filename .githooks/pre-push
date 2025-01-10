@@ -3,5 +3,5 @@ set -euo pipefail
 
 if [ ! -f ".nohooks" ]; then
   echo "Running pre-push checks..."
-  yarn test
+  pnpm test
 fi
