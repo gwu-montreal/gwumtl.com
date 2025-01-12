@@ -1,10 +1,15 @@
 ---
+import { getEntry } from "astro:content";
+
 import Default from "~/layouts/Default.astro";
 
-import { ui } from "~/util/ui";
+const entry = await getEntry("content", `en/home`);
+const {
+  data: { description },
+} = entry!;
 ---
 
-<Default title={ui.en.siteName} description={ui.en.siteName}>
+<Default description={description}>
   <script is:inline>
     if (navigator.language.split("-")[0] === "fr") location.href = "fr";
     else location.href = "en";
