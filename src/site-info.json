@@ -1,6 +1,8 @@
 {
   "domain": "https://gwumtl.com",
-  "twitter": "@gwu_montreal",
+  "twitter": "https://x.com/gwu_montreal",
+  "bsky": "https://bsky.app/profile/gwu-montreal.bsky.social",
+  "insta": "https://www.instagram.com/gwu_montreal/",
   "facebook": "https://www.facebook.com/gwumtl",
   "repository": "gwu-montreal/gwumtl.com"
 }

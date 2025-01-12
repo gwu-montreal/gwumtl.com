@@ -1,22 +1,24 @@
+# build output
+dist/
+# generated types
+.astro/
+
 # dependencies
-/node_modules
-/.pnp
-.pnp.js
+node_modules/
 
-# next.js
-/.next/
-/out/
-
-# misc
-.DS_Store
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
+# logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 
+
+# environment variables
+.env
+.env.production
+
+# macOS-specific files
+.DS_Store
+
+# special file to prevent pre-push hook from running
 .nohooks

@@ -1,0 +1,16 @@
+---
+import Default from "~/layouts/Default.astro";
+
+import { ui } from "~/util/ui";
+---
+
+<Default title={ui.en.siteName} description={ui.en.siteName}>
+  <script is:inline>
+    if (navigator.language.split("-")[0] === "fr") location.href = "fr";
+    else location.href = "en";
+  </script>
+  <div class="flex h-screen w-full flex-col items-center justify-center gap-4">
+    <a href="/en">Click here if you are not redirected</a>
+    <a href="/fr">Cliquer ici si vous n&apos;êtes pas redirigé·e</a>
+  </div>
+</Default>

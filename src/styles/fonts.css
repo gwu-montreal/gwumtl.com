@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "Plex";
+  src:
+    url("./fonts/subset-IBMPlexSans.woff2") format("woff2"),
+    url("./fonts/subset-IBMPlexSans.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Plex";
+  src:
+    url("./fonts/subset-IBMPlexSans-Bold.woff2") format("woff2"),
+    url("./fonts/subset-IBMPlexSans-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Plex";
+  src:
+    url("./fonts/subset-IBMPlexSans-Italic.woff2") format("woff2"),
+    url("./fonts/subset-IBMPlexSans-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Plex";
+  src:
+    url("./fonts/subset-IBMPlexSans-BoldItalic.woff2") format("woff2"),
+    url("./fonts/subset-IBMPlexSans-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src:
+    url("./fonts/subset-Poppins-Bold.woff2") format("woff2"),
+    url("./fonts/subset-Poppins-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}

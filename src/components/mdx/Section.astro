@@ -1,0 +1,55 @@
+---
+import Pic from "~/components/Pic.astro";
+
+export interface Props {
+  children: any;
+  box?: boolean;
+  imagePlacement?: "left" | "right";
+  image?: string;
+}
+const { box, imagePlacement, image } = Astro.props;
+---
+
+<div
+  class:list={[
+    "mb-16 flex flex-wrap lg:mb-24",
+    box
+      ? "-mx-8 bg-gray-50 p-8 shadow-lg md:flex-nowrap lg:-mx-16 lg:px-16 lg:py-12"
+      : "sm:block lg:flex lg:flex-nowrap",
+  ]}
+>
+  <div
+    class:list={[
+      "order-3 mx-auto mt-6 sm:shrink-0",
+      imagePlacement === "left" && "sm:order-1",
+      box
+        ? "md:mt-0 md:w-2/5 md:pl-6"
+        : [
+            "sm:mb-4 sm:mt-0 sm:w-2/5 md:w-80 lg:float-none lg:mb-0",
+            imagePlacement === "left"
+              ? "sm:float-left sm:ml-0 sm:mr-8"
+              : "sm:float-right sm:ml-8 sm:mr-0",
+          ],
+    ]}
+  >
+    {
+      image ? (
+        <Pic
+          class:list={["mx-auto", box ? "max-h-64" : "max-h-56"]}
+          imgName={image}
+        />
+      ) : null
+    }
+  </div>
+  <div
+    class:list={[
+      // we'd like to enable hyphens-auto, but it's awful on firefox -- way too
+      // aggro and quick to hyphenate. firefox also doesn't support
+      // `hyphenate-limit-chars` yet. maybe later!
+      "prose order-2 mx-auto max-w-full md:mx-0",
+      box && "text-xl",
+    ]}
+  >
+    <slot />
+  </div>
+</div>

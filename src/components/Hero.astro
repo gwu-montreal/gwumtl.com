@@ -1,0 +1,66 @@
+---
+import logoEn from "~/images/gwu-logo-en.svg";
+import logoFr from "~/images/gwu-logo-fr.svg";
+
+export type Props = { children: any };
+
+const { lang } = Astro.params;
+---
+
+<div id="top" class:list={["background", "bg-cover bg-center py-8"]}>
+  <div class="mx-auto flex max-w-container flex-col">
+    <slot />
+    <div
+      class="mx-auto max-w-full p-8 md:flex md:items-center md:justify-center lg:px-16"
+    >
+      <div class="mx-auto mb-6 w-max max-w-full shrink-0 md:mx-0 md:mb-0">
+        <img alt="Logo" src={lang === "fr" ? logoFr.src : logoEn.src} />
+      </div>
+      <h1
+        class:list={[
+          "max-w-[33rem] font-display text-5xl text-gray-50 sm:text-6xl",
+          "break-words text-center md:ml-12 md:basis-0 md:text-left lg:basis-auto",
+        ]}
+      >
+        GAME WORKERS UNITE MONTRÉAL
+      </h1>
+    </div>
+  </div>
+</div>
+<style>
+  .background {
+    position: relative;
+    z-index: 0;
+  }
+
+  .background::before {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-blend-mode: color, normal;
+    background-image: linear-gradient(
+        0deg,
+        hsl(330deg 65% 50% / 85%),
+        rgba(255, 0, 0, 0.65) 100%
+      ),
+      url("../images/hero-bg.jpg");
+  }
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .background::before {
+      background-image: linear-gradient(
+          0deg,
+          hsl(330deg 65% 50% / 85%),
+          rgba(255, 0, 0, 0.65) 100%
+        ),
+        url("../images/hero-bg@2x.jpg");
+    }
+  }
+</style>

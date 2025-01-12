@@ -1,0 +1,98 @@
+---
+import Link from "~/components/LocalizedLink.astro";
+
+import { getSiteData } from "~/util/i18n";
+
+import siteInfo from "~/site-info.json";
+
+import email from "~/images/email.svg";
+import twitter from "~/images/twitter.svg";
+import bsky from "~/images/bsky.svg";
+import insta from "~/images/insta.svg";
+import facebook from "~/images/facebook.svg";
+
+export interface Props {
+  items: NavbarItem[];
+}
+
+type NavbarItem = {
+  label: string;
+  emphasized?: boolean;
+  hideBelow?: "small" | "medium" | "large";
+} & ({ link: string } | { scrollTo: string });
+
+const { items } = Astro.props;
+
+const { t, otherLangName, otherLangUrl } = getSiteData(Astro.url);
+---
+
+<nav
+  class="mb-8 flex items-center gap-8 px-8 font-display text-gray-50 lg:px-16 xl:gap-12 xl:text-lg"
+>
+  {
+    items.map((item) => (
+      <div
+        class:list={[
+          item.hideBelow && "hidden",
+          item.hideBelow === "small" && "sm:block",
+          item.hideBelow === "medium" && "md:block",
+          item.hideBelow === "large" && "lg:block",
+        ]}
+      >
+        {"scrollTo" in item ? (
+          <div class="cursor-pointer" data-scrollto={item.scrollTo}>
+            {item.label}
+          </div>
+        ) : (
+          <Link href={item.link}>{item.label}</Link>
+        )}
+      </div>
+    ))
+  }
+  <div class="ml-auto flex shrink-0 items-center gap-6">
+    <a id="email">
+      <img class="h-5 w-auto" alt={t("header:email")} src={email.src} />
+    </a>
+    <a href={siteInfo.twitter}>
+      <img class="h-5 w-auto" alt="Twitter" src={twitter.src} />
+    </a>
+    <a href={siteInfo.bsky}>
+      <img class="h-5 w-auto" alt="Facebook" src={bsky.src} />
+    </a>
+    <a href={siteInfo.insta}>
+      <img class="h-5 w-auto" alt="Facebook" src={insta.src} />
+    </a>
+    <a href={siteInfo.facebook}>
+      <img class="h-5 w-auto" alt="Facebook" src={facebook.src} />
+    </a>
+  </div>
+  <a href={otherLangUrl}>
+    {otherLangName}
+  </a>
+</nav>
+<script>
+  for (const e of document.querySelectorAll<HTMLDivElement>(
+    "[data-scrollto]",
+  )) {
+    e.addEventListener("click", () => {
+      document
+        .getElementById(e.dataset["scrollto"]!)
+        ?.scrollIntoView({ behavior: "smooth" });
+    });
+  }
+</script>
+<script>
+  const protocol = "mailto:";
+  const address = "gwumontreal";
+  const domain = "gmail.com";
+
+  const decodeEmail = (e: Event) => {
+    (e.currentTarget as HTMLAnchorElement).href =
+      `${protocol}${address}@${domain}`;
+  };
+
+  const e = document.querySelector<HTMLAnchorElement>("#email")!;
+  e.addEventListener("mouseenter", decodeEmail);
+  e.addEventListener("touchstart", decodeEmail);
+  e.addEventListener("focus", decodeEmail);
+</script>

@@ -1,0 +1,38 @@
+---
+import { getEntry, render } from "astro:content";
+
+import Default from "~/layouts/Default.astro";
+import Hero from "~/components/Hero.astro";
+import Navbar from "~/components/Navbar.astro";
+import Footer from "~/components/Footer.astro";
+import { getSiteData } from "~/util/i18n";
+
+export { getStaticPaths } from "~/util/get-static-paths";
+
+const { t, lang } = getSiteData(Astro.url);
+const entry = await getEntry("content", `${lang}/codeofconduct`);
+const { Content } = await render(entry!);
+const {
+  data: { title, description },
+} = entry!;
+---
+
+<Default title={title} description={description}>
+  <Hero>
+    <Navbar
+      items={[
+        { label: `< ${t("header:backtohome")}`, link: "/", hideBelow: "small" },
+      ]}
+    />
+  </Hero>
+  <div class="mx-auto mb-16 mt-8 max-w-container px-8 lg:px-16">
+    <h1 class="mx-auto mb-8 max-w-[700px] font-display text-5xl uppercase">
+      {entry!.data.title}
+    </h1>
+
+    <div class="prose mx-auto max-w-[700px]">
+      <Content />
+    </div>
+  </div>
+  <Footer />
+</Default>

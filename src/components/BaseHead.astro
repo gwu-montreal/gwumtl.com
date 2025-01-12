@@ -1,0 +1,54 @@
+---
+import "~/styles/base.css";
+
+import { getImage } from "astro:assets";
+import { getSiteData } from "~/util/i18n";
+import defaultSocialImage from "~/images/opengraph.png";
+
+export interface Props {
+  /** page title, exclusive of the site name */
+  title?: string;
+  description: string;
+  image?: string;
+}
+
+const { title: pageTitle, description, image } = Astro.props;
+
+const socialImage = await getImage({
+  src: image ?? defaultSocialImage,
+  format: "png",
+});
+
+const { t } = getSiteData(Astro.url);
+
+const siteName = t("siteName");
+
+const title = pageTitle ? `${pageTitle} — ${siteName}` : siteName;
+---
+
+<!-- Global Metadata -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 64x64" />
+<link rel="icon" href="/icon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+<link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+<link rel="sitemap" href="/sitemap-index.xml" />
+
+<!-- FIXME: lang alternates? -->
+
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content={Astro.url} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={new URL(socialImage.src, Astro.url)} />
+
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={Astro.url} />
+<meta property="twitter:image" content={new URL(socialImage.src, Astro.url)} />
