@@ -13,7 +13,12 @@ export default defineConfig({
   scopedStyleStrategy: "class",
   integrations: [
     mdx(),
-    sitemap(),
+    sitemap({
+      i18n: {
+        defaultLocale: "en",
+        locales: { en: "en-CA", fr: "fr-CA" },
+      },
+    }),
     tailwind({
       // use our own base css so that we can customize the default font.
       applyBaseStyles: false,
