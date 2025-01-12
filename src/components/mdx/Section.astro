@@ -43,7 +43,10 @@ const { box, imagePlacement, image } = Astro.props;
   </div>
   <div
     class:list={[
-      "prose order-2 mx-auto max-w-full hyphens-auto md:mx-0",
+      // we'd like to enable hyphens-auto, but it's awful on firefox -- way too
+      // aggro and quick to hyphenate. firefox also doesn't support
+      // `hyphenate-limit-chars` yet. maybe later!
+      "prose order-2 mx-auto max-w-full md:mx-0",
       box && "text-xl",
     ]}
   >
