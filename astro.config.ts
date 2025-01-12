@@ -9,6 +9,7 @@ import { domain } from "./src/site-info.json";
 export default defineConfig({
   site: domain,
   devToolbar: { enabled: false },
+  prefetch: { prefetchAll: true },
   scopedStyleStrategy: "class",
   integrations: [
     mdx(),
