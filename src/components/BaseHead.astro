@@ -6,8 +6,6 @@ import { getSiteData } from "~/util/i18n";
 export interface Props {
   /** page title, exclusive of the site name */
   title?: string;
-  /** how should the site name be included in the title? (default "after") */
-  includeSiteNameInTitle?: "before" | "after" | "none";
   description: string;
   image?: string;
 }
@@ -16,7 +14,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 const {
   title: pageTitle,
-  includeSiteNameInTitle = "after",
   description,
   // FIXME use actual social image
   image = "/placeholder-social.jpg",
@@ -26,16 +23,7 @@ const { t } = getSiteData(Astro.url);
 
 const siteName = t("siteName");
 
-// prettier-ignore
-const title = !pageTitle
-  ? siteName
-  // can't wait for pattern matching proposal 😔
-  : (() => { switch(includeSiteNameInTitle) {
-    case "after": return `${pageTitle} — ${siteName}`;
-    case "before": return `${siteName} — ${pageTitle}`;
-    case "none": return pageTitle;
-    default: throw new Error("unexpected value", includeSiteNameInTitle)
-  }})()
+const title = pageTitle ? `${pageTitle} — ${siteName}` : siteName;
 ---
 
 <!-- Global Metadata -->
