@@ -2,11 +2,12 @@
 title: Code of Conduct
 description: GWU Montréal's Code of Conduct.
 ---
+
 ## Purpose
 
-A primary goal of [Game Workers Unite](https://www.gameworkersunite.org/) (GWU) is to empower people who are marginalized, oppressed, and exploited by the game industry, providing them with the tools and resources to improve their working conditions, push back against systems of oppression, and build a more equitable industry for everyone. We aim to stand in concrete solidarity with oppressed people around the world, and specifically to advance the interests of workers in the struggle against global capitalism. This code of conduct outlines our expectations for all those who participate in our community, as well as the consequences for unacceptable behavior.
+A primary goal of Game Workers Unite Montréal is to empower people who are marginalized, oppressed, and exploited by the game industry, providing them with the tools and resources to improve their working conditions, push back against systems of oppression, and build a more equitable industry for everyone. We aim to stand in concrete solidarity with oppressed people around the world, and specifically to advance the interests of workers in the struggle against global capitalism. This code of conduct outlines our expectations for all those who participate in our community, as well as the consequences for unacceptable behavior.
 
-We invite all those who participate in GWU activities to help us create safe and positive experiences for everyone.
+We invite all those who participate in GWU Montréal activities to help us create safe and positive experiences for everyone.
 
 ## Expected Behaviour
 
@@ -18,29 +19,32 @@ The following behaviors are expected and requested of all community members:
 - Try to treat criticism and call outs as gifts, rather than personal attacks. They may hurt, but they’re also a necessary part of learning to work together.
 
   If you’re feeling defensive or are unsure how to react, try this [helpful guide created by Dietrich Squinkifer](http://games.squinky.me/calledout/).
+
 - Respect people’s pronouns and ask if you don’t know which pronouns a person uses.
 
   If you are unfamiliar with the various pronouns in use in the english language, check out the website “[Pronoun Island](http://pronoun.is)”. For a french-language resource, see [this guide](https://libraryguides.mcgill.ca/ecritureinclusive/pronoms).
+
 - Refrain from demeaning, discriminatory, or harassing behavior and speech.
 - Be mindful of your surroundings and of your fellow participants. Alert committee members if you notice a dangerous situation, someone in distress, or violations of this Code of Conduct, even if they seem inconsequential.
 - Remember that community event venues may be shared with members of the public; please be respectful to all patrons of these locations.
 - Practice good consent culture. Ask if you can engage with people and NEVER touch someone without their given consent.
-    - When asking for consent, aside form verbal consent also take into account peoples body language (leaning away, crossed arms).
-    - Be aware of power dynamics and take them into account when dealing with consent. Examples include: social status, hiring capacity and priviledge (race, gender, middle class, english speaking)
-    - If someone gives you a “No”, treat is as a gift that this person can share their authentic boundries with you.
+  - When asking for consent, aside form verbal consent also take into account peoples body language (leaning away, crossed arms).
+  - Be aware of power dynamics and take them into account when dealing with consent. Examples include: social status, hiring capacity and priviledge (race, gender, middle class, english speaking)
+  - If someone gives you a “No”, treat is as a gift that this person can share their authentic boundries with you.
 
 ## Unacceptable Behaviour
 
 The following behaviors are considered harassment and are unacceptable within our community:
 
 - Punching down. This refers to actions or speech that targets people who are marginalized and/or have less structural power than the person speaking or acting. This may include:
-    - Violence or threats of violence directed against a marginalized person or any member of the community.
-    - Sexist, racist, homophobic, transphobic, ableist, classist or otherwise discriminatory jokes and language.
-    - Personal insults related to gender, sexual orientation, race, class, religion, body shape, or disability.
+  - Violence or threats of violence directed against a marginalized person or any member of the community.
+  - Sexist, racist, homophobic, transphobic, ableist, classist or otherwise discriminatory jokes and language.
+  - Personal insults related to gender, sexual orientation, race, class, religion, body shape, or disability.
 - Posting or displaying sexually explicit or violent material.
-- Posting or threatening to post other people’s personally identifying information (“doxing”) or expose their participation in GWU.
+- Posting or threatening to post other people’s personally identifying information (“doxing”) or expose their participation in GWU Montréal.
 
   This includes posting material that is not anonymized properly without consent.
+
 - Inappropriate or non-consensual photography, filming or recording of online conversations or at events, especially pertaining to the previous point (anonymity).
 - Inappropriate physical contact. You should have someone’s consent before touching them.
 - Unwelcome sexual attention. This includes: sexualized comments or jokes, inappropriate touching, groping, and unwelcome sexual advances.
@@ -75,7 +79,6 @@ This code of conduct and its related procedures also applies to unacceptable beh
 You can reach us at: gwumontreal@gmail.com
 
 If you are on the Discord server, please message the moderators.
-
 
 ## Definitions
 
@@ -118,7 +121,6 @@ _([source](http://disabledfeminists.com/2010/11/19/what-is-ableism-five-things-a
 _([source](http://genderqueerid.com/what-is-gq))_
 
 Our society has historically been structured around a rigid gender binary that divides human beings into the categories of male and female, men and women. Many people, however, do not identify as either one or the other. Gender is a social construct, meaning it is defined by culture, and is distinct from biological sex (think of all the stereotypes and learned behaviours associated with women, many of which have nothing to do with biology). Other societies have more than two genders, and as our society develops and changes, it is possible we may eventually move beyond a binary system, which can be quite limiting and even harmful for those who don’t conform to the unrealistic standards and norms that it generates (for e.g., when boys are bullied and teased for being too “girly”).
-
 
 ## Licence
 

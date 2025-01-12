@@ -1,13 +1,13 @@
 ---
 title: Code de Conduite
-description: La code de conduite de GWU Montréal.
+description: La code de conduite de CTIJ-GWU Montréal.
 ---
+
 ## Objectif
 
-Un des buts principaux de [“Game Workers Unite” (GWU)](https://www.gameworkersunite.org/) est de donner du pouvoir aux personnes marginalisées, opprimées, et exploitées par l’industrie du jeu vidéo, en leur apportant les outils et ressources pour améliorer leurs conditions de travail, repousser les systèmes d’oppression, et construire une industrie plus équitable pour tout le monde. GWU se tient en solidarité avec les personnes opprimées tout autour du monde, et vise en particulier à promouvoir les intérêts des travailleurs et travailleuses dans la lutte contre le capitalisme global. Ce code de conduite souligne nos attentes vis-à-vis de toutes celles et ceux qui participent à notre communauté, ainsi que les conséquences pour tout comportement inacceptable.
+Un des buts principaux de CTIJ-GWU Montréal est de donner du pouvoir aux personnes marginalisées, opprimées, et exploitées par l’industrie du jeu vidéo, en leur apportant les outils et ressources pour améliorer leurs conditions de travail, repousser les systèmes d’oppression, et construire une industrie plus équitable pour tout le monde. CTIJ-GWU Montréal se tient en solidarité avec les personnes opprimées tout autour du monde, et vise en particulier à promouvoir les intérêts des travailleurs et travailleuses dans la lutte contre le capitalisme global. Ce code de conduite souligne nos attentes vis-à-vis de toutes celles et ceux qui participent à notre communauté, ainsi que les conséquences pour tout comportement inacceptable.
 
-Nous invitons toute personne prenant part aux activités de GWU à nous aider à créer une expérience sécuritaire et positive pour tout le monde.
-
+Nous invitons toute personne prenant part aux activités de CTIJ-GWU Montréal à nous aider à créer une expérience sécuritaire et positive pour tout le monde.
 
 ## Comportements attendus
 
@@ -20,34 +20,34 @@ Les comportements suivants sont attendus de tous les membres de la communauté:
 - Soyez respectueux des pronoms de genre, et posez la question si vous ignorez quel pronom une personne utilise.
 
   Si vous n'êtes pas familier avec les différents pronoms utilisés en anglais, visitez le site _[Pronoun Island](http://pronoun.is)_. Pour une ressource en français, consultez [ce guide](https://libraryguides.mcgill.ca/ecritureinclusive/pronoms).
+
 - Abstenez-vous de tout comportement discriminatoire, rabaissant, ou diffamatoire, et ne harcelez personne.
 - Soyez soucieux de votre entourage et des autres participant·e·s. Alertez les membres du comité si vous repérez une situation dangereuse, une personne en détresse, ou une infraction de ce Code de Conduite, même si elles vous semblent sans conséquence.
 - Les événements communautaires prennent parfois place dans des lieux ouverts au public; soyez respectueux·se de tou·te·s les client·e·s/passant·e·s.
 - Pratiquez une bonne culture du consentement. Demandez la permission de participer, et ne touchez JAMAIS une autre personne sans qu’elle vous ait donné son consentement.
-    - Lorsque vous demandez le consentement, au delà des formes de consentement verbales, prenez en compte le langage corporel des gens (bras croisés, recul).
-    - Soyez conscient des dynamiques de pouvoir en jeu et prenez-les en compte lorsqu’il est question de consentement, par exemple: le statut social, la capacité d’embauche et toute forme de privilège (racial, de genre, de classe, de langue).
-    - Respectez la volonté, le courage et la sincérité d’une personne qui vous dit non.
-
+  - Lorsque vous demandez le consentement, au delà des formes de consentement verbales, prenez en compte le langage corporel des gens (bras croisés, recul).
+  - Soyez conscient des dynamiques de pouvoir en jeu et prenez-les en compte lorsqu’il est question de consentement, par exemple: le statut social, la capacité d’embauche et toute forme de privilège (racial, de genre, de classe, de langue).
+  - Respectez la volonté, le courage et la sincérité d’une personne qui vous dit non.
 
 ## Comportements inacceptables
 
 Les comportements suivants sont considérés comme étant du harcèlement et sont inacceptables dans notre communauté:
 
 - Toute action ou parole qui vise ou rabaisse les personnes marginalisées et/ou qui ont moins de pouvoir que la personne active ou en train de parler. Cela peut inclure:
-    - Violence ou menaces de violence à l’encontre d’une personne marginalisée ou de n’importe quel membre de la communauté.
-    - Language ou “blague” sexiste, raciste, homophobe, validiste, classiste ou autrement discriminatoire.
-    - Insultes personnelles liées au genre, l’orientation sexuelle, la race, la religion, le handicap ou le physique.
+  - Violence ou menaces de violence à l’encontre d’une personne marginalisée ou de n’importe quel membre de la communauté.
+  - Language ou “blague” sexiste, raciste, homophobe, validiste, classiste ou autrement discriminatoire.
+  - Insultes personnelles liées au genre, l’orientation sexuelle, la race, la religion, le handicap ou le physique.
 - Poster ou afficher du contenu violent ou sexuellement explicite.
-- Poster ou menacer de poster les informations d’identification d’une autre personne (“doxxing”) ou d'exposer leur participation à GWU.
+- Poster ou menacer de poster les informations d’identification d’une autre personne (“doxxing”) ou d'exposer leur participation à CTIJ-GWU Montréal.
 
   Cela inclut le partage de contenu qui n’a pas été rendu anonyme proprement et sans consentement.
+
 - Toute prise de photo inappropriée ou non-consentie, la capture vidéo ou enregistrement de conversations en lignes ou lors d'événements, particulièrement par rapport au précédent point (l’anonymat).
 - Les contacts physiques inappropriés. Vous devez avoir le consentement d’une personne avant de la toucher.
 - L’attention sexuelle non-désirée. Cela inclut : commentaires ou blagues à caractère sexuel, contacts inappropriés, attouchements, et avances sexuelles non-bienvenues.
 - Intimidation délibérée, harcèlement, ou poursuite d’une personne (en ligne et hors ligne).
 - Toute forme d’encouragement d’un des comportements précédemment mentionnés.
 - Perturbation régulière des événements communautaires, incluant les ralliements, meetups, talks et présentations.
-
 
 ## Conséquences pour les Comportements Inacceptables
 
@@ -57,7 +57,6 @@ Quiconque se voit être demandé d’arrêter son comportement inacceptable doit
 
 Si un membre de la communauté s’engage dans un comportement inacceptable, nous prendrons les mesures qui semblent appropriées, pouvant aller jusqu’à un bannissement temporaire ou une exclusion permanente de la communauté sans avertissement (ni remboursement dans le cas d’un événement payant).
 
-
 ## Signalement
 
 Si vous êtes sujet ou témoin d’un comportement inacceptable, ou que quelque chose vous préoccupe, nous vous prions de nous informer le plus tôt possible par e-mail à gwumontreal@gmail.com
@@ -66,20 +65,17 @@ Vous pouvez aussi utiliser [ce formulaire pour signaler un incident anonymement.
 
 De plus, des organisateur·rice·s de la communauté sont disponibles pour aider les membres de la communauté à contacter les représentants des forces de l’ordre locaux, ou pour aider les victimes de tout comportement inacceptable à se sentir plus en sécurité. Dans le cas d’évènements en personne, les organisateur·rice·s peuvent aussi fournir des escortes sur la demande de toute personne subissant une forme de détresse.
 
-
 ## Cadre
 
 Nous attendons de tous les participants de la communauté (membres, contributeur·rice·s, sponsors et autres visiteur·euse·s) de se soumettre à ce Code de Conduite sur tous les sites –en ligne et en personne– ainsi que dans toutes les communications en tête-à-tête en rapport avec la communauté.
 
 Ce Code de Conduite ainsi que ses procédures affiliées s’appliquent aussi à tout comportement inacceptable prenant place hors du cadre des activités de la communauté, lorsque ce comportement a le potentiel d’affecter négativement la sécurité et le bien-être des membres de la communauté.
 
-
 ## Contact
 
 Vous pouvez nous contacter à: gwumontreal@gmail.com
 
 Si vous êtes sur le serveur Discord, veuillez vous adresser aux modérateur·rice·s
-
 
 ## Definitions
 
@@ -122,7 +118,6 @@ _[source](http://disabledfeminists.com/2010/11/19/what-is-ableism-five-things-ab
 _[source](http://genderqueerid.com/what-is-gq)_
 
 Notre société a historiquement été structurée autour d’une binarité rigide du genre qui divise les humains entre les catégories homme et femme. Beaucoup de gens, cependant, n’appartiennent ni à l’une ni à l’autre. Le genre est une construction sociale, ce qui signifie qu’il est défini par la culture, et est distinct du sexe biologique (pensez aux stéréotypes et attitudes acquises que l’on associe aux femmes, dont beaucoup n’ont aucun rapport avec la biologie). D’autres sociétés ont plus que deux genres, et au fur et à mesure que notre société se développe et change, il est possible que l’on aille au delà d’un système binaire, qui peut être très contraignant et même nocif aux personnes qui ne se conforment pas aux standards irréalistes et aux normes qu’il génère (par exemple, quand les garçons se font harceler parce qu’ils sont trop “féminins”).
-
 
 ## Licence
 
