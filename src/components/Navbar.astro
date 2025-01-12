@@ -22,7 +22,7 @@ type NavbarItem = {
 
 const { items } = Astro.props;
 
-const { t, otherLang, otherLangName, otherLangUrl } = getSiteData(Astro.url);
+const { t, otherLangName, otherLangUrl } = getSiteData(Astro.url);
 ---
 
 <nav
@@ -48,36 +48,25 @@ const { t, otherLang, otherLangName, otherLangUrl } = getSiteData(Astro.url);
     ))
   }
   <div class="ml-auto flex items-center">
-    <div class="flex shrink-0 items-center space-x-4 lg:space-x-6">
-      <div>
-        <a id="email">
-          <img class="h-5 w-auto" alt={t("header:email")} src={email.src} />
-        </a>
-      </div>
-      <div>
-        <a href={siteInfo.twitter}>
-          <img class="h-5 w-auto" alt="Twitter" src={twitter.src} />
-        </a>
-      </div>
-      <div>
-        <a href={siteInfo.bsky}>
-          <img class="h-5 w-auto" alt="Facebook" src={bsky.src} />
-        </a>
-      </div>
-      <div>
-        <a href={siteInfo.insta}>
-          <img class="h-5 w-auto" alt="Facebook" src={insta.src} />
-        </a>
-      </div>
-      <div>
-        <a href={siteInfo.facebook}>
-          <img class="h-5 w-auto" alt="Facebook" src={facebook.src} />
-        </a>
-      </div>
+    <div class="flex shrink-0 items-center gap-6">
+      <a id="email">
+        <img class="h-5 w-auto" alt={t("header:email")} src={email.src} />
+      </a>
+      <a href={siteInfo.twitter}>
+        <img class="h-5 w-auto" alt="Twitter" src={twitter.src} />
+      </a>
+      <a href={siteInfo.bsky}>
+        <img class="h-5 w-auto" alt="Facebook" src={bsky.src} />
+      </a>
+      <a href={siteInfo.insta}>
+        <img class="h-5 w-auto" alt="Facebook" src={insta.src} />
+      </a>
+      <a href={siteInfo.facebook}>
+        <img class="h-5 w-auto" alt="Facebook" src={facebook.src} />
+      </a>
     </div>
     <a class="ml-8 xl:ml-12" href={otherLangUrl}>
-      <span class="capitalize sm:hidden">{otherLang}</span>
-      <span class="hidden sm:inline">{otherLangName}</span>
+      {otherLangName}
     </a>
   </div>
 </nav>
