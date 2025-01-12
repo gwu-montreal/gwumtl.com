@@ -12,50 +12,41 @@ const { box, imagePlacement, image } = Astro.props;
 
 <div
   class:list={[
-    "mb-16 lg:mb-24",
-    box && "-mx-8 bg-gray-50 p-8 shadow-lg lg:-mx-16 lg:px-16 lg:py-12",
+    "mb-16 flex flex-wrap lg:mb-24",
+    box
+      ? "-mx-8 bg-gray-50 p-8 shadow-lg md:flex-nowrap lg:-mx-16 lg:px-16 lg:py-12"
+      : "sm:block lg:flex lg:flex-nowrap",
   ]}
 >
-  <!-- FIXME: probably can be merged with above -->
   <div
     class:list={[
-      "flex flex-wrap",
-      box ? "md:flex-nowrap" : "sm:block lg:flex lg:flex-nowrap",
+      "order-3 mx-auto mt-6 sm:shrink-0",
+      imagePlacement === "left" && "sm:order-1",
+      box
+        ? "md:mt-0 md:w-2/5 md:pl-6"
+        : [
+            "sm:mb-4 sm:mt-0 sm:w-2/5 md:w-80 lg:float-none lg:mb-0",
+            imagePlacement === "left"
+              ? "sm:float-left sm:ml-0 sm:mr-8"
+              : "sm:float-right sm:ml-8 sm:mr-0",
+          ],
     ]}
   >
-    <div
-      class:list={[
-        "order-3 mx-auto sm:shrink-0",
-        { "sm:order-1": imagePlacement === "left" },
-        box
-          ? "mt-6 md:mt-0 md:w-2/5 md:pl-6"
-          : [
-              "mt-6 sm:mb-4 sm:mt-0 sm:w-2/5 md:w-80 lg:float-none lg:mb-0",
-              {
-                "sm:float-left sm:ml-0 sm:mr-8": imagePlacement === "left",
-              },
-              {
-                "sm:float-right sm:ml-8 sm:mr-0": imagePlacement === "right",
-              },
-            ],
-      ]}
-    >
-      {
-        image ? (
-          <Pic
-            class:list={["mx-auto", box ? "max-h-64" : "max-h-56"]}
-            imgName={image}
-          />
-        ) : null
-      }
-    </div>
-    <div
-      class:list={[
+    {
+      image ? (
+        <Pic
+          class:list={["mx-auto", box ? "max-h-64" : "max-h-56"]}
+          imgName={image}
+        />
+      ) : null
+    }
+  </div>
+  <div
+    class:list={[
       "prose order-2 mx-auto max-w-full hyphens-auto md:mx-0",
-        box && "text-xl",
-      ]}
-    >
-      <slot />
-    </div>
+      box && "text-xl",
+    ]}
+  >
+    <slot />
   </div>
 </div>
