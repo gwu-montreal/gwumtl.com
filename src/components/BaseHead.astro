@@ -1,7 +1,9 @@
 ---
 import "~/styles/base.css";
 
+import { getImage } from "astro:assets";
 import { getSiteData } from "~/util/i18n";
+import defaultSocialImage from "~/images/opengraph.png";
 
 export interface Props {
   /** page title, exclusive of the site name */
@@ -10,14 +12,12 @@ export interface Props {
   image?: string;
 }
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const { title: pageTitle, description, image } = Astro.props;
 
-const {
-  title: pageTitle,
-  description,
-  // FIXME use actual social image
-  image = "/placeholder-social.jpg",
-} = Astro.props;
+const socialImage = await getImage({
+  src: image ?? defaultSocialImage,
+  format: "png",
+});
 
 const { t } = getSiteData(Astro.url);
 
@@ -35,25 +35,20 @@ const title = pageTitle ? `${pageTitle} — ${siteName}` : siteName;
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
 <!-- Canonical URL -->
-<link rel="canonical" href={canonicalURL} />
+<link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
 
-<!-- FIXME: lang alternates -->
+<!-- FIXME: lang alternates? -->
 
-<!-- Primary Meta Tags -->
 <title>{title}</title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
 
-<!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={new URL(image, Astro.url)} />
+<meta property="og:image" content={new URL(socialImage.src, Astro.url)} />
 
-<!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={Astro.url} />
-<meta property="twitter:title" content={title} />
-<meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={new URL(image, Astro.url)} />
+<meta property="twitter:image" content={new URL(socialImage.src, Astro.url)} />
