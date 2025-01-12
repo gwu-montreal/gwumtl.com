@@ -19,7 +19,11 @@ const {
 
 <Default title={title} description={description}>
   <Hero>
-    <Navbar items={[{ label: `< ${t("header:backtohome")}`, link: "/" }]} />
+    <Navbar
+      items={[
+        { label: `< ${t("header:backtohome")}`, link: "/", hideBelow: "small" },
+      ]}
+    />
   </Hero>
   <div class="mx-auto mb-16 mt-8 max-w-container px-8 lg:px-16">
     <h1 class="mx-auto mb-8 max-w-[700px] font-display text-5xl uppercase">

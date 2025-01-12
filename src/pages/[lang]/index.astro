@@ -24,9 +24,21 @@ const {
   <Hero>
     <Navbar
       items={[
-        { label: t("header:whoweare"), scrollTo: "info" },
-        { label: t("header:newsandinfo"), scrollTo: "zines" },
-        { label: t("header:getinvolved"), scrollTo: "join" },
+        {
+          label: t("header:whoweare"),
+          scrollTo: "info",
+          hideBelow: "large",
+        },
+        {
+          label: t("header:newsandinfo"),
+          scrollTo: "zines",
+          hideBelow: "medium",
+        },
+        {
+          label: t("header:getinvolved"),
+          scrollTo: "join",
+          hideBelow: "small",
+        },
       ]}
     />
   </Hero>

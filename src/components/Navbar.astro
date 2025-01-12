@@ -18,6 +18,7 @@ export interface Props {
 type NavbarItem = {
   label: string;
   emphasized?: boolean;
+  hideBelow?: "small" | "medium" | "large";
 } & ({ link: string } | { scrollTo: string });
 
 const { items } = Astro.props;
@@ -26,15 +27,16 @@ const { t, otherLangName, otherLangUrl } = getSiteData(Astro.url);
 ---
 
 <nav
-  class="mb-8 flex items-center px-8 font-display text-gray-50 lg:px-16 xl:text-lg"
+  class="mb-8 flex items-center gap-8 px-8 font-display text-gray-50 lg:px-16 xl:gap-12 xl:text-lg"
 >
   {
     items.map((item) => (
       <div
         class:list={[
-          // FIXME: consider container query here
-          "mr-8 hidden lg:block xl:mr-12",
-          item.emphasized && "rounded-full bg-black/60 px-5 py-2",
+          item.hideBelow && "hidden",
+          item.hideBelow === "small" && "sm:block",
+          item.hideBelow === "medium" && "md:block",
+          item.hideBelow === "large" && "lg:block",
         ]}
       >
         {"scrollTo" in item ? (
@@ -47,28 +49,26 @@ const { t, otherLangName, otherLangUrl } = getSiteData(Astro.url);
       </div>
     ))
   }
-  <div class="ml-auto flex items-center">
-    <div class="flex shrink-0 items-center gap-6">
-      <a id="email">
-        <img class="h-5 w-auto" alt={t("header:email")} src={email.src} />
-      </a>
-      <a href={siteInfo.twitter}>
-        <img class="h-5 w-auto" alt="Twitter" src={twitter.src} />
-      </a>
-      <a href={siteInfo.bsky}>
-        <img class="h-5 w-auto" alt="Facebook" src={bsky.src} />
-      </a>
-      <a href={siteInfo.insta}>
-        <img class="h-5 w-auto" alt="Facebook" src={insta.src} />
-      </a>
-      <a href={siteInfo.facebook}>
-        <img class="h-5 w-auto" alt="Facebook" src={facebook.src} />
-      </a>
-    </div>
-    <a class="ml-8 xl:ml-12" href={otherLangUrl}>
-      {otherLangName}
+  <div class="ml-auto flex shrink-0 items-center gap-6">
+    <a id="email">
+      <img class="h-5 w-auto" alt={t("header:email")} src={email.src} />
+    </a>
+    <a href={siteInfo.twitter}>
+      <img class="h-5 w-auto" alt="Twitter" src={twitter.src} />
+    </a>
+    <a href={siteInfo.bsky}>
+      <img class="h-5 w-auto" alt="Facebook" src={bsky.src} />
+    </a>
+    <a href={siteInfo.insta}>
+      <img class="h-5 w-auto" alt="Facebook" src={insta.src} />
+    </a>
+    <a href={siteInfo.facebook}>
+      <img class="h-5 w-auto" alt="Facebook" src={facebook.src} />
     </a>
   </div>
+  <a href={otherLangUrl}>
+    {otherLangName}
+  </a>
 </nav>
 <script>
   for (const e of document.querySelectorAll<HTMLDivElement>(
